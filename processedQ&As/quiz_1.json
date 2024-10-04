@@ -1,0 +1,890 @@
+[
+  {
+    "question": "Your team is automating the build process for a Java based application by using Azure Devops.\nThe team needs to have code coverage in place and then ensure the outcomes are published to Azure Pipelines.\nWhich of the following can be used for the code coverage?",
+    "answers": [
+      "DevTest",
+      "MSTest",
+      "Cobertura",
+      "JavaTest"
+    ],
+    "rationale": "Correct \nAnswer – C\nCobertura is a code coverage tool for Java. Below is a snippet of the documentation page for the tool.\nIt also has the ability to publish results to Azure Devops as mentioned in the Microsoft documentation\nFor more information on the code coverage tool and publishing results, please visit the below URL\nhttp://cobertura.github.io/cobertura/\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-code-coverage-results?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement a testing strategy for pipelines",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Cobertura is a code coverage tool for Java. Below is a snippet of the documentation page for the tool.\nIt also has the ability to publish results to Azure Devops as mentioned in the Microsoft documentation\nFor more information on the code coverage tool and publishing results, please visit the below URL\nhttp://cobertura.github.io/cobertura/\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-code-coverage-results?view=azure-devops"
+  },
+  {
+    "question": "A team is planning on using Azure Automation for a set of Azure Virtual machines. They need to use Azure state configuration to manage the state of the virtual machines. Which of the following actions would need to be performed to ensure the state of the virtual machines are managed effectively?\nChoose 5 answers from the options given below",
+    "answers": [
+      "1. \n\n Onboard the set of virtual machines onto Azure Automation state configuration",
+      "2. \n\n Check the status of the node",
+      "3. \n\n Assign the node configuration",
+      "4. \n\n Create a node management group",
+      "5. \n\n Compile the configuration",
+      "6. \n\n Upload a configuration"
+    ],
+    "rationale": "Correct \nAnwser A,B,C,E and F\nThe Microsoft documentation lists the various steps for onboarding machines onto Azure Automation state configuration\nThe first step is to import an existing configuration\n2. The next step is to compile the configuration\n3. The next step is to on-board the set of virtual machines onto Azure Automation state configuration\n4. Ensure to assign the node configuration\n5. And then check the status of the nodes\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Automation State Node configuration, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Configure collaboration and communication",
+    "scrapedRationale": "Answer not found",
+    "normalizedRationale": "Explanation not found"
+  },
+  {
+    "question": "A team is using Azure Resource Manager templates in their Devops pipeline. The templates need to reference secrets in the Azure Key vault dynamically. You need to complete the below snippet of the Resource Manager template.\n\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n Microsoft.Deployments/resources",
+      "2. \n\n Deployments.Resources",
+      "3. \n\n Microsoft.Resources/deployments",
+      "4. \n\n Resources/Azure.KeyVault"
+    ],
+    "rationale": "Correct \nAnswer: C\nAn example of this is given in the Microsoft documentation on an ARM template which is used to reference secrets dynamically from an Azure Key vault service\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on referencing Azure Key vault in the Resource Manager, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "C",
+    "normalizedRationale": "An example of this is given in the Microsoft documentation on an ARM template which is used to reference secrets dynamically from an Azure Key vault service\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on referencing Azure Key vault in the Resource Manager, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter"
+  },
+  {
+    "question": "A team is using Azure Resource Manager templates in their Devops pipeline. The templates need to reference secrets in the Azure Key vault dynamically. You need to complete the below snippet of the Resource Manager template.\n\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n templateURI",
+      "2. \n\n templateLink",
+      "3. \n\n keyVaultlink",
+      "4. \n\n secretlink"
+    ],
+    "rationale": "Correct \nAnswer: B\nAn example of this is given in the Microsoft documentation on an ARM template which is used to reference secrets dynamically from an Azure Key vault service\n\n.\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on referencing Azure Key vault in the Resource Manager, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement infrastructure as code (IaC)",
+    "scrapedRationale": "B",
+    "normalizedRationale": "An example of this is given in the Microsoft documentation on an ARM template which is used to reference secrets dynamically from an Azure Key vault service\n\n.\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on referencing Azure Key vault in the Resource Manager, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter"
+  },
+  {
+    "question": "A team is currently working on a Java based project in an Azure Devops environment. A solution needs to be recommended to improve the quality of code within the Devops project.\nWhich of the following would you recommend?",
+    "answers": [
+      "1. \n\n For a Maven build task, enable CheckStyle",
+      "2. \n\n For a Maven build task, enable PMD",
+      "3. \n\n For a Gradle build task, enable CheckStyle",
+      "4. \n\n For an ANT build task, enable FindBugs"
+    ],
+    "rationale": "Correct \nAnswer  B\nPMD is a source code analyser tool. Below is what is mentioned on the PMD tool\nIn Azure Devops , you can enable this as shown in the Microsoft documentation below\nOptions A and C are incorrect since this tool is only used for style checks\nOption D is incorrect since you need to use either a Maven or Gradle build task\nFor more information on PMD and enabling it for a Java project, please visit the below URL\nhttps://pmd.github.io/\nhttps://docs.microsoft.com/en-us/azure/devops/java/standalone-tools?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Design and implement appropriate metrics and queries for DevOps",
+    "scrapedRationale": "B",
+    "normalizedRationale": "PMD is a source code analyser tool. Below is what is mentioned on the PMD tool\nIn Azure Devops , you can enable this as shown in the Microsoft documentation below\nOptions A and C are incorrect since this tool is only used for style checks\nOption D is incorrect since you need to use either a Maven or Gradle build task\nFor more information on PMD and enabling it for a Java project, please visit the below URL\nhttps://pmd.github.io/\nhttps://docs.microsoft.com/en-us/azure/devops/java/standalone-tools?view=azure-devops"
+  },
+  {
+    "question": "A team is currently building and deploying an application using Azure services which includes the Devops service. You have to advise on the right security tool to use to during the following phase of the development lifecycle\n– After a pull request\n– During the continuous integration phase\n– During the continuous delivery phase\nWhich of the following would you use for the pull request phase?",
+    "answers": [
+      "1. \n\n Penetration Testing",
+      "2. \n\n Static Code Analysis",
+      "3. \n\n Threat Modeling",
+      "4. \n\n Load Testing"
+    ],
+    "rationale": "Correct \nAnswer  B\nDuring the coding phase it is always preferential to use static code analyser tools. The Microsoft documentation mentions the following\nOption A is incorrect since this should be used during the deployment phase\nOption C is incorrect since this tool should be used during the design phase\nFor more information on security during the Devops lifecycle, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Automate security and compliance scanning",
+    "scrapedRationale": "B",
+    "normalizedRationale": "During the coding phase it is always preferential to use static code analyser tools. The Microsoft documentation mentions the following\nOption A is incorrect since this should be used during the deployment phase\nOption C is incorrect since this tool should be used during the design phase\nFor more information on security during the Devops lifecycle, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops"
+  },
+  {
+    "question": "A team is currently building and deploying an application using Azure services which includes the Devops service. You have to advise on the right security tool to use to during the following phase of the development lifecycle\n– After a pull request\n– During the continuous integration phase\n– During the continuous delivery phase\nWhich of the following would you use for the continuous integration phase?",
+    "answers": [
+      "1. \n\n Penetration Testing",
+      "2. \n\n Static Code Analysis",
+      "3. \n\n Threat Modeling",
+      "4. \n\n Load Testing"
+    ],
+    "rationale": "Correct \nAnswer  B\nDuring the CI phase it is always preferential to use static code analyser tools. The Microsoft documentation mentions the following\nOption A is incorrect since this should be used during the deployment phase\nOption C is incorrect since this tool should be used during the design phase",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Automate security and compliance scanning",
+    "scrapedRationale": "B",
+    "normalizedRationale": "During the CI phase it is always preferential to use static code analyser tools. The Microsoft documentation mentions the following\nOption A is incorrect since this should be used during the deployment phase\nOption C is incorrect since this tool should be used during the design phase"
+  },
+  {
+    "question": "A team is currently building and deploying an application using Azure services which includes the Devops service. You have to advise on the right security tool to use to during the following phase of the development lifecycle\n– After a pull request\n– During the continuous integration phase\n– During the continuous delivery phase\nWhich of the following would you use for the continuous delivery phase?",
+    "answers": [
+      "1. \n\n Penetration Testing",
+      "2. \n\n Static Code Analysis",
+      "3. \n\n Threat Modeling",
+      "4. \n\n Load Testing"
+    ],
+    "rationale": "Correct \nAnswer  A\nDuring the deployment phase we can use penetration testing tools. The Microsoft documentation mentions the following\nOption B is incorrect since this should be used during the development phase\nOption C is incorrect since this tool should be used during the design phase\nFor more information on security during the Devops lifecycle, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Automate security and compliance scanning",
+    "scrapedRationale": "A",
+    "normalizedRationale": "During the deployment phase we can use penetration testing tools. The Microsoft documentation mentions the following\nOption B is incorrect since this should be used during the development phase\nOption C is incorrect since this tool should be used during the design phase\nFor more information on security during the Devops lifecycle, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops"
+  },
+  {
+    "question": "A team is currently building and deploying an application using Azure services which includes the Devops service. The development team needs to have an efficient way to communicate with each other. The tool should have the following capabilities\n– Provide the ability to have different communication channels for each team\n– Have the ability to integrate with Azure Devops\n– Be able on a variety of platforms such as Windows 10, Mac OS , iOS and Android\nWhich of the following would you use for this purpose?",
+    "answers": [
+      "1. \n\n Microsoft Project",
+      "2. \n\n Slack",
+      "3. \n\n Jenkins",
+      "4. \n\n Bamboo"
+    ],
+    "rationale": "Correct \nAnswer  B\nSlack is the perfect communication tool for this requirement. The following is provided on the tool in the Azure marketplace\nOption A is incorrect since this is a project management tool\nOptions C and D are incorrect since this is a Continuous integration tool\nFor more information on the tool, please visit the below URL\nhttps://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-slack",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Configure collaboration and communication",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Slack is the perfect communication tool for this requirement. The following is provided on the tool in the Azure marketplace\nOption A is incorrect since this is a project management tool\nOptions C and D are incorrect since this is a Continuous integration tool\nFor more information on the tool, please visit the below URL\nhttps://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-slack"
+  },
+  {
+    "question": "A team needs to track project metrics in the dashboards available in Azure Devops\nYou need to recommend the right chart widgets to use for each of the following requirement\n– Ability to provide the elapsed time from the creation of work items to their completion\n– Ability to provide the elapsed time to complete work items once they are marked as active\n– Ability to provide the view on the work remaining\nWhich of the following chart widget would you use for the following requirement\nAbility to provide the elapsed time from the creation of work items to their completion",
+    "answers": [
+      "1. \n\n Burndown",
+      "2. \n\n Cycle Time",
+      "3. \n\n Lead Time",
+      "4. \n\n Velocity"
+    ],
+    "rationale": "Correct \nnswer  C\nYou can use the Lead time chart for this. The Microsoft documentation mentions the following\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on the widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "Answer not found",
+    "normalizedRationale": "Explanation not found"
+  },
+  {
+    "question": "A team needs to track project metrics in the dashboards available in Azure Devops\nYou need to recommend the right chart widgets to use for each of the following requirement\n– Ability to provide the elapsed time from the creation of work items to their completion\n– Ability to provide the elapsed time to complete work items once they are marked as active\n– Ability to provide the view on the work remaining\nWhich of the following chart widget would you use for the following requirement\nAbility to provide the elapsed time to complete work items once they are marked as active",
+    "answers": [
+      "1. \n\n Burndown",
+      "2. \n\n Cycle Time",
+      "3. \n\n Lead Time",
+      "4. \n\n Velocity"
+    ],
+    "rationale": "Correct \nAnswer: B\nYou can use the Cycle time chart for this. The Microsoft documentation mentions the following\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on the widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "B",
+    "normalizedRationale": "You can use the Cycle time chart for this. The Microsoft documentation mentions the following\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on the widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops"
+  },
+  {
+    "question": "A team needs to track project metrics in the dashboards available in Azure Devops\nYou need to recommend the right chart widgets to use for each of the following requirement\n– Ability to provide the elapsed time from the creation of work items to their completion\n– Ability to provide the elapsed time to complete work items once they are marked as active\n– Ability to provide the view on the work remaining\nWhich of the following chart widget would you use for the following requirement\nAbility to provide the view on the work remaining",
+    "answers": [
+      "1. \n\n Burndown",
+      "2. \n\n Cycle Time",
+      "3. \n\n Lead Time",
+      "4. \n\n Velocity"
+    ],
+    "rationale": "Correct \nAnswer – A\nYou can use the Burndown chart for this. The Microsoft documentation mentions the following\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on the widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Design and implement appropriate metrics and queries for DevOps",
+    "scrapedRationale": "A",
+    "normalizedRationale": "You can use the Burndown chart for this. The Microsoft documentation mentions the following\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on the widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops"
+  },
+  {
+    "question": "A company has created a new project in Azure Devops for a web application. The company currently uses ServiceNow for change and release management. The company wants to ensure a change request is processed before any changes are released to production.\nWhich of the following are 2 ways that ServiceNow can be integrated into the Azure Devops Release pipeline?",
+    "answers": [
+      "1. \n\n Create a deployment control that invokes the ServiceNow SOAP API",
+      "2. \n\n Create a deployment control that invokes the ServiceNow REST API",
+      "3. \n\n Ensure a post deployment gate is defined after the deployment to the QA stage",
+      "4. \n\n Ensure a pre deployment gate is defined before the deployment to the production stage"
+    ],
+    "rationale": "Correct \nAnswer  C and D\nAzure Devops has direct integration with ServiceNow. You dont need to create a SOAP or REST API for this. The Microsoft documentation mentions the following\nFor more information on using ServiceNow with Azure Devops, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/servicenow?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "C and D",
+    "normalizedRationale": "Azure Devops has direct integration with ServiceNow. You dont need to create a SOAP or REST API for this. The Microsoft documentation mentions the following\nFor more information on using ServiceNow with Azure Devops, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/servicenow?view=azure-devops"
+  },
+  {
+    "question": "A team is currently using a project in Azure Devops. The team needs to have a policy in place that ensures the following\nA user should be able to merge to a master branch even if the code fails to compile.\nThe solution must use the principle of least privilege.\nWhich of the following would you implement?",
+    "answers": [
+      "1. \n\n Ensure that the user is added to the Build Administrators group",
+      "2. \n\n Ensure that the user is added to the Project Administrators group",
+      "3. \n\n Ensure to modify the access control for the user from the security setting of the repository",
+      "4. \n\n Ensure to modify the access control for the user from the security setting of the branch"
+    ],
+    "rationale": "Correct \nAnswer  D\nYou can set permissions at the branch level. This is also given in the Microsoft documentation\nThe other options are incorrect since we need to use the principle of least privilege.\nFor more information on branch security, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/branch-permissions?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "D",
+    "normalizedRationale": "You can set permissions at the branch level. This is also given in the Microsoft documentation\nThe other options are incorrect since we need to use the principle of least privilege.\nFor more information on branch security, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/branch-permissions?view=azure-devops"
+  },
+  {
+    "question": "A team needs to deploy resources using Azure Resource Manager templates. You have to ensure that the users performing the deployment dont have the ability to view the connection strings required by the application being deployed via the template.\nWhich of the following would you use for this requirement?",
+    "answers": [
+      "1. \n\n A parameter file",
+      "2. \n\n A Storage account",
+      "3. \n\n Azure Key vault",
+      "4. \n\n Web config file"
+    ],
+    "rationale": "Correct \nAnswer  C\nThe ideal service to use for this purpose is the Azure Key vault service. The Microsoft documentation mentions the following\nAll other options are incorrect since the ideal service to use for this requirement is the Azure Key vault service.\nFor more information on using the Azure Key vault service to protect application secrets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/key-vault",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement a strategy for managing sensitive information in automation",
+    "scrapedRationale": "C",
+    "normalizedRationale": "The ideal service to use for this purpose is the Azure Key vault service. The Microsoft documentation mentions the following\nAll other options are incorrect since the ideal service to use for this requirement is the Azure Key vault service.\nFor more information on using the Azure Key vault service to protect application secrets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/key-vault"
+  },
+  {
+    "question": "A team is currently working on a repository in Azure repos for managing all of the source code. There are a high number of feature requests that is making it difficult to follow the history of the changes to the master branch. You need to enforce a strategy that would\n– Allows consolidation of all commit histories\n– Merge the changes into a single commit\nYou decide to implement the squash merge strategy\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYes, this would fulfil the desired requirement. The Microsoft documentation mentions the following\nFor more information on squash merge, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/merging-with-squash?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Design and implement branching strategies for the source code",
+    "scrapedRationale": "A",
+    "normalizedRationale": "Yes, this would fulfil the desired requirement. The Microsoft documentation mentions the following\nFor more information on squash merge, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/merging-with-squash?view=azure-devops"
+  },
+  {
+    "question": "A team is currently working on a repository in Azure repos for managing all of the source code. There are a high number of feature requests that is making it difficult to follow the history of the changes to the master branch. You need to enforce a strategy that would\n– Allows consolidation of all commit histories\n– Merge the changes into a single commit\nYou decide to implement a pull request template\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nThe pull request template is a file containing markdown text that is added to your pull request description when the pull request is created.\nFor more information on pull request templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/pull-request-templates?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Design and implement branching strategies for the source code",
+    "scrapedRationale": "B",
+    "normalizedRationale": "The pull request template is a file containing markdown text that is added to your pull request description when the pull request is created.\nFor more information on pull request templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/pull-request-templates?view=azure-devops"
+  },
+  {
+    "question": "A team is currently working on a repository in Azure repos for managing all of the source code. There are a high number of feature requests that is making it difficult to follow the history of the changes to the master branch. You need to enforce a strategy that would\n– Allows consolidation of all commit histories\n– Merge the changes into a single commit\nYou decide to implement a git fetch request.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nThe git fetch request is used to download objects from another repository\nFor more information on git fetch, please visit the below URL\nhttps://git-scm.com/docs/git-fetch",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Design and implement branching strategies for the source code",
+    "scrapedRationale": "B",
+    "normalizedRationale": "The git fetch request is used to download objects from another repository\nFor more information on git fetch, please visit the below URL\nhttps://git-scm.com/docs/git-fetch"
+  },
+  {
+    "question": "Case Study\n\nYou need to ensure that you meet the requirements for project photonappB. Which of the following would you implement for this requirement?",
+    "answers": [
+      "1. \n\n Create an authentication token in SonarQube",
+      "2. \n\n Create a service endpoint in SonarQube",
+      "3. \n\n Create an authentication token in Azure Devops",
+      "4. \n\n Create a service endpoint in Azure Devops"
+    ],
+    "rationale": "Correct \nAnswer  D\nSo here you need to create a service endpoint in either VSTS or Azure Devops. This is mentioned in the SonarQube documentation page\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on adding a SonarQube enpoint, please visit the below URL\nhttps://docs.sonarqube.org/display/SCAN/SonarQube+Endpoint",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Design and implement appropriate metrics and queries for DevOps",
+    "scrapedRationale": "D",
+    "normalizedRationale": "So here you need to create a service endpoint in either VSTS or Azure Devops. This is mentioned in the SonarQube documentation page\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on adding a SonarQube enpoint, please visit the below URL\nhttps://docs.sonarqube.org/display/SCAN/SonarQube+Endpoint"
+  },
+  {
+    "question": "You need to comply with the requirement for the project photonappD. Which of the following would you set for the folder /data?",
+    "answers": [
+      "1. \n\n A branch filter to exclude",
+      "2. \n\n A branch filter to include",
+      "3. \n\n A path filter to include",
+      "4. \n\n A path filter to exclude"
+    ],
+    "rationale": "Correct \nAnswer  D\nSince here we dont want to have a folder /data to be part of the build, we need to create a path filter to exclude. There is an example also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on build triggers, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#paths",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement a strategy for managing sensitive information in automation",
+    "scrapedRationale": "D",
+    "normalizedRationale": "Since here we dont want to have a folder /data to be part of the build, we need to create a path filter to exclude. There is an example also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on build triggers, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#paths"
+  },
+  {
+    "question": "You need to comply with the requirement for the project photonappD. Which of the following would you set for the folder /?",
+    "answers": [
+      "1. \n\n A branch filter to exclude",
+      "2. \n\n A branch filter to include",
+      "3. \n\n A path filter to include",
+      "4. \n\n A path filter to exclude"
+    ],
+    "rationale": "Correct \nAnswer  C\nSince here we need to ensure all artifacts are part of the build, we need to have a path filter to include. There is an example also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on build triggers, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#paths",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement a strategy for managing sensitive information in automation",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Since here we need to ensure all artifacts are part of the build, we need to have a path filter to include. There is an example also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on build triggers, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#paths"
+  },
+  {
+    "question": "You need to implement the requirement for the project photonappF. Which of the following steps would you implement for this requirement? Choose 3 answers from the options given below",
+    "answers": [
+      "1. \n\n Use the release pipeline editor",
+      "2. \n\n Use the triggers tab",
+      "3. \n\n Make sure to enable gates",
+      "4. \n\n Ensure to add a manual intervention task",
+      "5. \n\n Ensure to Add Query Work items"
+    ],
+    "rationale": "Correct \nAnswer  A,C and E\nYou can add gates which can be used to validate whether there are no active bugs against the application. The Microsoft documentation mentions the following\n\nYou can construct queries to search for values of interest which can then be used. The below snapshots from the Microsoft documentation showcases how this can be achieved\nFirst go to the release pipeline editor.\n\nThen Query for Work Items\n\nThen define the condition for the work items\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on gates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Configure collaboration and communication",
+    "scrapedRationale": "A,C and E",
+    "normalizedRationale": "You can add gates which can be used to validate whether there are no active bugs against the application. The Microsoft documentation mentions the following\n\nYou can construct queries to search for values of interest which can then be used. The below snapshots from the Microsoft documentation showcases how this can be achieved\nFirst go to the release pipeline editor.\n\nThen Query for Work Items\n\nThen define the condition for the work items\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on gates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops"
+  },
+  {
+    "question": "Your team is setting up a DevOps environment on Azure. As part of the setup several development environments are going to be spun up in Azure. Several Azure Resource Manager templates are going to be used to create the various development environments. You have to monitor all of the control-plane events.\nYou decide to use Azure Storage Analytics for monitoring all of the control-plane activities.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nAzure Storage Analytics is used to provide insight into trace requests, usage trends and issues with your storage account.\nFor this requirement, you have to use the Activity logs service\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Azure Storage Analytics is used to provide insight into trace requests, usage trends and issues with your storage account.\nFor this requirement, you have to use the Activity logs service\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit"
+  },
+  {
+    "question": "Your team is setting up a DevOps environment on Azure. As part of the setup several development environments are going to be spun up in Azure. Several Azure Resource Manager templates are going to be used to create the various development environments. You have to monitor all of the control-plane events.\nYou decide to use Azure Activity logs for monitoring all of the control-plane activities.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYes, this is the right approach.\nThe Microsoft documentation mentions the following\n\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "A",
+    "normalizedRationale": "Yes, this is the right approach.\nThe Microsoft documentation mentions the following\n\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit"
+  },
+  {
+    "question": "Your team is setting up a DevOps environment on Azure. As part of the setup several development environments are going to be spun up in Azure. Several Azure Resource Manager templates are going to be used to create the various development environments. You have to monitor all of the control-plane events.\nYou decide to use Network Security Group Flow logs for monitoring all of the control-plane activities.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nThis is used to capture ingress and egress IP traffic that flows via Network Security groups\nFor this requirement, you have to use the Activity logs service\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "B",
+    "normalizedRationale": "This is used to capture ingress and egress IP traffic that flows via Network Security groups\nFor this requirement, you have to use the Activity logs service\nFor more information on logs and audits, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/log-audit"
+  },
+  {
+    "question": "Your company want to develop and deploy a web application onto Azure. This is an ecommerce application. They want to track various user insights for their web application. Some of the key requirements for gaining user insights is given below\n– Insights on to how many users complete a product purchase\n– Where do users churn the most from the application\n– Are page load times affecting a users decision in continuing to use the application.\nYou plan to use Application Insights for all of the above requirements.\nWhich of the following in Application Insights would you use for the following requirement?\nInsights on to how many users complete a product purchase",
+    "answers": [
+      "1. \n\n Funnels",
+      "2. \n\n Cohorts",
+      "3. \n\n Impact",
+      "4. \n\n Retention"
+    ],
+    "rationale": "Correct \nAnswer – A\nYou can use Funnels to see whether users are completing multiple stages within your web application\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  Funnels, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-funnels",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Analyze metrics from instrumentation",
+    "scrapedRationale": "A",
+    "normalizedRationale": "You can use Funnels to see whether users are completing multiple stages within your web application\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  Funnels, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-funnels"
+  },
+  {
+    "question": "Which of the following in Application Insights would you use for the following requirement?\nWhere do users churn the most from the application",
+    "answers": [
+      "1. \n\n Funnels",
+      "2. \n\n Cohorts",
+      "3. \n\n Impact",
+      "4. \n\n Retention",
+      "5. \n\n User Flows"
+    ],
+    "rationale": "Correct \nAnswer  E\nYou can use User Flows for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  User Flows, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-flows",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Analyze metrics from instrumentation",
+    "scrapedRationale": "E",
+    "normalizedRationale": "You can use User Flows for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  User Flows, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-flows"
+  },
+  {
+    "question": "Which of the following in Application Insights would you use for the following requirement?\nAre page load times affecting a users decision in continuing to use the application.",
+    "answers": [
+      "1. \n\n Funnels",
+      "2. \n\n Cohorts",
+      "3. \n\n Impact",
+      "4. \n\n Retention",
+      "5. \n\n User Flows"
+    ],
+    "rationale": "Correct \nAnswer  C\nYou can use the Impact feature for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  Impact, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-impact",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Analyze metrics from instrumentation",
+    "scrapedRationale": "C",
+    "normalizedRationale": "You can use the Impact feature for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on Application Insights  Impact, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-impact"
+  },
+  {
+    "question": "You have to deploy a set of Azure Virtual Machines which will sit behind an Azure Load Balancer. The Virtual Machines will have a web site hosted on them. Users will be accessing the web site via the URL https://photonapps.com.\nYou have to implement probes based on HTTPS. You have to ensure costs are minimized in the implementation process.\nWhich of the following would you choose as the underlying SKU type for the Load Balancer?",
+    "answers": [
+      "1. \n\n Basic",
+      "2. \n\n Standard",
+      "3. \n\n Premium",
+      "4. \n\n Isolated"
+    ],
+    "rationale": "Correct \nAnswer  B\nThe Azure Load balancer has two SKU types : Basic and Standard.\nThe Standard SKU supports the HTTPS probe type\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on probes for the Azure Load Balancer  Impact, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Configure and manage repositories",
+    "scrapedRationale": "B",
+    "normalizedRationale": "The Azure Load balancer has two SKU types : Basic and Standard.\nThe Standard SKU supports the HTTPS probe type\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on probes for the Azure Load Balancer  Impact, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview"
+  },
+  {
+    "question": "Your company is planning on setting up multiple DevOps environment as part of their Azure subscription. You are responsible for setting up secure access to resources in Azure. You have to ensure certain Admin-level users use Multi-Factor authentication when logging in to the Azure portal. Which of the following would implement for this requirement?",
+    "answers": [
+      "1. \n\n Azure Active Directory Identity Protection",
+      "2. \n\n Conditional Access",
+      "3. \n\n Azure Policies",
+      "4. \n\n Azure Security"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can use Conditional Access in Azure Active Directory to enforce such policies.\nThe Microsoft documentation mentions the following on commonly applied policies for Conditional Access\n\nOption A is incorrect since this is used to automate the detection and remediation of identity-based risks.\nOption C is incorrect since this is used more from a governing aspect for Azure resources\nOption D is incorrect since this is used to check and implement security for your Azure based resources\nFor more information on Conditional Access, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "B",
+    "normalizedRationale": "You can use Conditional Access in Azure Active Directory to enforce such policies.\nThe Microsoft documentation mentions the following on commonly applied policies for Conditional Access\n\nOption A is incorrect since this is used to automate the detection and remediation of identity-based risks.\nOption C is incorrect since this is used more from a governing aspect for Azure resources\nOption D is incorrect since this is used to check and implement security for your Azure based resources\nFor more information on Conditional Access, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview"
+  },
+  {
+    "question": "Your team currently develops applications that are built around docker containers. You are planning on pushing the images and storing them in Azure container registry. Several application environments in Azure would then pull these images and run them as containers.\nYou have to ensure service principals are used to access the Azure container registry. You have to ensure the credentials for the service principal are stored in an existing Azure key vault instance.\nYou have to complete the below Azure CLI command to implement this requirement\nSLOT_1 \\\n–vault-name $AKV_NAME \\\n–name $ACR_NAME-pull-pwd \\\n–value $(SLOT_2 \\\n–name $ACR_NAME-pull \\\n–scopes $(az acr show –name $ACR_NAME –query id –output tsv) \\\n–role acrpull \\\n–query password \\\n–output tsv)\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n az keyvault set",
+      "2. \n\n az keyvault secret set",
+      "3. \n\n az ad sp create-for-rbac",
+      "4. \n\n az ad create"
+    ],
+    "rationale": "Correct \nAnswer  B\nHere we have to set the value of the secret in the key vault\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on an example on Azure container registry tasks, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-task",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Here we have to set the value of the secret in the key vault\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on an example on Azure container registry tasks, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-task"
+  },
+  {
+    "question": "Your team currently develops applications that are built around docker containers. You are planning on pushing the images and storing them in Azure container registry. Several application environments in Azure would then pull these images and run them as containers.\nYou have to ensure service principals are used to access the Azure container registry. You have to ensure the credentials for the service principal are stored in an existing Azure key vault instance.\nYou have to complete the below Azure CLI command to implement this requirement\nSLOT_1 \\\n–vault-name $AKV_NAME \\\n–name $ACR_NAME-pull-pwd \\\n–value $(SLOT_2 \\\n–name $ACR_NAME-pull \\\n–scopes $(az acr show –name $ACR_NAME –query id –output tsv) \\\n–role acrpull \\\n–query password \\\n–output tsv)\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n az keyvault set",
+      "2. \n\n az keyvault secret set",
+      "3. \n\n az ad sp create-for-rbac",
+      "4. \n\n az ad create"
+    ],
+    "rationale": "Correct \nAnswer  C\nHere we have to go ahead and create the service principal in Azure AD\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on an example on Azure container registry tasks, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-task",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Here we have to go ahead and create the service principal in Azure AD\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on an example on Azure container registry tasks, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-task"
+  },
+  {
+    "question": "Your team currently makes use of Azure Pipelines. You have to configured Azure Pipelines to pick up code from various GitHub repositories. You have to create a continuous integration trigger that would cause the pipeline to run based on the following event\nWhenever a change is pushed to any of the master or release branches\nEnsure that the pipeline does not run when a change is made to a specific archive release branch\nYou have to complete the below YAML configuration for this requirement\ntrigger:\nbranches:\nSLOT_1:\n– master\n– releases/*\nSLOT_2:\n– releases/old*\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n github",
+      "2. \n\n pipeline",
+      "3. \n\n include",
+      "4. \n\n exclude"
+    ],
+    "rationale": "Correct \nAnswer  C\nSince we have to include the master and release branches, we will use the include statement in the YAML configuration\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Github with Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement pipelines",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Since we have to include the master and release branches, we will use the include statement in the YAML configuration\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Github with Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml"
+  },
+  {
+    "question": "Your team currently makes use of Azure Pipelines. You have to configured Azure Pipelines to pick up code from various GitHub repositories. You have to create a continuous integration trigger that would cause the pipeline to run based on the following event\nWhenever a change is pushed to any of the master or release branches\nEnsure that the pipeline does not run when a change is made to a specific archive release branch\nYou have to complete the below YAML configuration for this requirement\ntrigger:\nbranches:\nSLOT_1:\n– master\n– releases/*\nSLOT_2:\n– releases/old*\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n github",
+      "2. \n\n pipeline",
+      "3. \n\n include",
+      "4. \n\n exclude"
+    ],
+    "rationale": "Correct \nAnswer  D\nSince we have to exclude the archive release branch, we will use the exclude statement in the YAML configuration\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Github with Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement pipelines",
+    "scrapedRationale": "D",
+    "normalizedRationale": "Since we have to exclude the archive release branch, we will use the exclude statement in the YAML configuration\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Github with Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml"
+  },
+  {
+    "question": "Your team currently has code hosted in a Github repository. You have to connect an Azure Boards project with a GitHub.com repository.\nWhich of the following groups should you be a member of in your Azure DevOps project to connect to GitHub from Azure Boards?\nChoose 2 answers from the options given below. Each answer presents part of the solution",
+    "answers": [
+      "1. \n\n Reader Group",
+      "2. \n\n Project Administrator Group",
+      "3. \n\n Projects Contributor Group",
+      "4. \n\n GitHub Group"
+    ],
+    "rationale": "Correct \nAnswer  B and C\nYou have to be either a member of the Project Administrator and the project Contributor group.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on connecting to GitHub from Azure Boards, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/connect-to-github?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Configure and manage repositories",
+    "scrapedRationale": "B and C",
+    "normalizedRationale": "You have to be either a member of the Project Administrator and the project Contributor group.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on connecting to GitHub from Azure Boards, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/connect-to-github?view=azure-devops"
+  },
+  {
+    "question": "Your team currently has code hosted in a Github repository. You have to connect an Azure Boards project with a GitHub.com repository.\nWhich of the following permissions must be given to a user for the GitHub repository to connect to GitHub from Azure Boards? Choose 2 answers from the options given below. Each answer presents a complete solution",
+    "answers": [
+      "1. \n\n Administrator",
+      "2. \n\n Owner",
+      "3. \n\n Reader",
+      "4. \n\n Default"
+    ],
+    "rationale": "Correct \nAnswer  A and B\nYou must be either the administrator or owner of the GitHub repository\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on connecting to GitHub from Azure Boards, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/connect-to-github?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Configure collaboration and communication",
+    "scrapedRationale": "A and B",
+    "normalizedRationale": "You must be either the administrator or owner of the GitHub repository\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on connecting to GitHub from Azure Boards, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/connect-to-github?view=azure-devops"
+  },
+  {
+    "question": "Your team is planning on using Azure Pipelines for continuous integration and release. They need to enable continuous monitoring for the release pipelines.\nWhich of the following is a template that can be used in the Release pipeline to achieve this requirement?",
+    "answers": [
+      "1. \n\n Azure App Service deployment with continuous monitoring",
+      "2. \n\n Activity Logs monitoring",
+      "3. \n\n Release Annotations",
+      "4. \n\n Release monitoring"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can use Azure App Service deployment with continuous monitoring to achieve this requirement.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on continuous monitoring in your release pipeline, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/continuous-monitoring",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "A",
+    "normalizedRationale": "You can use Azure App Service deployment with continuous monitoring to achieve this requirement.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on continuous monitoring in your release pipeline, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/continuous-monitoring"
+  },
+  {
+    "question": "Your company wants to use Azure Artifacts for hosting a private PowerShell repository. This would allow multiple teams to download and upload PowerShell modules to. Which of the following steps would you implement for this requirement?\nChoose 3 answers from the options given below",
+    "answers": [
+      "1. \n\n Create a certificate that would be used to authenticate other services with Azure DevOps services",
+      "2. \n\n Create a Personal Access Token that would be used to authenticate other services with Azure DevOps services",
+      "3. \n\n Create a new feed within Azure Artifacts",
+      "4. \n\n Create a new repository within Azure Artifacts",
+      "5. \n\n Create packages for the PowerShell modules and send them across to the Azure Artifacts Feed"
+    ],
+    "rationale": "Correct \nAnswer  B,C and E\nThe correct list of steps is\nCreate a Personal Access Token that would be used to authenticate other services with Azure DevOps services\nCreate a new feed within Azure Artifacts\nCreate packages for the PowerShell modules and send them across to the Azure Artifacts Feed.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using Azure Artifacts as a private PowerShell repository, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/tutorials/private-powershell-library?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Configure and manage repositories",
+    "scrapedRationale": "B,C and E",
+    "normalizedRationale": "The correct list of steps is\nCreate a Personal Access Token that would be used to authenticate other services with Azure DevOps services\nCreate a new feed within Azure Artifacts\nCreate packages for the PowerShell modules and send them across to the Azure Artifacts Feed.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using Azure Artifacts as a private PowerShell repository, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/tutorials/private-powershell-library?view=azure-devops"
+  },
+  {
+    "question": "A team is currently making use of Azure Pipelines for their application deployments. They now want to also implement database updates to an Azure SQL database after every successful build. Which of the following are steps they can implement for this requirement? Choose 2 answers from the options given below.",
+    "answers": [
+      "1. \n\n Create an ARM template for the schema related changes",
+      "2. \n\n Create a DACPAC to deploy schema related changes",
+      "3. \n\n Use the Azure SQL Database deployment task",
+      "4. \n\n Use the Azure Stack deployment task"
+    ],
+    "rationale": "Correct \nAnswer  B and C\nYou can publish schema related changes using a DACPAC. You can then use the Azure SQL Database deployment task in Azure Pipelines\nThis is also mentioned in the Microsoft documentation\n\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on publishing changes to an Azure SQL database, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-sqldb",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B and C",
+    "normalizedRationale": "You can publish schema related changes using a DACPAC. You can then use the Azure SQL Database deployment task in Azure Pipelines\nThis is also mentioned in the Microsoft documentation\n\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on publishing changes to an Azure SQL database, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-sqldb"
+  },
+  {
+    "question": "A company wants to deploy a web-based application onto Azure. The application is going to be hosted on a set of Azure virtual machines located in different regions. They want to implement the strategy of Blue-Green deployment for all future application updates. You also want to implement an Azure DNS load balancing solution for implementing Blue-Green deployments.\nWhich of the following would they use as the service for implementing Azure DNS load balancing?",
+    "answers": [
+      "1. \n\n Azure Standard Load Balancer",
+      "2. \n\n Azure CDN",
+      "3. \n\n Azure Traffic Manager",
+      "4. \n\n Azure Basic Load Balancer"
+    ],
+    "rationale": "Correct \nAnswer  C\nAzure Traffic Manager is Azures DNS based load balancing solution.\nThere is a blog article also related to this.\n\nThe other options are incorrect since they dont have features of DNS routing\nFor more information on the article itself, please refer to the following link\nhttps://azure.microsoft.com/en-in/blog/blue-green-deployments-using-azure-traffic-manager",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Azure Traffic Manager is Azures DNS based load balancing solution.\nThere is a blog article also related to this.\n\nThe other options are incorrect since they dont have features of DNS routing\nFor more information on the article itself, please refer to the following link\nhttps://azure.microsoft.com/en-in/blog/blue-green-deployments-using-azure-traffic-manager"
+  },
+  {
+    "question": "A company wants to deploy a web-based application onto Azure. The application is going to be hosted on a set of Azure virtual machines located in different regions. They want to implement the strategy of Blue-Green deployment for all future application updates. You also want to implement an Azure DNS load balancing solution for implementing Blue-Green deployments.\nWhich of the following would be implemented as a feature to enable Blue-Green Deployments?",
+    "answers": [
+      "1. \n\n Automatic updates",
+      "2. \n\n Rolling updates",
+      "3. \n\n Weighted routing method",
+      "4. \n\n Priority routing method"
+    ],
+    "rationale": "Correct \nAnswer  C\nWhen you are implementing the Azure Traffic Manager as the DNS routing service, you can use the Weighted routing method for implementing Blue-Green deployments.\n\nBased on the implementation of using Azure Traffic Manager for Blue-Green deployments, all other options are incorrect\nFor more information on the article itself, please refer to the following link\nhttps://azure.microsoft.com/en-in/blog/blue-green-deployments-using-azure-traffic-manager",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "C",
+    "normalizedRationale": "When you are implementing the Azure Traffic Manager as the DNS routing service, you can use the Weighted routing method for implementing Blue-Green deployments.\n\nBased on the implementation of using Azure Traffic Manager for Blue-Green deployments, all other options are incorrect\nFor more information on the article itself, please refer to the following link\nhttps://azure.microsoft.com/en-in/blog/blue-green-deployments-using-azure-traffic-manager"
+  },
+  {
+    "question": "Your company is currently making use of Azure Pipelines for application deployment. They want to also make use of Azure Pipelines for deploying Azure Resource Manager Templates. Which of the following are two ways to deploy templates with Azure Pipelines? Choose 2 answers from the options given below",
+    "answers": [
+      "1. \n\n Create a Resource Group deployment task",
+      "2. \n\n Add a task that runs an Azure PowerShell script",
+      "3. \n\n Add tasks to copy and deploy tasks",
+      "4. \n\n Add an Azure Blueprint task"
+    ],
+    "rationale": "Correct \nAnswer  B and C\nThe two ways given in the Microsoft documentation for the deployment of Azure Resource Manager Templates as part of Azure Pipelines is\nAdd a task that runs an Azure PowerShell script\nAdd tasks to copy and deploy tasks\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on adding templates to Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B and C",
+    "normalizedRationale": "The two ways given in the Microsoft documentation for the deployment of Azure Resource Manager Templates as part of Azure Pipelines is\nAdd a task that runs an Azure PowerShell script\nAdd tasks to copy and deploy tasks\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on adding templates to Azure Pipelines, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines"
+  },
+  {
+    "question": "Your company currently has an Azure subscription and an Azure tenant. Teams currently develop and deploy applications onto Azure. There are some application built on top of docker based containers. Azure Container Registry is currently being used to store the container images. The company wants to have the ability to detect any image vulnerabilities for the images stored in Azure Container Registry. Which of the following can be used for this purpose?",
+    "answers": [
+      "1. \n\n Azure Identity Protected",
+      "2. \n\n Privileged Identity Management",
+      "3. \n\n Azure Security Center  Standard Tier",
+      "4. \n\n Azure Blueprints"
+    ],
+    "rationale": "Correct \nAnswer  C\nTo check for vulnerabilities, you can use Azure Security Center, the Standard Tier.\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Container Registry with Security Center, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security-center/azure-container-registry-integration",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Automate security and compliance scanning",
+    "scrapedRationale": "C",
+    "normalizedRationale": "To check for vulnerabilities, you can use Azure Security Center, the Standard Tier.\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Container Registry with Security Center, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/security-center/azure-container-registry-integration"
+  },
+  {
+    "question": "Your company has just setup an Azure subscription and an Azure tenant. They are planning on setting up several resources in Azure. They want to collect resource-based logs into a central location. They want to be able to create queries for the log data. Which of the following could they use for storage of resource logs?",
+    "answers": [
+      "1. \n\n Azure Event Hubs",
+      "2. \n\n Azure Log Analytics",
+      "3. \n\n Azure Security Center",
+      "4. \n\n Azure Pipelines"
+    ],
+    "rationale": "Correct \nAnswer  B\nThey can direct resource logs onto a Log Analytics Workspace\nThe Microsoft documentation mentions a tutorial on the same\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on collecting and analysing resource logs, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-resource-logs",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "B",
+    "normalizedRationale": "They can direct resource logs onto a Log Analytics Workspace\nThe Microsoft documentation mentions a tutorial on the same\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on collecting and analysing resource logs, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-resource-logs"
+  },
+  {
+    "question": "Your team needs to deploy a set of applications onto Azure Linux virtual machines. The application will be deployed as Docker containers. You have to send the logs emitted from the docker containers onto the Azure Monitor service.\nWhich of the following would you install on the Azure virtual machines?",
+    "answers": [
+      "1. \n\n Kubernetes",
+      "2. \n\n Swarm",
+      "3. \n\n Log Analytics Agent",
+      "4. \n\n Azure Security Center"
+    ],
+    "rationale": "Correct \nAnswer  C\nYou can install the Log Analytics Agent on the virtual machines. The agent would send the logs onto a Log Analytics workspace.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on sending container logs onto Azure Monitor, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/containers",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "C",
+    "normalizedRationale": "You can install the Log Analytics Agent on the virtual machines. The agent would send the logs onto a Log Analytics workspace.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on sending container logs onto Azure Monitor, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/containers"
+  },
+  {
+    "question": "A team wants to make use of Azure Pipelines for the continuous deployment of applications. The applications need to be deployed onto a set of Azure virtual machines.\nWhich of the following makes it easier to target the application release on a set of virtual machines?",
+    "answers": [
+      "1. \n\n Agent pool",
+      "2. \n\n Deployment groups",
+      "3. \n\n ARM agents",
+      "4. \n\n Resource groups"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can create a deployment group and install agents on each of the servers as part of the deployment group.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using deployment groups, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B",
+    "normalizedRationale": "You can create a deployment group and install agents on each of the servers as part of the deployment group.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using deployment groups, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/?view=azure-devops"
+  },
+  {
+    "question": "A team wants to make use of Azure Pipelines for the continuous deployment of applications. The applications need to be deployed onto a set of Azure virtual machines.\nWhich of the following can be used to prepare the virtual machines?",
+    "answers": [
+      "1. \n\n Azure Pipeline Agent extension",
+      "2. \n\n Deployment groups",
+      "3. \n\n Release builds",
+      "4. \n\n Release gates"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can use extension to easily deploy the agent onto Azure virtual machines\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using deployment groups, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "A",
+    "normalizedRationale": "You can use extension to easily deploy the agent onto Azure virtual machines\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on using deployment groups, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/?view=azure-devops"
+  },
+  {
+    "question": "A company is currently hosting a multi-tier web application in Azure. The application currently makes use of the Azure Web App service and the Azure SQL Database service. The front-end service is hosted in Azure Web Apps and the backend in an Azure SQL Database service. The application also makes use of Azure Functions. You want the Azure DevOps team to be notified whenever the frontend application fails to return a status code of 200. Which of the following would you use for this requirement?",
+    "answers": [
+      "1. \n\n Service Map feature in Azure Log Analytics",
+      "2. \n\n The Availability tests feature in Azure Application Insights",
+      "3. \n\n The Profiler feature in Azure Application Insights",
+      "4. \n\n The Application Map feature in Azure Application Insights"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can use the Availability tests feature in Azure Application Insights\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on availability tests in Azure Application Insights, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Implement an Instrumentation Strategy",
+    "subcategory": "Configure monitoring for a DevOps environment",
+    "scrapedRationale": "B",
+    "normalizedRationale": "You can use the Availability tests feature in Azure Application Insights\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on availability tests in Azure Application Insights, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability"
+  },
+  {
+    "question": "Your team is planning on hosting a git repository using Azure repos. The team would be hosting the following types of files\n– ASP.Net core code files\n– Images, JavaScript files linked to the projects\nThe team wants to follow the best practices when it comes to hosting the files in a git-based repository.\nWhich of the following are ideal strategies when working with large binary source files? Choose 2 answers from the options given below",
+    "answers": [
+      "1. \n\n Compress the image files and store them in the git repository for better space management",
+      "2. \n\n Leave the large image files as they are",
+      "3. \n\n Upload the compiled code to the repository for better management of the entire code base",
+      "4. \n\n Avoid committing compiled code onto the repository"
+    ],
+    "rationale": "Correct \nAnswer  B and D\nThe ideal strategies for large binary files are also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on working with large binary source files, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/manage-large-files?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Design and implement branching strategies for the source code",
+    "scrapedRationale": "B and D",
+    "normalizedRationale": "The ideal strategies for large binary files are also given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on working with large binary source files, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/manage-large-files?view=azure-devops"
+  },
+  {
+    "question": "Your team is planning on hosting a git repository using Azure repos. The team would be hosting the following types of files\n– ASP.Net core code files\n– Images, JavaScript files linked to the projects\nThe team wants to follow the best practices when it comes to hosting the files in a git-based repository.\nWhich of the following can be used to manage source files that large differences between versions and frequent updates to the files?",
+    "answers": [
+      "1. \n\n Git locking",
+      "2. \n\n Git merge",
+      "3. \n\n Git LFS",
+      "4. \n\n Git squash merge"
+    ],
+    "rationale": "Correct \nAnswer  C\nWe can use Git LFS to manage such file types.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on working with large binary source files, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/manage-large-files?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement a Source Control Strategy",
+    "subcategory": "Design and implement branching strategies for the source code",
+    "scrapedRationale": "C",
+    "normalizedRationale": "We can use Git LFS to manage such file types.\nThis is also mentioned in the Microsoft documentation.\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on working with large binary source files, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/manage-large-files?view=azure-devops"
+  },
+  {
+    "question": "Your company is planning on using Azure DevOps. The company wants to ensure that only devices that are connected to their on-premises network can access the Azure DevOps environment. Which of the following can be used to implement this requirement?",
+    "answers": [
+      "1. \n\n Make sure to assign Stakeholder access level to all users",
+      "2. \n\n Configure risky sign-ins in Azure Active Directory",
+      "3. \n\n Configure Project security in Azure DevOps",
+      "4. \n\n Configure conditional access in Azure Active Directory"
+    ],
+    "rationale": "Correct \nAnswer  D\nYou can actually configure conditional access in Azure Active Directory to ensure that only company authenticated devices are used to access Azure based resources.\nThe Microsoft documentation mentions the following on conditional access.\n\nThe other options are invalid since they cannot be used to control access based on devices.\nFor more information on Conditional access, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "D",
+    "normalizedRationale": "You can actually configure conditional access in Azure Active Directory to ensure that only company authenticated devices are used to access Azure based resources.\nThe Microsoft documentation mentions the following on conditional access.\n\nThe other options are invalid since they cannot be used to control access based on devices.\nFor more information on Conditional access, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview"
+  },
+  {
+    "question": "A DevOps team is building resource manager templates that would be used to setup multiple environments in Azure. They are building a template that would be used to deploy an Azure SQL Server along with an Azure SQL Database on the server. A snippet of the template is given below\nWhich of the following would go into SLOT_1?\n“resources”: [\n{\n“name”: “[variables(‘sqlserverName’)]”,\n“apiVersion”: “2014-04-01-preview”,\n“type”: “Microsoft.Sql/servers”,\n“location”: “[resourceGroup().location]”,\n“tags”: {\n“displayName”: “SqlServer”\n},\n“properties”: {\n“administratorLogin”: “[parameters(‘administratorLogin’)]”,\n“administratorLoginPassword”: “[parameters(‘administratorLoginPassword’)]”\n},\n“SLOT_1”: [\n{\n“name”: “[parameters(‘databaseName’)]”,\n“apiVersion”: “2014-04-01-preview”,\n“type”: “databases”,\n“location”: “[resourceGroup().location]”,\n“SLOT_2”: [\n“[variables(‘sqlserverName’)]”\n],\n“tags”: {\n“displayName”: “Database”\n},\n“properties”: {\n“edition”: “[parameters(‘edition’)]”,\n“collation”: “[parameters(‘collation’)]”,\n“maxSizeBytes”: “[parameters(‘maxSizeBytes’)]”,\n“requestedServiceObjectiveName”: “[parameters(‘requestedServiceObjectiveName’)]”\n}\n}\n]\n}\n]",
+    "answers": [
+      "1. \n\n resources",
+      "2. \n\n child",
+      "3. \n\n dependsOn",
+      "4. \n\n properties"
+    ],
+    "rationale": "Correct \nAnswer  A\nHere we have the child resources section for the database itself.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on specifying resource dependency, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Processes and Communications",
+    "subcategory": "Design and implement traceability and flow of work",
+    "scrapedRationale": "A",
+    "normalizedRationale": "Here we have the child resources section for the database itself.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on specifying resource dependency, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency"
+  },
+  {
+    "question": "A DevOps team is building resource manager templates that would be used to setup multiple environments in Azure. They are building a template that would be used to deploy an Azure SQL Server along with an Azure SQL Database on the server. A snippet of the template is given below\nWhich of the following would go into SLOT_2?\n“resources”: [\n{\n“name”: “[variables(‘sqlserverName’)]”,\n“apiVersion”: “2014-04-01-preview”,\n“type”: “Microsoft.Sql/servers”,\n“location”: “[resourceGroup().location]”,\n“tags”: {\n“displayName”: “SqlServer”\n},\n“properties”: {\n“administratorLogin”: “[parameters(‘administratorLogin’)]”,\n“administratorLoginPassword”: “[parameters(‘administratorLoginPassword’)]”\n},\n“SLOT_1”: [\n{\n“name”: “[parameters(‘databaseName’)]”,\n“apiVersion”: “2014-04-01-preview”,\n“type”: “databases”,\n“location”: “[resourceGroup().location]”,\n“SLOT_2”: [\n“[variables(‘sqlserverName’)]”\n],\n“tags”: {\n“displayName”: “Database”\n},\n“properties”: {\n“edition”: “[parameters(‘edition’)]”,\n“collation”: “[parameters(‘collation’)]”,\n“maxSizeBytes”: “[parameters(‘maxSizeBytes’)]”,\n“requestedServiceObjectiveName”: “[parameters(‘requestedServiceObjectiveName’)]”\n}\n}\n]\n}\n]",
+    "answers": [
+      "1. \n\n resources",
+      "2. \n\n child",
+      "3. \n\n dependsOn",
+      "4. \n\n properties"
+    ],
+    "rationale": "Correct \nAnswer  C\nHere we have to mention the dependency of the Azure SQL database on the database server.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on specifying resource dependency, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement infrastructure as code (IaC)",
+    "scrapedRationale": "C",
+    "normalizedRationale": "Here we have to mention the dependency of the Azure SQL database on the database server.\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on specifying resource dependency, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency"
+  },
+  {
+    "question": "A DevOps team needs to deploy an Azure resource manager template using PowerShell. You have to complete the below PowerShell script for this requirement\n$resourceGroupName = Read-Host -Prompt “Enter the Resource Group name”\n$location = Read-Host -Prompt “Enter the location (i.e. centralus)”\nNew-AzResourceGroup -Name $resourceGroupName -Location $location\nSLOT_1 -Name ExampleDeployment `\n-ResourceGroupName $resourceGroupName `\nSLOT_2 c:\\MyTemplates\\azuredeploy.json\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n New-AzARMdeploy",
+      "2. \n\n New-AzResourceGroupDeployment",
+      "3. \n\n New-Azdeploy",
+      "4. \n\n Set-AzResourceGroupDeployment"
+    ],
+    "rationale": "Correct \nAnswer  B\nWe have to use the New-AzResourceGroupDeployment cmdlet to specify a new ARM template deployment\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on deploying ARM templates via PowerShell, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-powershell",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B",
+    "normalizedRationale": "We have to use the New-AzResourceGroupDeployment cmdlet to specify a new ARM template deployment\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on deploying ARM templates via PowerShell, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-powershell"
+  },
+  {
+    "question": "A DevOps team needs to deploy an Azure resource manager template using PowerShell. You have to complete the below PowerShell script for this requirement\n$resourceGroupName = Read-Host -Prompt “Enter the Resource Group name”\n$location = Read-Host -Prompt “Enter the location (i.e. centralus)”\nNew-AzResourceGroup -Name $resourceGroupName -Location $location\nSLOT_1 -Name ExampleDeployment `\n-ResourceGroupName $resourceGroupName `\nSLOT_2 c:\\MyTemplates\\azuredeploy.json\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n -file",
+      "2. \n\n -TemplateFile",
+      "3. \n\n -URL",
+      "4. \n\n -URI"
+    ],
+    "rationale": "Correct \nAnswer  B\nHere we have to use the flag of -TemplateFile\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on deploying ARM templates via PowerShell, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-powershell",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Here we have to use the flag of -TemplateFile\nThis is also given as an example in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on deploying ARM templates via PowerShell, please refer to the following link\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-powershell"
+  },
+  {
+    "question": "A development team has implemented Azure Pipelines. They have defined an approval process based on a condition. There is a policy attached that the approvals must be completed within 5 hours.\nBut after implementation, the deployments start failing after 2 hours.\nYou need to ensure the deployments only fail if the approval time is longer than 5 hours.\nYou decide to modify the Timeout setting from the pre-deployment approvals from the Pre-deployment conditions section\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nIn the Microsoft documentation, it mentions that if the Timeout is exceeded for an approval process, the deployment is rejected. Since we are looking at a pre-deployment stage , this is the right approach to change the timeout for this process.\n\nFor more information on using release and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/approvals?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "A",
+    "normalizedRationale": "In the Microsoft documentation, it mentions that if the Timeout is exceeded for an approval process, the deployment is rejected. Since we are looking at a pre-deployment stage , this is the right approach to change the timeout for this process.\n\nFor more information on using release and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/approvals?view=azure-devops"
+  },
+  {
+    "question": "A development team has implemented Azure Pipelines. They have defined an approval process based on a condition. There is a policy attached that the approvals must be completed within 5 hours.\nBut after implementation, the deployments start failing after 2 hours.\nYou need to ensure the deployments only fail if the approval time is longer than 5 hours.\nYou decide to modify the Timeout setting from the post-deployment approvals from the Post-deployment conditions section\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nSince we are looking at pre-deployment , we should not change the timeout of post-deployment.\nFor more information on using release and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/approvals?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Since we are looking at pre-deployment , we should not change the timeout of post-deployment.\nFor more information on using release and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/approvals?view=azure-devops"
+  },
+  {
+    "question": "A development team has implemented Azure Pipelines. They have defined an approval process based on a condition. There is a policy attached that the approvals must be completed within 5 hours.\nBut after implementation, the deployments start failing after 2 hours.\nYou need to ensure the deployments only fail if the approval time is longer than 5 hours.\nYou decide to modify the Time interval between re-evaluation of gates from the Post-deployment conditions section\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nGates are used for configuring automated calls to external services. Since this is a manual approval, we should not work with the gate settings.\nFor more information on using gates and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deploy-using-approvals?view=azure-devops",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Design and Implement Build and Release Pipelines",
+    "subcategory": "Design and implement deployments",
+    "scrapedRationale": "B",
+    "normalizedRationale": "Gates are used for configuring automated calls to external services. Since this is a manual approval, we should not work with the gate settings.\nFor more information on using gates and approvals, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/deploy-using-approvals?view=azure-devops"
+  },
+  {
+    "question": "A team is using Azure Resource Manager templates in their DevOps pipeline. The template needs to access secrets stored in the Azure Key vault service. You as a DevOps engineer has to ensure that the resource manager template can successfully access the secrets using the principle of least privilege.\nWhich of the following would you be able to use the data inside the key vault data plane?",
+    "answers": [
+      "1. \n\n Key vault access policy",
+      "2. \n\n Key Vault advanced policy access",
+      "3. \n\n Role based access control",
+      "4. \n\n Azure policies"
+    ],
+    "rationale": "Correct \nAnswer  A\nIn the Azure key vault you need to ensure that you click on Enable access to Azure Resource Manager for template deployment as shown below. This allows the use of accessing resources in Azure Key vault via resource manager templates.\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Key vault with ARM templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/overview-security#identity-and-access-management",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "A",
+    "normalizedRationale": "In the Azure key vault you need to ensure that you click on Enable access to Azure Resource Manager for template deployment as shown below. This allows the use of accessing resources in Azure Key vault via resource manager templates.\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Key vault with ARM templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/overview-security#identity-and-access-management"
+  },
+  {
+    "question": "A team is using Azure Resource Manager templates in their DevOps pipeline. The templates needs to access secrets stored in the Azure Key vault service. You as a DevOps engineer has to ensure that the resource manager template can successfully access the secrets using the principle of least privilege.\nWhich of the following would you be able to use the data inside the key vault management plane?",
+    "answers": [
+      "1. \n\n Key vault access policy",
+      "2. \n\n Key Vault advanced policy access",
+      "3. \n\n Role based access control",
+      "4. \n\n Azure policies"
+    ],
+    "rationale": "Correct \nAnswer  C\nTo grant access to the secrets you can use Role based access control as shown below in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Key vault with ARM templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/overview-security#identity-and-access-management",
+    "quizNumber": "microsoft-azure-az-400-practice-sets",
+    "category": "Develop a Security and Compliance Plan",
+    "subcategory": "Design and implement authentication and authorization methods",
+    "scrapedRationale": "C",
+    "normalizedRationale": "To grant access to the secrets you can use Role based access control as shown below in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on integrating Azure Key vault with ARM templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/overview-security#identity-and-access-management"
+  }
+]

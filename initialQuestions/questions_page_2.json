@@ -1,0 +1,686 @@
+[
+  {
+    "question": "You are developing a web app that will use an App Service on Linux.\nYou create and push a Docker image that contains the web app to Azure Container Registry.\nYou should be able to access the console logs in real-time generated from inside the container.\nWhich Azure CLI commands should you use?",
+    "answers": [
+      "az webapp log config --name webapp --resource-group RG1 --docker-container-logging filesystem\naz webapp log tail --name webapp --resource-group RG1",
+      "az webapp log config --name webapp --resource-group RG1 --application-logging filesystem\naz webapp log tail --name webapp --resource-group RG1",
+      "az webapp log config --name webapp --resource-group RG1 --docker-container-logging filesystem\naz webapp log download --name webapp --resource-group RG1",
+      "az webapp log config --name webapp --resource-group RG1 --docker-container-logging filesystem\naz webapp log show --name webapp --resource-group RG1"
+    ],
+    "correctAnswer": "To access the console logs generated from inside the container, first, turn on container logging by running the following command:\naz webapp log config –name –resource-group –docker-container-logging filesystem\nReplace and with the names appropriate for your web app.\nOnce container logging is turned on, run the following command to see the log stream:\naz webapp log tail –name –resource-group\nIf you don‘t see console logs immediately, check again in 30 seconds.\nTo stop log streaming at any time, type Ctrl+C.\nhttps://docs.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux#access-diagnostic-logs-1",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to use Azure messaging solution in an application. The messaging solution must meet the below requirements:It must provide transactional support.It must provide duplicate detection.Able to store the messages for an unlimited period of time.Select the two solutions that will meet these requirements.",
+    "answers": [
+      "1. \n\n Azure Service Bus Topic",
+      "2. \n\n Azure Service Bus Queue",
+      "3. \n\n Azure Storage Queue",
+      "4. \n\n Azure Event Hub"
+    ],
+    "correctAnswer": "Azure event hub does not support duplicate detection and Azure storage queue does not provide transactional support.https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a website that will store the scanned copies of patient health records. If the health records are downloaded from storage by a third party, the contents of the forms must not be compromised.To achieve the requirement, you plan to store the health records in an Azure Key Vault as secrets.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Instead, encrypt the forms and Store the encrypted from in Azure Storage Blob storage.",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a website that will store the scanned copies of patient health records. If the health records are downloaded from storage by a third party, the contents of the forms must not be compromised.To achieve the requirement, you plan to create an Azure Cosmos DB database with Storage service encryption enabled and store the health records in the database.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "This approach will encrypt the data at rest. However, once data is read by a 3d party, it is not guaranteed that forms are not compromised.",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a website that will store the scanned copies of patient health records. If the health records are downloaded from storage by a third party, the contents of the forms must not be compromised.To achieve the requirement, you plan to create an Azure Key Vault key, use the key to encrypt the health records and store the encrypted health records in an Azure Blob storage.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Since health records are encrypted with a key, 3rd party cannot modify the forms.",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You develop an Azure Function app that uses HTTP trigger. The Azure Function app process data stored in an Azure blob storage. The Azure Function app is triggered using an output binding on the blob.The Function app continues to time out after four minutes. The Function app must process the blob data.You need to implement a solution so that the Function app does not time out and processes the blob data.You plan to use the Durable Function async pattern to process the blob data.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "The maximum amount of time that an HTTP triggered function can take to respond to a request is 230 seconds. This is because of the default idle timeout of Azure Load Balancer. For longer processing times, consider using the Durable Functions async pattern.https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#timeout",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You develop an Azure Function app that uses HTTP trigger. The Azure Function app process data stored in an Azure blob storage. The Azure Function app is triggered using an output binding on the blob.The Function app continues to time out after four minutes. The Function app must process the blob data.You need to implement a solution so that the Function app does not time out and processes the blob data.You plan to pass the HTTP trigger payload into an Azure Service Bus queue to be processed by a queue trigger function and return an immediate HTTP success response.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Large, long-running functions can cause unexpected timeout issues. Whenever possible, refactor large functions into smaller function sets that work together and return responses fast. For example, a webhook or HTTP trigger function might require an acknowledgment response within a certain time limit; it‘s common for webhooks to require an immediate response. You can pass the HTTP trigger payload into a queue to be processed by a queue trigger function. This approach lets you defer the actual work and return an immediate response.https://docs.microsoft.com/en-us/azure/azure-functions/functions-best-practices",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You develop an Azure Function app that uses HTTP trigger. The Azure Function app process data stored in an Azure blob storage. The Azure Function app is triggered using an output binding on the blob.The Function app continues to time out after four minutes. The Function app must process the blob data.You need to implement a solution so that the Function app does not time out and processes the blob data.You plan to the app to use an App Service hosting plan and enable the Always On setting.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Instead use Durable functions or use a queue/ event hub to pass the payload and trigger function from queue.https://docs.microsoft.com/en-us/azure/azure-functions/functions-best-practices",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to deploy an application named Application1 in an Azure App Service.You need to eliminate file conflicts between deployments and improve cold-start performance.Which setting should you configure in the Azure App Service?",
+    "answers": [
+      "1. \n\n Set WEBSITE_RUN_FROM_PACKAGE=0",
+      "2. \n\n Set WEBSITE_RUN_FROM_PACKAGE=1",
+      "3. \n\n Set Always On to Off",
+      "4. \n\n Set Always On to On"
+    ],
+    "correctAnswer": "You need to set WEBSITE_RUN_FROM_PACKAGE=1There are several benefits to running directly from a package:Eliminates file lock conflicts between deployment and runtime.Ensures only full-deployed apps are running at any time.Can be deployed to a production app (with restart).Improves the performance of Azure Resource Manager deployments.May reduce cold-start times, particularly for JavaScript functions with large npm package trees.https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing and deploying several ASP.NET web applications to Azure App Service. You plan to use sessions to store user information. You have configure auto-scaling in the Azure App Service.You need to ensure that session information is not lost when application scales out.What should you implement?",
+    "answers": [
+      "1. \n\n Set ARR affinity to Off",
+      "2. \n\n Set ARR affinity to On",
+      "3. \n\n Set WEBSITE_RUN_FROM_PACKAGE=0",
+      "4. \n\n Set WEBSITE_RUN_FROM_PACKAGE=1"
+    ],
+    "correctAnswer": "ARR affinity: In a multi-instance deployment, ensure that the client is routed to the same instance for the life of the session. You can set this option to Off for stateless applications. If client is routed to different instances, then session data will be lost.https://docs.microsoft.com/en-us/azure/app-service/configure-common#configure-connection-strings",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to deploy an application into an Azure virtual machine.Just in time (JIT) access has been enabled on the virtual machine.What should be your first step to connect to the virtual machine using remote desktop?",
+    "answers": [
+      "1. \n\n From Azure Directory (Azure AD) Privileged Identity Management (PIM), activate the Security administrator user role.",
+      "2. \n\n From Azure Active Directory (Azure AD) Privileged Identity Management (PIM), activate the Owner role for the virtual machine.",
+      "3. \n\n From the Azure portal, select the virtual machine VM1, select Connect, and then select Request access."
+    ],
+    "correctAnswer": "You can request access to a JIT-enabled VM from the Azure portal (in Security Center or Azure Virtual machines) or programmatically. When a VM has a JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.To request access from Azure virtual machines:1. In the Azure portal, open the virtual machines pages.2. Select the VM to which you want to connect, and open the Connect page.Azure checks to see if JIT is enabled on that VM.a. If JIT isn‘t enabled for the VM, you‘ll be prompted to enable it.b. If JIT‘s enabled, select Request access to pass an access request with the requesting IP, time range, and ports that were configured for that VM.https://docs.microsoft.com/en-us/azure/security-center/security-center-just-in-time?tabs=jit-config-asc%2Cjit-request-avm#request-access-to-a-jit-enabled-vm",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Which of the following are valid sections in an Azure Resource Manager (ARM) template?",
+    "answers": [
+      "1. \n\n Parameters",
+      "2. \n\n Inputs",
+      "3. \n\n Outputs",
+      "4. \n\n Variables",
+      "5. \n\n Resources",
+      "6. \n\n User defined functions"
+    ],
+    "correctAnswer": "The ARM template has the following sections:Parameters – Provide values during deployment that allow the same template to be used with different environments.Variables – Define values that are reused in your templates. They can be constructed from parameter values.User-defined functions – Create customized functions that simplify your template.Resources – Specify the resources to deploy.Outputs – Return values from the deployed resources.https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview#template-design",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Which Azure RBAC roles allows you to download images from an Azure Container Registry?",
+    "answers": [
+      "1. \n\n AcrPush",
+      "2. \n\n AcrPull",
+      "3. \n\n AcrImageSigner",
+      "4. \n\n Contributor"
+    ],
+    "correctAnswer": "The Azure Container Registry service supports a set of built-in Azure roles that provide different levels of permissions to an Azure container registry. Use Azure role-based access control (Azure RBAC) to assign specific permissions to users, service principals, or other identities that need to interact with a registry.\nhttps://docs.microsoft.com/bs-latn-ba/azure/container-registry/container-registry-roles",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You create a container image named Image1.\nThe Image1 processes long running tasks.\nWhich restart policy should you consider for Image1?",
+    "answers": [
+      "1. \n\n Always",
+      "2. \n\n Never",
+      "3. \n\n OnFailure"
+    ],
+    "correctAnswer": "\nThe ideal restart policy for the Image1 container, which processes long-running tasks, would be OnFailure. This policy ensures that the container is restarted only if it fails due to an error or crash. This avoids unnecessary restarts and resource consumption, especially for tasks that are expected to run for extended periods.\nHere’s a breakdown of why OnFailure is the best choice:\nWhile “Always” might seem like a good option to ensure the container is always running, it can lead to excessive restarts and resource consumption, especially if the container encounters temporary errors or glitches. “Never” would prevent the container from restarting at all, which is not desirable for long-running tasks that might encounter issues.\nhttps://docs.microsoft.com/en-us/azure/container-instances/container-instances-restart-policy\n",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an Azure Container Registry named Registry1. You need to publish an image named Image1 to Finance namespace.",
+    "answers": [
+      "1. \n\n Select the command should you use.",
+      "2. \n\n docker push finance.azurecr.io/registry1/image1",
+      "3. \n\n docker push registry1.azurecr/finance/image1",
+      "4. \n\n docker push registry1.azurecr.io/finance/image1",
+      "5. \n\n docker push finance.azurecr/registry1/image1"
+    ],
+    "correctAnswer": "docker push is the command to push an image to Azure Container registry. The correct format is docker push .azureacr.io//https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to deploy a web application in an Azure App Service.The application logs must be captured and retained for long-term.Which three actions should you perform in sequence?",
+    "answers": [
+      "1. \n\n Navigate to Azure App ServiceSelect App Service LogsTurn on Application logging File System",
+      "2. \n\n Navigate to Azure App ServiceSelect App Service LogsTurn on Application logging Blob",
+      "3. \n\n Navigate to Azure App ServiceSelect App Service LogsTurn on Web server logging Storage",
+      "4. \n\n Navigate to Azure App ServiceSelect App Service LogsTurn on Web server logging File system"
+    ],
+    "correctAnswer": "To enable application logging for Windows apps in the Azure portal, navigate to your app and select App Service logs.Select On for either Application Logging (Filesystem) or Application Logging (Blob), or both.The Filesystem option is for temporary debugging purposes, and turns itself off in 12 hours. The Blob option is for long-term logging, and needs a blob storage container to write logs to.https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that uploads videos to an Azure storage container named Container1.The upload method uses Storage REST APIs.You need to copy specific blobs from Container1 to Container2 in real time when specific business requirements are met. The copies must exclude backup blobs.What should you do?",
+    "answers": [
+      "1. \n\n Download the videos to a virtual machine from Container1 and then upload the blob to Container2.",
+      "2. \n\n Execute the Azure PowerShell command Start-AzureStorageBlobCopy.",
+      "3. \n\n Copy blobs to Container2 by using the Put Blob operation of the Blob Service REST API.",
+      "4. \n\n Use AzCopy with the Snapshot switch blobs to Container2."
+    ],
+    "correctAnswer": "The Start-AzureStorageBlobCopy cmdlet starts to copy a blobhttps://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azurestorageblobcopy?view=azurermps-6.13.0The Put Blob operation creates a new block, page, or append blob, or updates the content of an existing block blob. So in the given options, onlyStart-AzureStorageBlobCopy cmdlet copies the blob",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to develop an application that will be deployed to an Azure virtual machine.The application connects to external services that are authenticated using a secret key.You plan to store secret keys in an Azure Key Vault.Select the authentication method you must consider to read secrets from Key Vault.",
+    "answers": [
+      "1. \n\n Service principal and certificate",
+      "2. \n\n Managed Identity",
+      "3. \n\n Service principal and secret"
+    ],
+    "correctAnswer": "Managed identities for Azure resources: When you deploy an app on a virtual machine in Azure, you can assign an identity to your virtual machine that has access to Key Vault. You can also assign identities to other Azure resources. The benefit of this approach is that the app or service isn‘t managing the rotation of the first secret. Azure automatically rotates the identity. We recommend this approach as a best practice.https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts#authentication",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a web application that will be accessible using application1.azurewebsites.net. The traffic to the web application must be secured with SSL and routed through an Azure Application Gateway.\nThe Azure application gateway instance is used by multiple applications.\nSelect the two actions should you perform to configure Azure Application Gateway.",
+    "answers": [
+      "1. \n\n Enable the Use for App service setting in the Azure Application Gateway‘s HTTP settings.",
+      "2. \n\n Convert the web app to run in an Azure App service environment (ASE).",
+      "3. \n\n Add an authentication certificate to the Azure Application gateway.",
+      "4. \n\n Set the value of the Override backend path option to application1.azurewebsites.net in the Azure Application Gateway‘s HTTP settings."
+    ],
+    "correctAnswer": "In multi-tenant architectural designs in web servers, multiple websites are running on the same web server instance. Hostnames are used to differentiate between the different applications which are hosted. Application gateway provides a capability which allows users to override the HTTP host header in the request based on the host name of the back-end. This capability enables support for multi-tenant back ends such as Azure App service web apps and API management.\nThe ability to specify a host override is defined in the HTTP settings and can be applied to any back-end pool during rule creation. The following two ways of overriding host header and SNI extension for multi-tenant back ends is supported:\nThe ability to set the host name to a fixed value explicitly entered in the HTTP settings. This capability ensures that the host header is overridden to this value for all traffic to the back-end pool where the particular HTTP settings are applied. When using end to end TLS, this overridden host name is used in the SNI extension. This capability enables scenarios where a back-end pool farm expects a host header that is different from the incoming customer host header.\nThe ability to derive the host name from the IP or FQDN of the back-end pool members. HTTP settings also provide an option to dynamically pick the host name from a back-end pool member‘s FQDN if configured with the option to derive host name from an individual back-end pool member. When using end to end TLS, this host name is derived from the FQDN and is used in the SNI extension. This capability enables scenarios where a back-end pool can have two or more multi-tenant PaaS services like Azure web apps and the request‘s host header to each member contains the host name derived from its FQDN. For implementing this scenario, we use a switch in the HTTP Settings called Pick hostname from backend address which will dynamically override the host header in the original request to the one mentioned in the backend pool.\nhttps://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-web-app-overview#tls-termination-and-end-to-end-tls-with-multi-tenant-services",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an Azure App Service web app to deliver video on-demand streaming media. Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node.You enable an Azure Content Delivery Network (CDN) Standard for the web endpoint.Customer videos are downloaded from the web app by using the following example URL.: http://www.webapplication.com/content.mp4?quality=1All videos must expire from the cache after one hour.You need to configure Azure CDN caching rules.Which option should you use for caching behavior?",
+    "answers": [
+      "1. \n\n Bypass Cache",
+      "2. \n\n Override",
+      "3. \n\n Set if missing"
+    ],
+    "correctAnswer": "For global and custom caching rules, you can specify the following Caching behavior settings:Bypass cache: Do not cache and ignore origin-provided cache-directive headers.Override: Ignore origin-provided cache duration; use the provided cache duration instead. This will not override cache-control: no-cache.Set if missing: Honor origin-provided cache-directive headers, if they exist; otherwise, use the provided cache duration.In this scenario, the content must expire after one hour. So we need to ignore origin provided cache duration and use cache duration that is provided by us.https://docs.microsoft.com/en-us/azure/cdn/cdn-caching-rules",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an Azure App Service web app to deliver video on-demand streaming media. Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node.You enable an Azure Content Delivery Network (CDN) Standard for the web endpoint.Customer videos are downloaded from the web app by using the following example URL.: http://www.webapplication.com/content.mp4?quality=1All videos must expire from the cache after one hour.You need to configure Azure CDN caching rules.Which option should you use for cache expiration duration?",
+    "answers": [
+      "1. \n\n 1 Second",
+      "2. \n\n 1 Minute",
+      "3. \n\n 1 Month",
+      "4. \n\n 1 Hour"
+    ],
+    "correctAnswer": "All videos must expire from the cache after one hour.https://docs.microsoft.com/en-us/azure/cdn/cdn-query-string",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an Azure App Service web app to deliver video on-demand streaming media. Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node.You enable an Azure Content Delivery Network (CDN) Standard for the web endpoint.Customer videos are downloaded from the web app by using the following example URL.: http://www.webapplication.com/content.mp4?quality=1All videos must expire from the cache after one hour.You need to configure Azure CDN caching rules.Which option should you configure for query string caching behavior?",
+    "answers": [
+      "1. \n\n Ignore Query Strings",
+      "2. \n\n Bypass caching for query strings",
+      "3. \n\n Cache every unique URL"
+    ],
+    "correctAnswer": "Quality is a query string parameter and question asks for Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node. So, we need to cache every unique URLCache every unique URL: In this mode, each request with a unique URL, including the query string, is treated as a unique asset with its own cache.https://docs.microsoft.com/en-us/azure/cdn/cdn-query-string",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a HTTP-based API to support a web app.The primary functionality of the API is to allow customers to check the status of their orders.You need to use Azure Functions to implement the API.The API must not allow write operations. However, it must provide pubic read only operations.You need to recommend a configuration option for authorization level.What should you recommend?",
+    "answers": [
+      "1. \n\n Anonymous",
+      "2. \n\n Function",
+      "3. \n\n Admin"
+    ],
+    "correctAnswer": "Anonymous allows public read access.https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to publish an API for your customers by using Azure API Management. The API uses JWT token for user authorization.You need to implement response caching for the APIM gateway. The caching mechanism must detect the user ID of the client that accesses data for a given location and cache the response for that user ID.You need to add a set-variable policy to store the detected user identity to the policies file.To which section of the policy should you add?",
+    "answers": [
+      "1. \n\n Inbound",
+      "2. \n\n Outbound"
+    ],
+    "correctAnswer": "Set-varible is part of Inbound section.https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-cache-by-key#fragment-caching",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to publish an API for your customers by using Azure API Management. The API uses JWT token for user authorization.You need to implement response caching for the APIM gateway. The caching mechanism must detect the user ID of the client that accesses data for a given location and cache the response for that user ID.You need to add a cache-lookup-value policy to the policies file.To which section of the policy should you add?",
+    "answers": [
+      "1. \n\n Inbound",
+      "2. \n\n Outbound"
+    ],
+    "correctAnswer": "Cache-lookup-value is part of Inbound section.https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-cache-by-key#fragment-caching",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to publish an API for your customers by using Azure API Management. The API uses JWT token for user authorization.You need to implement response caching for the APIM gateway. The caching mechanism must detect the user ID of the client that accesses data for a given location and cache the response for that user ID.You need to add a cache-store-value policy to the policies file.To which section of the policy should you add?",
+    "answers": [
+      "1. \n\n Inbound",
+      "2. \n\n Outbound"
+    ],
+    "correctAnswer": "We need to cache the response. So, Cache-store-value should be part of outbound section.https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-cache-by-key#fragment-cachinghttps://docs.microsoft.com/en-us/azure/api-management/api-management-caching-policies#StoreToCacheByKey",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to publish an API for your customers by using Azure API Management. The API uses JWT token for user authorization.You need to implement response caching for the APIM gateway. The caching mechanism must detect the user ID of the client that accesses data for a given location and cache the response for that user ID.You need to add a find-and-replace policy to the policies file to update the response body with the user profile information.To which section of the policy should you add?",
+    "answers": [
+      "1. \n\n Inbound",
+      "2. \n\n Outbound"
+    ],
+    "correctAnswer": "Find-and-replace is part of outbound section.https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-cache-by-key#fragment-caching",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have developed several web APIs. The web APIs are published by using Azure API Management.You are developing several web apps that will use the Web APIs.Both web apps and web APIs are registered with your Azure Active Directory (Azure AD) tenant.You need to implement a solution to block unauthorized requests originating from the web apps from reaching the web APIs.The solution must use Azure AD generated claims and minimize the configuration effort.What should you implement?",
+    "answers": [
+      "1. \n\n Azure AD",
+      "2. \n\n API Management API Restriction Policy",
+      "3. \n\n API Management Cross domain policy"
+    ],
+    "correctAnswer": "Validate JWT – Enforces existence and validity of a JWT extracted from either a specified HTTP Header or a specified query parameter.https://docs.microsoft.com/en-us/azure/api-management/api-management-access-restriction-policies#ValidateJWT",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "“You plan to create a virtual machine in your Azure subscription using PowerShell.Which two parameters should you add to complete below command?“New-AzVm -Name “myVM“ -Location “East US“ -SubnetName “mySubnet“ -SecurityGroupName “myNetworkSecurityGroup“ -PublicIpAddressName “myPublicIpAddress“ -OpenPorts 80,3389",
+    "answers": [
+      "1. \n\n -ResourceGroupName “myResourceGroup“",
+      "2. \n\n -DiskSize 50000",
+      "3. \n\n -VirtualNetworkName “myVnet“",
+      "4. \n\n -OperatingSystem “win2016datacenter“"
+    ],
+    "correctAnswer": "Below is the sample complete command.New-AzVm ′-ResourceGroupName “myResourceGroup“ ′-Name “myVM“ ′-Location “East US“ ′-VirtualNetworkName “myVnet“ ′-SubnetName “mySubnet“ ′-SecurityGroupName “myNetworkSecurityGroup“ ′-PublicIpAddressName “myPublicIpAddress“ ′-OpenPorts 80,3389https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-powershell",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have a Resource Group named RG1 in an Azure subscription named Subscription1.You have created an Azure virtual machine in RG1 using Azure Portal.You need to download the Azure Resource Manager (ARM) template of the newly created VM to re-use in your next deployments.Select the steps should you follow in sequence.",
+    "answers": [
+      "1. \n\n Login to Azure PortalSelect the VM created using Azure PortalSelect Export template and download",
+      "2. \n\n Login to Azure PortalSelect the VM created using Azure PortalSelect activity log and download",
+      "3. \n\n Login to Azure PortalSelect the VM created using Azure PortalSelect logs and download",
+      "4. \n\n Login to Azure PortalSelect the VM created using Azure PortalSelect continuous delivery and download scripts"
+    ],
+    "correctAnswer": "When you create a VM in Azure using the portal or PowerShell, a Resource Manager template is automatically created for you. You can use this template to quickly duplicate a deployment. The template contains information about all of the resources in a resource group. For a virtual machine, this means the template contains everything that is created in support of the VM in that resource group, including the networking resources.https://docs.microsoft.com/en-us/azure/virtual-machines/windows/download-template",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You need to view container startup events.Which troubleshooting command should you use?",
+    "answers": [
+      "1. \n\n az container logs",
+      "2. \n\n az container attach",
+      "3. \n\n az container exec"
+    ],
+    "correctAnswer": "The az container attach command provides diagnostic information during container startup. Once the container has started, it also writes standard output and standard error streams to your local terminal.The az container attach command shows container events and logs. By contrast, the az container logs only shows the logs and not the startup events.https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart#attach-output-streams",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to develop an application using Azure App Service and Azure Cosmos DB.You need to collect detailed resource logs for monitoring health and availability of Azure resources.Which of the following actions you should perform to send logs to Log Analytics workspace?",
+    "answers": [
+      "1. \n\n Create a Log Analytics WorkspaceEnable Diagnostic settingsSelect log categoriesSelect Send to Log Analytics",
+      "2. \n\n Create a Storage accountEnable Diagnostic settingsSelect log categoriesSelect Send to Storage account",
+      "3. \n\n Configure Log Analytics to connect to Storage accountCreate a Log Analytics WorkspaceEnable Diagnostic settingsSelect log categoriesSelect Send to Log Analytics and Storage accounts"
+    ],
+    "correctAnswer": "Resource logs provide insight into the detailed operation of an Azure resource and are useful for monitoring their health and availability. Azure resources generate resource logs automatically, but you must configure where they should be collected.https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-resource-logs",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to develop an application using Azure Functions.\nYou need to use the Azure Function triggers that have built-in retry support.\nWhich triggers should you use?",
+    "answers": [
+      "1. \n\n Azure Blob storage",
+      "2. \n\n Azure Queue storage",
+      "3. \n\n Azure Service Bus (queue/topic)",
+      "4. \n\n Azure Table Storage",
+      "5. \n\n Azure Cosmos DB",
+      "6. \n\n Event Hubs"
+    ],
+    "correctAnswer": "Here are the Azure Function triggers that have built-in retry support:\nTriggers that do not have built-in retries:\nFor these triggers, you would need to implement your own retry logic within your function code using libraries like Polly for handling transient errors.\nIn summary, the triggers with built-in retry support for Azure Functions are Azure Queue storage, Azure Service Bus (queue/topic), and Event Hubs.\nhttps://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-errors",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that must execute a sequence of activities in a specific order.You plan to deploy the application in a serverless compute environment.Which of the below service should you create to deploy the application?",
+    "answers": [
+      "1. \n\n Azure Functions",
+      "2. \n\n Durable Functions",
+      "3. \n\n Azure App Service"
+    ],
+    "correctAnswer": "Durable Functions is an extension of Azure Functions that lets you write stateful functions in a serverless compute environment. The primary use case for Durable Functions is simplifying complex, stateful coordination requirements in serverless applications. In the function chaining pattern, a sequence of functions executes in a specific order. In this pattern, the output of one function is applied to the input of another function. You can use Durable Functions to implement the function chaining pattern.https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an Azure Cosmos DB. You need to configure consistency level that consumes the least amount of request units per operation.Which consistency level should you configure?",
+    "answers": [
+      "1. \n\n Strong",
+      "2. \n\n Bounded Staleness",
+      "3. \n\n Session",
+      "4. \n\n Consistent Prefix",
+      "5. \n\n Eventual"
+    ],
+    "correctAnswer": "The cost of a read operation (in terms of RUs consumed) with the eventual consistency level is the lowest of all the Azure Cosmos DB consistency levels.https://docs.microsoft.com/en-us/learn/modules/distribute-data-globally-with-cosmos-db/5-data-consistency-levels",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that uses Azure Cosmos DB for a hospital.You have configured the default consistency level for the database to Strong and Indexing mode to Consistent.If multiple users in different locations have updated a patient record, the application must return latest patient status details.You need to override the default consistency level at the query level.Which consistency level should you implement to return patient status?",
+    "answers": [
+      "1. \n\n Strong",
+      "2. \n\n Consistent Prefix",
+      "3. \n\n Bounded Staleness",
+      "4. \n\n Eventual"
+    ],
+    "correctAnswer": "Strong consistency offers a linearizability guarantee. The reads are guaranteed to return the most recent committed version of an item. A client never sees an uncommitted or partial write. Users are always guaranteed to read the latest committed write.",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that uses Azure Cosmos DB for a hospital.You have configured the default consistency level for the database to Strong and Indexing mode to Consistent.The application must return the health monitoring data of a patent in the current version or the prior version.You need to override the default consistency level at the query level.Which consistency level should you implement to return health monitoring data?",
+    "answers": [
+      "1. \n\n Strong",
+      "2. \n\n Consistent Prefix",
+      "3. \n\n Bounded Staleness",
+      "4. \n\n Eventual"
+    ],
+    "correctAnswer": "Bounded staleness: The reads are guaranteed to honor the consistent-prefix guarantee. The reads might lag behind writes by at most “K“ versions (that is, “updates“) of an item or by “T“ time interval, whichever is reached first. In other words, when you choose bounded staleness, the “staleness“ can be configured in two ways:The number of versions (K) of the itemThe time interval (T) reads might lag behind the writeshttps://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that uses Azure Cosmos DB for a hospital.You have configured the default consistency level for the database to Strong and Indexing mode to Consistent.The patient billing record contains the final charges once a patient is discharged and all charges have been assessed.You need to override the default consistency level at the query level.Which consistency level should you implement to retrieve the correct billing data with the final changes?",
+    "answers": [
+      "1. \n\n Strong",
+      "2. \n\n Consistent Prefix",
+      "3. \n\n Bounded Staleness",
+      "4. \n\n Eventual"
+    ],
+    "correctAnswer": "Eventual: There‘s no ordering guarantee for reads. In the absence of any further writes, the replicas eventually converge.https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application that stores customer information in an Azure Cosmos DB.The customer details is partitioned by last name.You need to implement a query that returns all customers with the last name Smith.Which code segment should you use?",
+    "answers": [
+      "1. \n\n TableQuery.GenerateFilterCondition(“PartitionKey“, Equals, “Smith“)",
+      "2. \n\n TableQuery.GenerateFilterCondition(“LastName“, Equals, “Smith“)",
+      "3. \n\n TableQuery.GenerateFilterCondition(“PartitionKey“, QueryComparisons.Equal, “Smith“)",
+      "4. \n\n TableQuery.GenerateFilterCondition(“LastName“, QueryComparisons.Equal, “Smith“)"
+    ],
+    "correctAnswer": "Data is partitioned by last name. So the query can be based on partition key equal to Smith.https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an Azure Storage account that contains several blobs. The files are set to use the archive access tier.You need to ensure a file named File1 is accessible within in two hours once a retrieval request is initiated.Select rehydration priority should you use.",
+    "answers": [
+      "1. \n\n General Priority",
+      "2. \n\n Standard Priority",
+      "3. \n\n High Priority"
+    ],
+    "correctAnswer": "Standard priority: The rehydration request will be processed in the order it was received and may take up to 15 hours.High priority: The rehydration request will be prioritized over Standard requests and may finish in under 1 hour for objects under ten GB in size.https://docs.microsoft.com/en-au/azure/storage/blobs/storage-blob-rehydration?tabs=azure-portal",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Overview –\nYou are a developer for Adam, Ltd.\nThe company has a social networking website that is developed as a Single Page Application (SPA).\nThe social networking website loads user uploaded content from an Azure blob storage.\nYou are developing a solution to monitor the user uploaded data for inappropriate content.\nThe following process occurs when users upload content by using the social networking website:\nMessages are sent to ContentUploadService.\nContent is processed by ContentAnalysisService.\nAfter processing is complete, the content is either posted to the social network or a rejection message is posted in its place.\nThe ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages.\nThe solution will use eight CPU cores.\nAzure Active Directory –\nAzure Active Directory (Azure AD) is used for both internal and guest accounts.\nRequirements –\nContentAnalysisService –\nThe Company’s data science group built ContentAnalysisService which accepts user generated content as a string and returns a probable value for inappropriate content.\nAny values over a specific threshold must be reviewed by an employee of Adam, Ltd.\nYou must create an Azure Function named CheckUserContent to perform the content checks.\nCosts –\nThe solution must minimize costs for all Azure services.\nManual review –\nTo review content, the user must authenticate to the website portion of the ContentAnalysisService using their Azure AD credentials.\nThe website is built using React and all pages and API endpoints require authentication.\nIn order to review content a user must be part of a ContentReviewer role.\nAll completed reviews must include the reviewer‘s email address for auditing purposes.\nHigh availability –\nThe region failures must not impact overall application availability.\nMonitoring –\nAn alert must be raised if the ContentUploadService uses more than 80 percent of available CPU-cores.\nSecurity Requirements-\nAny web service accessible over the Internet must be protected from cross site scripting attacks.\nAll websites and services must use SSL from a valid root certificate authority.\nAzure Storage access keys must only be stored in memory and must be available only to the service.\nAll Internal services must only be accessible from Internal Virtual Networks (VNets)\nAll parts of the system must support inbound and outbound traffic restrictions.\nAll service calls must be authenticated by using Azure AD.\nUser agreements –\nUsers must agree to a user agreement before submitting content.\nThe agreement allows employees of Adam.Ltd to review content, store cookies on user devices and track user‘s IP addresses.\nInformation regarding agreements is used by multiple divisions within Adam, Ltd.\nUser responses must not be lost and must be available to all parties regardless of individual service uptime.\nThe volume of agreements is expected to be in the millions per hour.\nValidation testing –\nWhen a new version of the ContentAnalysisService is available the previous seven days of content must be processed with the new version to verify that the new version does not significantly deviate from the old version.\nIssues –\nUsers of the ContentUploadService report that they occasionally see HTTP 502 responses on specific pages.\nContentUploadService code is as below. Line number are for reference only.\n\nApplicationManifest code is as below\n\nQuestion\nYou need to add code at line AM09 to ensure that users can review content using contentAnalysisService.\nHow should you complete the code?",
+    "answers": [
+      "1. \n\n “oauth2AllowImplicitFlow“ : true“preAuthorizedApplications“ : [“SPA“]",
+      "2. \n\n “oauth2AllowImplicitFlow“ : true“oauth2AllowIdTokenImplicitFlow“ : true",
+      "3. \n\n “allowPublicClient“ : true“oauth2AllowIdTokenImplicitFlow“ : true",
+      "4. \n\n “oauth2Permissions“ : [“login“]“oauth2AllowIdTokenImplicitFlow“ : true"
+    ],
+    "correctAnswer": "Scenario: The website is built using React and all pages and API endpoints require authentication\noauth2AllowImplicitFlow – Specifies whether this web app can request OAuth2.0 implicit flow access tokens. The default is false. This flag is used for browser-based apps, like JavaScript single-page apps\noauth2AllowIdTokenImplicitFlow – Specifies whether this web app can request OAuth2.0 implicit flow ID tokens. The default is false. This flag is used for browser-based apps, like JavaScript single-page apps.\nhttps://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest\nhttps://spblog.net/post/2019/06/04/building-single-page-application-with-react-msal-js-and-pnpjs",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Overview –\nYou are a developer for Adam, Ltd.\nThe company has a social networking website that is developed as a Single Page Application (SPA).\nThe social networking website loads user uploaded content from an Azure blob storage.\nYou are developing a solution to monitor the user uploaded data for inappropriate content.\nThe following process occurs when users upload content by using the social networking website:\nMessages are sent to ContentUploadService.\nContent is processed by ContentAnalysisService.\nAfter processing is complete, the content is either posted to the social network or a rejection message is posted in its place.\nThe ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages.\nThe solution will use eight CPU cores.\nAzure Active Directory –\nAzure Active Directory (Azure AD) is used for both internal and guest accounts.\nRequirements –\nContentAnalysisService –\nThe Company’s data science group built ContentAnalysisService which accepts user generated content as a string and returns a probable value for inappropriate content.\nAny values over a specific threshold must be reviewed by an employee of Adam, Ltd.\nYou must create an Azure Function named CheckUserContent to perform the content checks.\nCosts –\nThe solution must minimize costs for all Azure services.\nManual review –\nTo review content, the user must authenticate to the website portion of the ContentAnalysisService using their Azure AD credentials.\nThe website is built using React and all pages and API endpoints require authentication.\nIn order to review content a user must be part of a ContentReviewer role.\nAll completed reviews must include the reviewer‘s email address for auditing purposes.\nHigh availability –\nThe region failures must not impact overall application availability.\nMonitoring –\nAn alert must be raised if the ContentUploadService uses more than 80 percent of available CPU-cores.\nSecurity Requirements-\nAny web service accessible over the Internet must be protected from cross site scripting attacks.\nAll websites and services must use SSL from a valid root certificate authority.\nAzure Storage access keys must only be stored in memory and must be available only to the service.\nAll Internal services must only be accessible from Internal Virtual Networks (VNets)\nAll parts of the system must support inbound and outbound traffic restrictions.\nAll service calls must be authenticated by using Azure AD.\nUser agreements –\nUsers must agree to a user agreement before submitting content.\nThe agreement allows employees of Adam.Ltd to review content, store cookies on user devices and track user‘s IP addresses.\nInformation regarding agreements is used by multiple divisions within Adam, Ltd.\nUser responses must not be lost and must be available to all parties regardless of individual service uptime.\nThe volume of agreements is expected to be in the millions per hour.\nValidation testing –\nWhen a new version of the ContentAnalysisService is available the previous seven days of content must be processed with the new version to verify that the new version does not significantly deviate from the old version.\nIssues –\nUsers of the ContentUploadService report that they occasionally see HTTP 502 responses on specific pages.\nContentUploadService code is as below. Line number are for reference only.\n\nApplicationManifest code is as below\n\nQuestion\nYou need to ensure that network security policies are met. How should you configure network security?",
+    "answers": [
+      "1. \n\n SSL Certificate : Valid root certificateProxy Type : ngnix",
+      "2. \n\n SSL Certificate : Self-signed certificateProxy Type : ngnix",
+      "3. \n\n SSL Certificate : Self-signed certificateProxy Type : Azure Application Gateway",
+      "4. \n\n SSL Certificate : Valid root certificateProxy Type : Azure Application Gateway"
+    ],
+    "correctAnswer": "Scenario: All websites and services must use SSL from a valid root certificate authority.\nSo, certificate must be valid root certificate.\nScenario: Any web service accessible over the Internet must be protected from cross site scripting attacks.\nAzure Web Application Firewall (WAF) on Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities. Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. SQL injection and cross-site scripting are among the most common attacks.\nApplication Gateway supports autoscaling, SSL offloading, and end-to-end SSL, a web application firewall (WAF), cookie-based session affinity, URL path-based routing, multisite hosting, redirection, rewrite HTTP headers and other features.",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Overview –\nYou are a developer for Adam, Ltd.\nThe company has a social networking website that is developed as a Single Page Application (SPA).\nThe social networking website loads user uploaded content from an Azure blob storage.\nYou are developing a solution to monitor the user uploaded data for inappropriate content.\nThe following process occurs when users upload content by using the social networking website:\nMessages are sent to ContentUploadService.\nContent is processed by ContentAnalysisService.\nAfter processing is complete, the content is either posted to the social network or a rejection message is posted in its place.\nThe ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages.\nThe solution will use eight CPU cores.\nAzure Active Directory –\nAzure Active Directory (Azure AD) is used for both internal and guest accounts.\nRequirements –\nContentAnalysisService –\nThe Company’s data science group built ContentAnalysisService which accepts user generated content as a string and returns a probable value for inappropriate content.\nAny values over a specific threshold must be reviewed by an employee of Adam, Ltd.\nYou must create an Azure Function named CheckUserContent to perform the content checks.\nCosts –\nThe solution must minimize costs for all Azure services.\nManual review –\nTo review content, the user must authenticate to the website portion of the ContentAnalysisService using their Azure AD credentials.\nThe website is built using React and all pages and API endpoints require authentication.\nIn order to review content a user must be part of a ContentReviewer role.\nAll completed reviews must include the reviewer‘s email address for auditing purposes.\nHigh availability –\nThe region failures must not impact overall application availability.\nMonitoring –\nAn alert must be raised if the ContentUploadService uses more than 80 percent of available CPU-cores.\nSecurity Requirements-\nAny web service accessible over the Internet must be protected from cross site scripting attacks.\nAll websites and services must use SSL from a valid root certificate authority.\nAzure Storage access keys must only be stored in memory and must be available only to the service.\nAll Internal services must only be accessible from Internal Virtual Networks (VNets)\nAll parts of the system must support inbound and outbound traffic restrictions.\nAll service calls must be authenticated by using Azure AD.\nUser agreements –\nUsers must agree to a user agreement before submitting content.\nThe agreement allows employees of Adam.Ltd to review content, store cookies on user devices and track user‘s IP addresses.\nInformation regarding agreements is used by multiple divisions within Adam, Ltd.\nUser responses must not be lost and must be available to all parties regardless of individual service uptime.\nThe volume of agreements is expected to be in the millions per hour.\nValidation testing –\nWhen a new version of the ContentAnalysisService is available the previous seven days of content must be processed with the new version to verify that the new version does not significantly deviate from the old version.\nIssues –\nUsers of the ContentUploadService report that they occasionally see HTTP 502 responses on specific pages.\nContentUploadService code is as below. Line number are for reference only.\n\nApplicationManifest code is as below\n\nQuestion\nYou need to configure the ContentUploadService deployment. Which two actions should you perform?",
+    "answers": [
+      "1. \n\n Add the following markup to line number 34: types: Private",
+      "2. \n\n Add the following markup to line number 34: types: Public",
+      "3. \n\n Add the following markup to line number 35: osType: Windows",
+      "4. \n\n Add the following markup to line number 35: osType: Linux"
+    ],
+    "correctAnswer": "Scenario: All Internal services must only be accessible from Internal Virtual Networks (VNets)\nCurrently, only Linux containers are supported in a container group deployed to a virtual network and the type must be Private.\nhttps://docs.microsoft.com/en-us/azure/container-instances/container-instances-vnet\nhttps://docs.microsoft.com/en-us/azure/container-instances/container-instances-virtual-network-concepts#unsupported-networking-scenarios",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Overview –\nYou are a developer for Adam, Ltd.\nThe company has a social networking website that is developed as a Single Page Application (SPA).\nThe social networking website loads user uploaded content from an Azure blob storage.\nYou are developing a solution to monitor the user uploaded data for inappropriate content.\nThe following process occurs when users upload content by using the social networking website:\nMessages are sent to ContentUploadService.\nContent is processed by ContentAnalysisService.\nAfter processing is complete, the content is either posted to the social network or a rejection message is posted in its place.\nThe ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages.\nThe solution will use eight CPU cores.\nAzure Active Directory –\nAzure Active Directory (Azure AD) is used for both internal and guest accounts.\nRequirements –\nContentAnalysisService –\nThe Company’s data science group built ContentAnalysisService which accepts user generated content as a string and returns a probable value for inappropriate content.\nAny values over a specific threshold must be reviewed by an employee of Adam, Ltd.\nYou must create an Azure Function named CheckUserContent to perform the content checks.\nCosts –\nThe solution must minimize costs for all Azure services.\nManual review –\nTo review content, the user must authenticate to the website portion of the ContentAnalysisService using their Azure AD credentials.\nThe website is built using React and all pages and API endpoints require authentication.\nIn order to review content a user must be part of a ContentReviewer role.\nAll completed reviews must include the reviewer‘s email address for auditing purposes.\nHigh availability –\nThe region failures must not impact overall application availability.\nMonitoring –\nAn alert must be raised if the ContentUploadService uses more than 80 percent of available CPU-cores.\nSecurity Requirements-\nAny web service accessible over the Internet must be protected from cross site scripting attacks.\nAll websites and services must use SSL from a valid root certificate authority.\nAzure Storage access keys must only be stored in memory and must be available only to the service.\nAll Internal services must only be accessible from Internal Virtual Networks (VNets)\nAll parts of the system must support inbound and outbound traffic restrictions.\nAll service calls must be authenticated by using Azure AD.\nUser agreements –\nUsers must agree to a user agreement before submitting content.\nThe agreement allows employees of Adam.Ltd to review content, store cookies on user devices and track user‘s IP addresses.\nInformation regarding agreements is used by multiple divisions within Adam, Ltd.\nUser responses must not be lost and must be available to all parties regardless of individual service uptime.\nThe volume of agreements is expected to be in the millions per hour.\nValidation testing –\nWhen a new version of the ContentAnalysisService is available the previous seven days of content must be processed with the new version to verify that the new version does not significantly deviate from the old version.\nIssues –\nUsers of the ContentUploadService report that they occasionally see HTTP 502 responses on specific pages.\nContentUploadService code is as below. Line number are for reference only.\n\nApplicationManifest code is as below\n\nQuestion\nYou need to add markup at line AM04 to implement the ContentReview role.\nHow should you complete the markup?",
+    "answers": [
+      "1. \n\n “appRoles“ : [{“allowedMemberTypes“ : [“User“],“displayName“ : “ContentReviewer“,“id“ : “e1c2ade8-98f8-45fd-aa4a-6d24b512c22a“,“isEnabled“ : true,“role“ : “ContentReviewer“}],",
+      "2. \n\n “appRoles“ : [{“allowedMemberTypes“ : [“User“],“displayName“ : “ContentReviewer“,“id“ : “e1c2ade8-98f8-45fd-aa4a-6d24b512c22a“,“isEnabled“ : true,“value“ : “ContentReviewer“}],",
+      "3. \n\n “appRoles“ : [{“allowedAccountTypes“ : [“User“],“displayName“ : “ContentReviewer“,“id“ : “e1c2ade8-98f8-45fd-aa4a-6d24b512c22a“,“isEnabled“ : true,“value“ : “ContentReviewer“}],",
+      "4. \n\n “appRoles“ : [{“allowedAccountTypes“ : [“User“],“displayName“ : “ContentReviewer“,“id“ : “e1c2ade8-98f8-45fd-aa4a-6d24b512c22a“,“isEnabled“ : true,“role“ : “ContentReviewer“}],"
+    ],
+    "correctAnswer": "Scenario: In order to review content a user must be part of a ContentReviewer role.\nThe following example shows an appRole that you can assign to users.\n“appId“: “8763f1c4-f988-489c-a51e-158e9ef97d6a“,\n“appRoles“: [\n{\n“allowedMemberTypes“: [\n“User“\n],\n“displayName“: “Writer“,\n“id“: “d1c2ade8-98f8-45fd-aa4a-6d06b947c66f“,\n“isEnabled“: true,\n“description“: “Writers Have the ability to create tasks.“,\n“value“: “Writer“\n}\n],\n“availableToOtherTenants“: false\nhttps://docs.microsoft.com/en-us/graph/api/resources/approle",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "Overview –\nYou are a developer for Adam, Ltd.\nThe company has a social networking website that is developed as a Single Page Application (SPA).\nThe social networking website loads user uploaded content from an Azure blob storage.\nYou are developing a solution to monitor the user uploaded data for inappropriate content.\nThe following process occurs when users upload content by using the social networking website:\nMessages are sent to ContentUploadService.\nContent is processed by ContentAnalysisService.\nAfter processing is complete, the content is either posted to the social network or a rejection message is posted in its place.\nThe ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages.\nThe solution will use eight CPU cores.\nAzure Active Directory –\nAzure Active Directory (Azure AD) is used for both internal and guest accounts.\nRequirements –\nContentAnalysisService –\nThe Company’s data science group built ContentAnalysisService which accepts user generated content as a string and returns a probable value for inappropriate content.\nAny values over a specific threshold must be reviewed by an employee of Adam, Ltd.\nYou must create an Azure Function named CheckUserContent to perform the content checks.\nCosts –\nThe solution must minimize costs for all Azure services.\nManual review –\nTo review content, the user must authenticate to the website portion of the ContentAnalysisService using their Azure AD credentials.\nThe website is built using React and all pages and API endpoints require authentication.\nIn order to review content a user must be part of a ContentReviewer role.\nAll completed reviews must include the reviewer‘s email address for auditing purposes.\nHigh availability –\nThe region failures must not impact overall application availability.\nMonitoring –\nAn alert must be raised if the ContentUploadService uses more than 80 percent of available CPU-cores.\nSecurity Requirements-\nAny web service accessible over the Internet must be protected from cross site scripting attacks.\nAll websites and services must use SSL from a valid root certificate authority.\nAzure Storage access keys must only be stored in memory and must be available only to the service.\nAll Internal services must only be accessible from Internal Virtual Networks (VNets)\nAll parts of the system must support inbound and outbound traffic restrictions.\nAll service calls must be authenticated by using Azure AD.\nUser agreements –\nUsers must agree to a user agreement before submitting content.\nThe agreement allows employees of Adam.Ltd to review content, store cookies on user devices and track user‘s IP addresses.\nInformation regarding agreements is used by multiple divisions within Adam, Ltd.\nUser responses must not be lost and must be available to all parties regardless of individual service uptime.\nThe volume of agreements is expected to be in the millions per hour.\nValidation testing –\nWhen a new version of the ContentAnalysisService is available the previous seven days of content must be processed with the new version to verify that the new version does not significantly deviate from the old version.\nIssues –\nUsers of the ContentUploadService report that they occasionally see HTTP 502 responses on specific pages.\nContentUploadService code is as below. Line number are for reference only.\n\nApplicationManifest code is as below\n\nQuestion\nYou need to investigate the http server log output to resolve the issue with the ContentUploadService.\nWhich command should you use first?",
+    "answers": [
+      "1. \n\n az webapp log",
+      "2. \n\n az ams live-output",
+      "3. \n\n az monitor activity-log",
+      "4. \n\n az container attach"
+    ],
+    "correctAnswer": "Scenario: The ContentAnalysisService is deployed with Azure Container Instances from a private Azure Container Registry named AdamImages. The solution will use eight CPU cores.\nWhen you have a misbehaving container in Azure Container Instances, start by viewing its logs with az container logs, and stream its standard out and standard error with az container attach.\nhttps://docs.microsoft.com/en-us/azure/container-instances/container-instances-get-logs",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an application that uses Azure Cosmos DB. The usage pattern of the application has changed drastically. You need to configure the database to auto scale based on application’s usage.Which three actions should you perform in sequence?",
+    "answers": [
+      "1. \n\n Create a new Azure Cosmos DB accountCreate a new containerSelect Auto scale",
+      "2. \n\n Navigate to the Azure Cosmos DB accountSelect Scale & SettingsEnable Auto scale",
+      "3. \n\n Navigate to the Azure Cosmos DB accountSelect ItemsEnable Auto scale"
+    ],
+    "correctAnswer": "Enable autoscale on existing database or containerSign in to the Azure portal or the Azure Cosmos DB explorer.Navigate to your Azure Cosmos DB account and open the Data Explorer tab.Select Scale and Settings for your container, or Scale for your database.Under Scale, select the Autoscale option and Savehttps://docs.microsoft.com/en-us/azure/cosmos-db/how-to-provision-autoscale-throughput?tabs=api-async",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an ASP.NET Core API by using C#. The API will be hosted in an Azure App Service. All API calls must be authenticated.The API app is expected to allow users to authenticate by using Twitter and Azure Active Directory (Azure AD) credentials.You need to log the users name for each API call.Which values should you use for Attribute and Request Header respectively?",
+    "answers": [
+      "1. \n\n AuthorizeX-MS-CLIENT-PRINCIPAL-ID",
+      "2. \n\n AllowAnonymousX-MS-CLIENT-PRINCIPAL-NAME",
+      "3. \n\n AuthorizeX-MS-CLIENT-PRINCIPAL-NAME",
+      "4. \n\n AllowAnonymousX-MS-CLIENT-PRINCIPAL-ID"
+    ],
+    "correctAnswer": "X-MS-CLIENT-PRINCIPAL-NAME gets user‘s name and Authorize attribute makes sure users are authenticatedhttps://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-how-tohttps://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-twitter",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have created a custom RBAC role name Role1 as below. { “Name“: “Customrole1“, “Id“: “88888888-8888-8888-8888-888888888888“, “IsCustom“: true, “Description“: “Custom role one“, “Actions“: [ “Microsoft.Storage/*/read“, “Microsoft.Network/*/read“, “Microsoft.Compute/*/read“, “Microsoft.Compute/virtualMachines/start/action“, “Microsoft.Compute/virtualMachines/restart/action“, “Microsoft.Authorization/*/read“, “Microsoft.ResourceHealth/availabilityStatuses/read“, “Microsoft.Resources/subscriptions/resourceGroups/read“, “Microsoft.Insights/alertRules/*“, “Microsoft.Insights/diagnosticSettings/*“, “Microsoft.Support/*“ ], “NotActions“: [], “DataActions“: [], “NotDataActions“: [], “AssignableScopes“: [ “/subscriptions/{subscriptionId1}“, “/subscriptions/{subscriptionId2}“, “/providers/Microsoft.Management/managementGroups/{groupId1}“ ] } You have assigned Role1 to a user named user1. What operations user1 can perform?",
+    "answers": [
+      "1. \n\n Create Virtual machine",
+      "2. \n\n Start virtual machine",
+      "3. \n\n Restart virtual machine",
+      "4. \n\n Create storage accounts",
+      "5. \n\n Monitor virtual machines"
+    ],
+    "correctAnswer": "This custom role can be used for monitoring and restarting virtual machines as allowed actions are start, restart and insights.https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application using Azure web app.The application uses Azure Active Directory for user authentication.Where should you look for the users‘ claims within the web app?",
+    "answers": [
+      "1. \n\n Client cookie",
+      "2. \n\n HTTP message body",
+      "3. \n\n HTTP request header",
+      "4. \n\n URL query string"
+    ],
+    "correctAnswer": "For all language frameworks, App Service makes the claims in the incoming token (whether that be from an authenticated end user or a client application) available to your code by injecting them into the request headers.https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You need to provide an Azure virtual machine (VM) access to specific resource groups in Azure Resource Manager. You need to obtain an Azure Resource Manager access token.To achieve the requirement, you use an X.509 certificate to authenticate the VM with Azure Resource Manager.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Instead run the Invoke-RestMethod cmdlet to make a request to the local managed identity for Azure resources endpointUsing managed identities for Azure resources, your code can get access tokens to authenticate to resources that support Azure AD authentication. The Azure Resource Manager supports Azure AD authentication. First, we need to grant this VM’s system-assigned managed identity access to a resource in Resource Manager.https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-arm",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You need to provide an Azure virtual machine (VM) access to specific resource groups in Azure Resource Manager. You need to obtain an Azure Resource Manager access token.To achieve the above mentioned requirement, you use the Reader role-based access control (RBAC) role to authenticate the VM with Azure Resource Manager.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "Instead run the Invoke-RestMethod cmdlet to make a request to the local managed identity for Azure resources endpointUsing managed identities for Azure resources, your code can get access tokens to authenticate to resources that support Azure AD authentication. The Azure Resource Manager supports Azure AD authentication. First, we need to grant this VM’s system-assigned managed identity access to a resource in Resource Manager.https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-arm",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You need to provide an Azure virtual machine (VM) access to specific resource groups in Azure Resource Manager. You need to obtain an Azure Resource Manager access token.To achieve the above mentioned requirement, you run the Invoke-RestMethod cmdlet to make a request to the local managed identity for Azure resources endpoint.Did you achieve the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "correctAnswer": "You must get an access token using the VM‘s system-assigned managed identity and use it to call Azure Resource ManagerUsing the Invoke-WebRequest cmdlet, make a request to the local managed identity for Azure resources endpoint to get an access token for Azure Resource Manager.https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-arm",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a gaming application. Users can form teams to play online and see leaderboards that include player statistics.\nYou plan to use an Azure Redis Cache to improve the performance of data operations for entities that rarely change.\nThe application includes an entity named TeamMembers.\nYou need to invalidate the cache when team member’s data is changed. You have a method ClearCachedTeams as shown below.\nL01 void ClearCachedTeams()\nL02 {\nL03\nL04\nL05 ViewBag.msg += “Team removed from cache. “;\nL06 }\nHow should you complete the code in L03 & L04?",
+    "answers": [
+      "1. \n\n IDatabase cache = Connection.GetDatabase();cache.StringSet(“TeamMembers“);",
+      "2. \n\n IDatabase cache = Connection.GetDatabase();cache.KeyDelete(“TeamMembers“);",
+      "3. \n\n ICache cache = Connection.GetDatabase();cache.StringSet(“TeamMembers“);",
+      "4. \n\n ICache cache = Connection.GetDatabase();cache.KeyDelete(“TeamMembers“);"
+    ],
+    "correctAnswer": "The sample code is as below.\nhttps://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-web-app-cache-aside-leaderboard#configure-the-app-for-azure-cache-for-redis",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a web application that is deployed to an Azure App Service.The application is instrumented with Application Insights.You need to find how many users on your web application are impacted based on page load times.Which Application Insights usage analysis feature should you implement?",
+    "answers": [
+      "1. \n\n User Flows",
+      "2. \n\n Users, Sessions, Events",
+      "3. \n\n Funnels",
+      "4. \n\n Impact"
+    ],
+    "correctAnswer": "Impact analyzes how load times and other properties influence conversion rates for various parts of your app. To put it more precisely, it discovers how any dimension of a page view, custom event, or request affects the usage of a different page view or custom event.https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-impact",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a web application that is deployed to an Azure App Service. The application is instrumented with Application Insights.You need to find what pages your users are most interested in.Which Application Insights usage analysis feature should you implement?",
+    "answers": [
+      "1. \n\n User Flows",
+      "2. \n\n Users, Sessions, Events",
+      "3. \n\n Funnels",
+      "4. \n\n Impact"
+    ],
+    "correctAnswer": "To find out when people use your web app, what pages they‘re most interested in, where your users are located, and what browsers and operating systems they use. Analyze business and usage telemetry by using Azure Application Insights.The Users, Sessions, and Events segmentation tool is used to slice and dice telemetry from your web app from three perspectives. By filtering and splitting the data, you can uncover insights about the relative usage of different pages and features.• Users tool: How many people used your app and its features? Users are counted by using anonymous IDs stored in browser cookies. A single person using different browsers or machines will be counted as more than one user.• Sessions tool: How many sessions of user activity have included certain pages and features of your app? A session is counted after half an hour of user inactivity, or after 24 hours of continuous use.• Events tool: How often certain pages and features of your app are used. A page view is counted when a browser loads a page from your app, provided you have instrumented it.https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-segmentation",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a web application that is deployed to an Azure App Service. The application is instrumented with Application Insights.You need to find where your users are locate and what browsers and operating systems they use.Which Application Insights usage analysis feature should you implement?",
+    "answers": [
+      "1. \n\n User Flows",
+      "2. \n\n Users, Sessions, Events",
+      "3. \n\n Funnels",
+      "4. \n\n Impact"
+    ],
+    "correctAnswer": "To find out when people use your web app, what pages they‘re most interested in, where your users are located, and what browsers and operating systems they use. Analyze business and usage telemetry by using Azure Application Insights.The Users, Sessions, and Events segmentation tool is used to slice and dice telemetry from your web app from three perspectives. By filtering and splitting the data, you can uncover insights about the relative usage of different pages and features.• Users tool: How many people used your app and its features? Users are counted by using anonymous IDs stored in browser cookies. A single person using different browsers or machines will be counted as more than one user.• Sessions tool: How many sessions of user activity have included certain pages and features of your app? A session is counted after half an hour of user inactivity, or after 24 hours of continuous use.• Events tool: How often certain pages and features of your app are used. A page view is counted when a browser loads a page from your app, provided you have instrumented it.https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-segmentation",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an API that is published by using Azure API Management.You need to restrict incoming requests from specified IP addresses by using the ip-filter policy.Which policy section should you use?",
+    "answers": [
+      "1. \n\n Outbound",
+      "2. \n\n Backend",
+      "3. \n\n on-error",
+      "4. \n\n inbound"
+    ],
+    "correctAnswer": "To add a new statement to restrict incoming requests to specified IP addresses, place the cursor just inside the content of the inbound XML element and click the Restrict caller IPs statement.https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-policies#restrict-incoming-requests",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You need to create a named Role1 by using the below role definition.{“Name“: “Role1“,“Id“: “88888888-8888-8888-8888-888888888888“,IsCustom : false,“Description“: ““,“Actions“ : [“Microsoft.Storage/*/read“,“Microsoft.Network/*/read“,“Microsoft.Compute/*/read“,“Microsoft.Compute/virtualMachines/start/action“,“Microsoft.Compute/virtualMachines/restart/action“,“Microsoft.Authorization/*/read“],“NotActions“: [],“DataActions“: [],“NotDataActions“: [],“AssignableScopes“: []}Which two values should you modify before you create Role1?",
+    "answers": [
+      "1. \n\n IsCustom",
+      "2. \n\n DataActions",
+      "3. \n\n Id",
+      "4. \n\n AssignableScopes",
+      "5. \n\n Description"
+    ],
+    "correctAnswer": "The following shows what a custom role looks like as displayed using Azure PowerShell in JSON format.{“Name“: “Virtual Machine Operator“,“Id“: “88888888-8888-8888-8888-888888888888“,“IsCustom“: true,“Description“: “Can monitor and restart virtual machines.“,“Actions“: [“Microsoft.Storage/*/read“,“Microsoft.Network/*/read“,“Microsoft.Compute/*/read“,“Microsoft.Compute/virtualMachines/start/action“,“Microsoft.Compute/virtualMachines/restart/action“,“Microsoft.Authorization/*/read“,“Microsoft.ResourceHealth/availabilityStatuses/read“,“Microsoft.Resources/subscriptions/resourceGroups/read“,“Microsoft.Insights/alertRules/*“,“Microsoft.Insights/diagnosticSettings/*“,“Microsoft.Support/*“],“NotActions“: [],“DataActions“: [],“NotDataActions“: [],“AssignableScopes“: [“/subscriptions/{subscriptionId1}“,“/subscriptions/{subscriptionId2}“,“/providers/Microsoft.Management/managementGroups/{groupId1}“]}",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You have an Azure Container Registry named ContainerRegistry1. You enabled content trust for ContainerRegistry1.You need to provide access to a user named User1 to create trusted images in ContainerRegistry1.The solution must use the principle of least privilege.Which RBAC roles should you add User1?",
+    "answers": [
+      "1. \n\n AcrQuarantineReader",
+      "2. \n\n Contributor",
+      "3. \n\n AcrPush",
+      "4. \n\n AcrImageSigner",
+      "5. \n\n AcrQuarantineWriter"
+    ],
+    "correctAnswer": "AcrPush – The ability to docker push an image, or push another supported artifact such as a Helm chart, to a registry.ArcImageSigner – The ability to sign images, usually assigned to an automated process, which would use a service principal. This permission is typically combined with push image to allow pushing a trusted image to a registry.https://docs.microsoft.com/bs-latn-ba/azure/container-registry/container-registry-roles#push-image",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You plan to develop an Azure function app to connect to Azure Event Grid.The resources for the function app must be allocated dynamically. The costs must be based on the number of executions.How should you configure when you create the function app?",
+    "answers": [
+      "1. \n\n the Windows operating system and the App Service plan hosting plan",
+      "2. \n\n the Docker container and an App Service plan that uses the B1 pricing tier",
+      "3. \n\n the Windows operating system and the Consumption plan hosting plan",
+      "4. \n\n the Docker container and an App Service plan that uses the S1 pricing tier"
+    ],
+    "correctAnswer": "When you‘re using the Consumption plan, instances of the Azure Functions host are dynamically added and removed based on the number of incoming events. This serverless plan scales automatically, and you‘re charged for compute resources only when your functions are running. On a Consumption plan, a function execution times out after a configurable period of time.https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a solution that allows cooling devices to send temperature information to a central location.The solution must receive and store message until they can be processed.You create an Azure Service Bus Instance by providing a name, pricing tier, subscription, resource group, and location.You need to complete the configuration.Which Azure CLI or PowerShell command should you run?",
+    "answers": [
+      "1. \n\n az servicebus namespace create --resource-group fridge-rg --name fridge-ns --location fridge-loc",
+      "2. \n\n New-AzureRmResourceGroup -Name fridge-rg -Location fridge-loc",
+      "3. \n\n az servicebus queue create --resource-group fridge-rg --namespace-name fridge-ns --name fridge-q"
+    ],
+    "correctAnswer": "The question asks for a solution to receive and store messages, so a queue needs to be created.https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-cli",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing a solution using Azure Service Bus. You need to create a resource group, Service Bus namespace, and a Service Bus queue using Azure CLI.\nWhich three commands should you use?",
+    "answers": [
+      "1. \n\n az group create",
+      "2. \n\n az servicebus queue create",
+      "3. \n\n az servicebus namespace update",
+      "4. \n\n az servicebus queue update",
+      "5. \n\n az servicebus namespace create"
+    ],
+    "correctAnswer": "\nhttps://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-cli#use-cli-to-create-resources",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an e-commerce application. The application contains several Azure services to handle different components of a transaction.You need to include an Azure service to asynchronously communicate transaction information by using REST messages.What would you consider?",
+    "answers": [
+      "1. \n\n Traffic Manager",
+      "2. \n\n Azure Notification Hubs",
+      "3. \n\n Azure Blob storage",
+      "4. \n\n Azure Queue storage"
+    ],
+    "correctAnswer": "Azure Queue Storage is a service for storing large numbers of messages. You access messages from anywhere in the world via authenticated calls using HTTP or HTTPS. A queue message can be up to 64 KB in size. A queue may contain millions of messages, up to the total capacity limit of a storage account. Queues are commonly used to create a backlog of work to process asynchronously.https://docs.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application using Azure CDN from Microsoft.You are troubleshooting an issue to find whether the content is served from the origin or CDN.Which HTTP header value will indicate if the content is served from the origin?",
+    "answers": [
+      "1. \n\n X-Cache: TCP_HIT",
+      "2. \n\n X-Cache: TCP_REMOTE_HIT",
+      "3. \n\n X-Cache: TCP_MISS"
+    ],
+    "correctAnswer": "X-Cache: TCP_MISS – This header is returned when there is a cache miss, and the content is served from the Origin.https://docs.microsoft.com/en-us/azure/cdn/cdn-msft-http-debug-headers",
+    "partOfQuiz": "2"
+  },
+  {
+    "question": "You are developing an application using Azure CDN from Microsoft.You are troubleshooting an issue to find whether the content is served from the origin or CDN.Which HTTP header value will indicate if the content is served from the CDN regional cache?",
+    "answers": [
+      "1. \n\n X-Cache: TCP_HIT",
+      "2. \n\n X-Cache: TCP_REMOTE_HIT",
+      "3. \n\n X-Cache: TCP_MISS"
+    ],
+    "correctAnswer": "X-Cache: TCP_REMOTE_HIT – This header is returned when the content is served from the CDN regional cache (Origin shield layer)https://docs.microsoft.com/en-us/azure/cdn/cdn-msft-http-debug-headers",
+    "partOfQuiz": "2"
+  }
+]

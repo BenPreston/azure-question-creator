@@ -1,0 +1,651 @@
+[
+  {
+    "question": "A team is currently using Azure DevOps for a Java-based project. They need to use a static code analysis tool for the java project. Which of the following are tools that can be used along with Azure DevOps for this purpose? [Select Two]",
+    "answers": [
+      "PMD",
+      "Bamboo",
+      "FindBugs",
+      "Jenkins"
+    ],
+    "rationale": "Correct \nAnswer  A and C\nYou can use tools such as PMD and FindBugs along with Azure DevOps for static code analysis. The Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on the tools for DevOps, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/java/standalone-tools?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A team needs to create Resource Manager templates for deployment of virtual machines that would have a custom script extension.\nYou need to complete the below resource manager template\n\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n Microsoft.Compute",
+      "2. \n\n Compute.Extensions",
+      "3. \n\n CustomScriptExtension",
+      "4. \n\n PowershellExtension"
+    ],
+    "rationale": "Correct \nAnswer  A\nAn example of this is given in the Microsoft documentation\n\nSince this is clearly given, all other options are incorrect\nFor more information on creating templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/template-description",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A team needs to create Resource Manager templates for deployment of virtual machines that would have a custom script extension.\nYou need to complete the below resource manager template\n\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n Microsoft.Compute",
+      "2. \n\n Compute.Extensions",
+      "3. \n\n CustomScriptExtension",
+      "4. \n\n PowershellExtension"
+    ],
+    "rationale": "Correct \nAnswer  C\nAn example of this is given in the Microsoft documentation\n\nSince this is clearly given, all other options are incorrect\nFor more information on creating templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/template-description",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is developing a new web application. The Web application is going to be given to a set of users for testing. All of those test users will use the Microsoft Test and Feedback extension which would be installed in Chrome.\nYou need to ensure you provide the right level of access for development teams and the test users.\n– The developers would need to request and gather feedback from the test users\n– You would need to collect feedback from the test users\nWhat is the access level in Devops you would give for the test users?",
+    "answers": [
+      "1. \n\n Basic",
+      "2. \n\n Standard",
+      "3. \n\n Premium",
+      "4. \n\n Stakeholder"
+    ],
+    "rationale": "Correct \nAnswer – D\nThe right level of access is the Stakeholder access which allows you to provide feedback and respond to feedback requests\nThe access levels are given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on the Test and Feedback extension, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/test/connected-mode-exploratory-testing?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is developing a new web application. The Web application is going to be given to a set of users for testing. All of those test users will use the Microsoft Test and Feedback extension which would be installed in Chrome.\nYou need to ensure you provide the right level of access for development teams and the test users.\n– The developers would need to request and gather feedback from the test users\n– You would need to collect feedback from the test users\nWhat is the access level in Devops you would give for the developers?",
+    "answers": [
+      "1. \n\n Basic",
+      "2. \n\n Standard",
+      "3. \n\n Premium",
+      "4. \n\n Stakeholder"
+    ],
+    "rationale": "Correct \nAnswer – D\nThe right level of access is the Basic access which allows you to request and respond to feedback requests.\nThe access levels are given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on the Test and Feedback extension, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/test/connected-mode-exploratory-testing?view=azure-devops\nhttps://docs.microsoft.com/en-us/azure/devops/test/request-stakeholder-feedback?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is developing an application for iOS devices. The members having these devices will receive the application via Visual Studio App Center. The members are part of a private distribution.\nWhich of the following certificate type is used for distribution of the application via the App Center?",
+    "answers": [
+      "1. \n\n .cer",
+      "2. \n\n .pvi",
+      "3. \n\n .pfx",
+      "4. \n\n .p12"
+    ],
+    "rationale": "Correct \nAnswer  D\nThe certificate must be of the .p12 format, this is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on managing distribution groups, please visit the below URL\nhttps://docs.microsoft.com/en-us/appcenter/distribution/groups",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A development team has currently setup an Azure repository for source code versioning. They currently have the git client installed on their Windows workstations. They will be using this client to connect to the Azure Repo.\nWhich of the following mechanism is used to authenticate into the repo?",
+    "answers": [
+      "1. \n\n Personal Access token",
+      "2. \n\n Role Based access",
+      "3. \n\n Group access",
+      "4. \n\n Certificates"
+    ],
+    "rationale": "Correct \nAnswer  A\nFor git clients, they would normally used Personal Access tokens for authentication. The Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on authenticating with personal access tokens, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A development team has currently setup an Azure repository for source code versioning. They currently have the git client installed on their Windows workstations. They will be using this client to connect to the Azure Repo.\nWhich of the following should be used to manage the authentication from the Windows client?",
+    "answers": [
+      "1. \n\n SSH",
+      "2. \n\n Git Credential Manager",
+      "3. \n\n Azure Repo Credential Manager",
+      "4. \n\n Azure Repo Roles"
+    ],
+    "rationale": "Correct \nAnswer  B\nThis needs to be managed via the Git Credential manager. The Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on the Git credential manager, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is setting up Azure Artifacts. Several feeds are being created in Azure Artifacts. You need to set the permissions for the feed for the following groups\n– GroupA  This group should be able to list and install packages from the feed\n– GroupB – This group should be able to push packages to the feed\nYou need to ensure the least privileges are given to each group\nWhich of the following permission would you assign to GroupA?",
+    "answers": [
+      "1. \n\n Reader",
+      "2. \n\n Collaborator",
+      "3. \n\n Contributor",
+      "4. \n\n Owner"
+    ],
+    "rationale": "Correct \nAnswer  A\nBased on the Microsoft documentation, assigning the Reader role is the right role for this requirement\n\nSince this is the right role to assign, all other options are incorrect\nFor more information on feed permissions, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is setting up Azure Artifacts. Several feeds are being created in Azure Artifacts. You need to set the permissions for the feed for the following groups\n– GroupA  This group should be able to list and install packages from the feed\n– GroupB – This group should be able to push packages to the feed\nYou need to ensure the least privileges are given to each group\nWhich of the following permission would you assign to GroupB?",
+    "answers": [
+      "1. \n\n Reader",
+      "2. \n\n Collaborator",
+      "3. \n\n Contributor",
+      "4. \n\n Owner"
+    ],
+    "rationale": "Correct \nAnswer  C\nBased on the Microsoft documentation, assigning the Contributor role is the right role for this requirement\n\nSince this is the right role to assign, all other options are incorrect\nFor more information on feed permissions, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Case Study:\n\nHow would you migrate the source code from Team Foundation Server onto Azure Devops?",
+    "answers": [
+      "1. \n\n Migrate the server onto Azure Devops",
+      "2. \n\n Import the server onto Azure Devops",
+      "3. \n\n Clone the repositories into Azure Devops",
+      "4. \n\n Import the repositories into Azure Devops"
+    ],
+    "rationale": "Correct \nAnswer – D\nYou can do an import of the registry. An example of this is given in the Microsoft documentation\n\nSince this is clearly given in the documentation, all other options are incorrect\nFor more information on importing from Team Foundation Version Control, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/import-from-tfvc?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Case Study:\n\nYour team needs to ensure that the runbooks for the Azure Automation Account are stored in the Azure Repo in Azure Devops. How would you configure this?",
+    "answers": [
+      "1. \n\n Import the runbooks into Azure Devops",
+      "2. \n\n Create a service connection from Azure Automation",
+      "3. \n\n Create a service connection from Azure Devops",
+      "4. \n\n Configure source control integration in Azure Automation"
+    ],
+    "rationale": "Correct \nAnswer  D\nThis can be done with the help of source control integration in Azure Automation\n\nSince this is clearly given in the documentation, all other options are incorrect\nFor more information on source control integration in Azure Automation, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/automation/source-control-integration",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Case Study:\n\nYou need to assign permissions so that a particular user can add the agent machines to an agent pool. You need to ensure you provide the least privilege required. Which of the following would you consider assigning to the user?",
+    "answers": [
+      "1. \n\n Reader",
+      "2. \n\n Contributor",
+      "3. \n\n Service Account",
+      "4. \n\n Administrator"
+    ],
+    "rationale": "Correct \nAnswer  D\nThis can only be accomplished via the Administrator role. The Microsoft documentation mentions the following when it comes to security of agent pools\n\nSince this is clearly given in the documentation, all other options are incorrect\nFor more information on agents for Azure pipelines, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Case Study:\n\nWhich of the following can be used by the company to manage technical debt for applications?",
+    "answers": [
+      "1. \n\n WhiteSource Bolt",
+      "2. \n\n SonarQube",
+      "3. \n\n Jenkins",
+      "4. \n\n PMD"
+    ],
+    "rationale": "Correct \nAnswer  B\nThe right tool for this is SonarQube. Below is what the documentation on Azure Devops mentions about the tool\n\nOption A is incorrect since this is used for finding and fixing open source vulnerabilities\nOption C is incorrect since this is used as a CI/CD tool\nOption D is incorrect since this is used to check for errors in Java based applications\nFor more information on implementing SonarQube, please visit the below URL\nhttps://www.azuredevopslabs.com/labs/vstsextend/sonarqube/",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Case Study:\n\nWhich of the following would you use to centralize all of the Nuget packages for the company?",
+    "answers": [
+      "1. \n\n Azure Artifact",
+      "2. \n\n Git",
+      "3. \n\n Azure Pipeline",
+      "4. \n\n Azure Kubernetes"
+    ],
+    "rationale": "Correct \nAnswer  A\nThe right tool to use for this is Azure Artifact. The Microsoft documentation mentions the following\n\nOption B is incorrect since this is used as a source code versioning system\nOption C is incorrect since this is used for continuous integration and deployments\nOption D is incorrect since this is used as an orchestration service for container-based applications\nFor more information on Azure Artifact, please visit the below URL\nhttps://azure.microsoft.com/en-in/services/devops/artifacts/",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to follow Azure DevOps strategy for their development and deployment process. They want to ensure that during the development phase the following requirements are met\n– Scanning of 3rd party packages in the code base for vulnerabilities\n– Checking for unlicensed libraries in the code base\nThe company decides to implement these checks using Continuous Integration.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYes, you would use tools as part of the Continuous Integration process to check on these vulnerabilities.\nThe Microsoft documentation mentions the following representation on the CI/CD pipeline\n\nFor more information on security validation in the CI/CD pipeline, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to follow Azure DevOps strategy for their development and deployment process. They want to ensure that during the development phase the following requirements are met\n– Scanning of 3rd party packages in the code base for vulnerabilities\n– Checking for unlicensed libraries in the code base\nThe company decides to implement these checks using Continuous Deployment.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nNo, you would use tools as part of the Continuous Integration process to check on these vulnerabilities.\nFor more information on security validation in the CI/CD pipeline, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to follow Azure DevOps strategy for their development and deployment process. They want to ensure that during the development phase the following requirements are met\nScanning of 3rd party packages in the code base for vulnerabilities\nChecking for unlicensed libraries in the code base\nThe company decides to implement automated security tools.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can implement many tools as part of the CI/CD pipeline to check for security vulnerabilities\nThe Microsoft documentation mentions the following\n\nFor more information on security validation in the CI/CD pipeline, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have an Azure DevOps project. You have to add a test case to the project. Which of the following are steps you would implement for this scenario? Choose 2 answers from the options given below",
+    "answers": [
+      "1. \n\n Create a test",
+      "2. \n\n Create a work item",
+      "3. \n\n Create a new test project",
+      "4. \n\n Create a new DevOps project"
+    ],
+    "rationale": "Correct \nAnswer  A and B\nYou can first create a new work item in your Azure Board. You then add a Test for the work item.\nThe Microsoft documentation mentions the following\n\nOption C is incorrect since we need to have a test plan and test suite for test cases\nOption D is incorrect since we already have a project in place\nFor more information on adding tests in Azure DevOps, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/user-guide/add-run-manual-tests?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company has an Azure DevOps project. They want to create release pipelines in the DevOps project. The release pipelines need to access secrets stored in an existing Key vault service.\nWhich of the following would you create to ensure the release pipeline could access the secret in the key vault?",
+    "answers": [
+      "1. \n\n Access keys",
+      "2. \n\n Service principal",
+      "3. \n\n Password",
+      "4. \n\n Certificates"
+    ],
+    "rationale": "Correct \nAnswer  B\nTo access the secret in the key vault, you have to create a service principal.\nThis is also mentioned in the Azure DevOps Lab documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on using the keyvault from your pipeline, please visit the following URL\nhttps://azuredevopslabs.com/labs/vstsextend/azurekeyvault/",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company has an Azure DevOps project. They want to create release pipelines in the DevOps project. The release pipelines need to access secrets stored in an existing Key vault service.\nWhich of the following would you create in your pipeline?",
+    "answers": [
+      "1. \n\n Azure Resource manager deployment",
+      "2. \n\n Azure Resource manager service connection",
+      "3. \n\n A service principal",
+      "4. \n\n An Azure AD object"
+    ],
+    "rationale": "Correct \nAnswer – B\nYou have to create a new service connection\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on using the keyvault from your pipeline, please visit the following URL\nhttps://azuredevopslabs.com/labs/vstsextend/azurekeyvault/",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is using Microsoft Visual Studio App Center. They have a private distribution group that contains provisioned and un-provisioned devices. You have to distribute a new iOS application to the distribution group using App Center.\nWhich of the following must they do?",
+    "answers": [
+      "1. \n\n Ensure to register the devices and sign the application.",
+      "2. \n\n Generate new .p12 files for each device",
+      "3. \n\n Ensure to create a new active subscription",
+      "4. \n\n Add each device owner to the collaborators group"
+    ],
+    "rationale": "Correct \nAnswer  A\nWhen working with distribution of apps ,we have to ensure we register the devices.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on auto-provisioning in Apps Center, please visit the following URL\nhttps://docs.microsoft.com/en-us/appcenter/distribution/auto-provisioning",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You company has an Azure DevOps project that contains several build pipelines. The build pipeline uses around 30 open source libraries. You have to ensure that the open source libraries comply with the companys licensing standards. Which of the following could you use for this purpose?",
+    "answers": [
+      "1. \n\n NuGet",
+      "2. \n\n Maven",
+      "3. \n\n Black Duck",
+      "4. \n\n Helm"
+    ],
+    "rationale": "Correct \nAnswer  C\nThe Black Duck tool can be used to comply with this requirement.\nThis is also mentioned in the Visual Studio marketplace\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on the product itself, please visit the following URL\nhttps://marketplace.visualstudio.com/items?itemName=black-duck-software.detect-for-tfs",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You currently have an Azure Kubernetes cluster in place. You have to deploy an application to the cluster by using Azure DevOps. Which of the following steps would you carry out to implement this? Choose 3 answers from the options given below",
+    "answers": [
+      "1. \n\n Create a new service account for the cluster",
+      "2. \n\n Create a new service principal in Azure Active Directory",
+      "3. \n\n Add a Helm package and deploy a task to the deployment pipeline",
+      "4. \n\n Add a Docker compose task to the deployment pipeline",
+      "5. \n\n Configure RBAC roles in the cluster"
+    ],
+    "rationale": "Correct \nAnswer  B,C and E\nYou can have your images deployed onto Azure Container registry. Even though this is not explicitly mentioned in the question, we would need to assume based on the options available, we would need to allow Azure Kubernetes to authenticate and pull the image from a repository.\nFor this we have to create a service principal and assign RBAC roles to allow the cluster to pull the images from Azure Container registry.\nAn example of this is given in the Microsoft documentation\n\nThen we can use a Helm deployment task to deploy applications to the cluster.\nOption A is incorrect because we have to create a new service principal\nOption D is incorrect since to deploy to Azure Kubernetes, we should ideally use a Helm package\nFor more information on the integration between Azure Kubernetes and Azure Container registry and using Helm for deployment, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&tabs=java",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have to set up an Azure Kubernetes cluster to host a set of applications. Below are the key requirements for the deployment\n– The images must be published internally\n– The Azure Kubernetes clusters must be able to create and manage containers in Azure\nWhich of the following would you use for the requirement?\nThe images must be published internally",
+    "answers": [
+      "1. \n\n Azure Container Instances",
+      "2. \n\n Azure Container Registry",
+      "3. \n\n Azure Functions",
+      "4. \n\n Dockerfile"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can use Azure Container Registry for having a private repository service\nThis is also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Azure Container registry, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have to set up an Azure Kubernetes cluster to host a set of applications. Below are the key requirements for the deployment\n– The images must be published internally\nThe Azure Kubernetes clusters must be able to create and manage containers in Azure\nWhich of the following would you use for the requirement?\nThe Azure Kubernetes clusters must be able to create and manage containers in Azure",
+    "answers": [
+      "1. \n\n An Azure Active Directory user",
+      "2. \n\n An Azure Active Directory group",
+      "3. \n\n An Azure Automation Account",
+      "4. \n\n An Azure service principal"
+    ],
+    "rationale": "Correct \nAnswer  D\nTo provide access for the Azure Kubernetes cluster to the Azure Container registry , we have to use a service principal\nThis is also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on providing access for Azure Kubernetes to Azure Container registry, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company needs to deploy a set of Azure Kubernetes clusters. Each cluster has different requirements. The requirements are given below\n\nWhich of the following would you use in the deployment of the cluster photonappclusterA?",
+    "answers": [
+      "1. \n\n SecretProviderClass",
+      "2. \n\n Blobfuse-flexvol",
+      "3. \n\n kubernetes.io/azure-disk",
+      "4. \n\n kubernetes.io/azure-file",
+      "5. \n\n volume.beta.kubernetes.io/storage-provisioner"
+    ],
+    "rationale": "Correct \nAnswer  D\nIn the yaml deployment file , you can use the kubernetes.io/azure-file provisioner to access an SMB-based file share.\nThis is also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on dynamically access files from a cluster, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company needs to deploy a set of Azure Kubernetes clusters. Each cluster has different requirements. The requirements are given below\n\nWhich of the following would you use in the deployment of the cluster photonappclusterB?",
+    "answers": [
+      "1. \n\n Azurekeyvault-flexvolume",
+      "2. \n\n Blobfuse-flexvol",
+      "3. \n\n kubernetes.io/azure-disk",
+      "4. \n\n kubernetes.io/azure-file",
+      "5. \n\n volume.beta.kubernetes.io/storage-provisioner"
+    ],
+    "rationale": "Correct \nAnswer  C\nIn the yaml deployment file , you can use the kubernetes.io/azure-disk provisioner to access disks.\nThis is also mentioned in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on dynamically access disks from a cluster, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company needs to deploy a set of Azure Kubernetes clusters. Each cluster has different requirements. The requirements are given below\n\nWhich of the following would you use in the deployment of the cluster photonappclusterC?",
+    "answers": [
+      "1. \n\n azurekeyvault-flexvolume",
+      "2. \n\n Blobfuse-flexvol",
+      "3. \n\n kubernetes.io/azure-disk",
+      "4. \n\n kubernetes.io/azure-file",
+      "5. \n\n volume.beta.kubernetes.io/storage-provisioner"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can use azurekeyvault-flexvolume to access artifacts in the Azure Key vault service\nThis is also mentioned in the GitHub documentation. Note that this will also be deprecated.\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on using Kubernetes Keyvault flexvol, please visit the following URL\nhttps://github.com/Azure/kubernetes-keyvault-flexvol",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You currently have an existing Azure Kubernetes cluster in place. You have to enable monitoring. You have to execute the required Azure CLI command for enabling monitoring.\naz aks SLOT_1 -a SLOT_2 -g -n\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n docker",
+      "2. \n\n monitoring",
+      "3. \n\n enable",
+      "4. \n\n enable-addons"
+    ],
+    "rationale": "Correct \nAnswer  D\nFirst, we have to use the enable-addons options.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on enabling monitoring for Azure Kubernetes, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-enable-existing-clusters",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You currently have an existing Azure Kubernetes cluster in place. You have to enable monitoring. You have to execute the required Azure CLI command for enabling monitoring.\naz aks SLOT_1 -a SLOT_2 -g -n\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n docker",
+      "2. \n\n monitoring",
+      "3. \n\n enable",
+      "4. \n\n enable-addons"
+    ],
+    "rationale": "Correct \nAnswer  B\nNext, we need to enable monitoring\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on enabling monitoring for Azure Kubernetes, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-enable-existing-clusters",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A team needs to deploy a web application onto Azure using the Azure Web App service. The following requirements need to be met\n– Send telemetry about the web application onto Azure\n– Scale the web application based on the status of availability tests for the web application\nWhich of the following would you use for storage of telemetry data?",
+    "answers": [
+      "1. \n\n Azure storage accounts",
+      "2. \n\n Azure Application Insights",
+      "3. \n\n Azure Logic Apps",
+      "4. \n\n Azure Boards"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can use Azure Application Insights to store the telemetry data.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on an example on using Application Insights for youre a web application, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/asp-net",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A team needs to deploy a web application onto Azure using the Azure Web App service. The following requirements need to be met\n– Send telemetry about the web application onto Azure\n– Scale the web application based on the status of availability tests for the web application\nYou have to define scaling rules. Which of the following would you define as the Metric source?",
+    "answers": [
+      "1. \n\n Current resource",
+      "2. \n\n Storage queue",
+      "3. \n\n Service Bus Queue",
+      "4. \n\n Other resource"
+    ],
+    "rationale": "Correct \nAnswer  D\nFor more information on setting up scaling for your Azure web apps, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/app-service/manage-scale-up",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A team needs to deploy a web application onto Azure using the Azure Web App service. The following requirements need to be met\n– Send telemetry about the web application onto Azure\n– Scale the web application based on the status of availability tests for the web application\nWhere would you define the condition of basing the metric on Availability tests?",
+    "answers": [
+      "1. \n\n Metric source",
+      "2. \n\n Metric namespace",
+      "3. \n\n Time aggregation",
+      "4. \n\n Metric name"
+    ],
+    "rationale": "Correct \nAnswer  D\nFor more information on setting up scaling for your Azure web apps, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/app-service/manage-scale-up",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company currently has an on-premises setup that uses Team Foundation Server for managing continuous delivery pipelines. They also now want to make use of Azure DevOps services. They are planning to also use slack for team communication.\nThey want to effectively create work items directly from slack channels.\nWhich of the following should they consider when integrating Team Foundation Server and Slack?",
+    "answers": [
+      "1. \n\n Azure Boards for Slack",
+      "2. \n\n Service Hook subscription",
+      "3. \n\n Azure Pipelines for Slack",
+      "4. \n\n Azure Repos for Slack"
+    ],
+    "rationale": "Correct \nAnswer  B\nFor Team Foundation Server they should create a service hook.\nThis is also given in the Microsoft documentation\n\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on using Slack with Azure DevOps, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/service-hooks/services/slack?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company currently has an on-premises setup that uses Team Foundation Server for managing continuous delivery pipelines. They also now want to make use of Azure DevOps services. They are planning to also use slack for team communication.\nThey want to effectively create work items directly from slack channels.\nWhich of the following should they consider when integrating Azure DevOps and Slack?",
+    "answers": [
+      "1. \n\n Azure Boards for Slack",
+      "2. \n\n Service Hook subscription",
+      "3. \n\n Azure Pipelines for Slack",
+      "4. \n\n Azure Repos for Slack"
+    ],
+    "rationale": "Correct \nAnswer  A\nFor this, they should consider using Azure Boards for Slack.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on using Slack with Azure DevOps, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/service-hooks/services/slack?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is planning on Azure DevOps and also use DevOps practices for development and deployment of applications. They have the following patterns they want to implement for different development teams when it comes to Build automation\n– Ensure that only code that compiles and passes unit testing is checked into the Integration branch\n– Ensure code is of good quality before it is released to the test area\n– Ensure security vulnerabilities are identified as soon as possible in the code base\nWhich of the following technique in build automation can be used for the following requirement?\nEnsure that only code that compiles and passes unit testing is checked into the Integration branch",
+    "answers": [
+      "1. \n\n Daily Builds",
+      "2. \n\n Gated Check-ins",
+      "3. \n\n Code Analysis Integrations",
+      "4. \n\n Fortify Integrations"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can accomplish this with Gated Check-ins.\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Build and Deployment best practices, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/build-deployment-best-practices",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is planning on Azure DevOps and also use DevOps practices for development and deployment of applications. They have the following patterns they want to implement for different development teams when it comes to Build automation\n– Ensure that only code that compiles and passes unit testing is checked into the Integration branch\n– Ensure code is of good quality before it is released to the test area\n– Ensure security vulnerabilities are identified as soon as possible in the code base\nWhich of the following technique in build automation can be used for the following requirement?\nEnsure code is of good quality before it is released to the test area",
+    "answers": [
+      "1. \n\n Daily Builds",
+      "2. \n\n Gated Check-ins",
+      "3. \n\n Code Analysis Integrations",
+      "4. \n\n Fortify Integrations"
+    ],
+    "rationale": "Correct \nAnswer  C\nYou can accomplish this with Code Analysis Integrations\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Build and Deployment best practices, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/build-deployment-best-practices",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company is planning on Azure DevOps and also use DevOps practices for development and deployment of applications. They have the following patterns they want to implement for different development teams when it comes to Build automation\n– Ensure that only code that compiles and passes unit testing is checked into the Integration branch\n– Ensure code is of good quality before it is released to the test area\n– Ensure security vulnerabilities are identified as soon as possible in the code base\nWhich of the following technique in build automation can be used for the following requirement?\nEnsure security vulnerabilities are identified as soon as possible in the code base",
+    "answers": [
+      "1. \n\n Daily Builds",
+      "2. \n\n Gated Check-ins",
+      "3. \n\n Code Analysis Integrations",
+      "4. \n\n Fortify Integrations"
+    ],
+    "rationale": "Correct \nAnswer  D\nYou can accomplish this with Fortify Integrations\nThis is also given in the Microsoft documentation\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Build and Deployment best practices, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/build-deployment-best-practices",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to provision a set of Windows virtual machines on Azure. They want to automate the installation of applications and configuration of the VM during the creation of the VM.\nThe company decides to use Azure Custom Script Extensions for the virtual machine.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYes, you can use Azure Custom Script Extensions for this requirement\nThe Microsoft documentation mentions the following\n\nFor more information on Infrastructure automation, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to provision a set of Windows virtual machines on Azure. They want to automate the installation of applications and configuration of the VM during the creation of the VM.\nThe company decides to use Cloud-init for the virtual machine.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  B\nNo, this is used to customize a Linux VM\nThe Microsoft documentation mentions the following\n\nFor more information on Infrastructure automation, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation",
+    "quizNumber": "3"
+  },
+  {
+    "question": "A company wants to provision a set of Windows virtual machines on Azure. They want to automate the installation of applications and configuration of the VM during the creation of the VM.\nThe company decides to use Chef as the automation platform.\nWould this fulfil the requirement?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nAnswer  A\nYes, you can use this to define how your infrastructure gets deployed.\nThe Microsoft documentation mentions the following\n\nFor more information on Infrastructure automation, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is setting up a DevOps environment using Azure DevOps. They will be using Git for source code versioning in Azure Repos. They want to setup the right policies and permissions in Azure Repos. Below are the key requirements\n– Provide a set of users the ability to remove locks set on branches by other users\n– Require a minimum number of reviewers before completing a pull request\n– Enforce a merge strategy for pull requests\nWhich of the following can be used to implement the requirement?\nProvide a set of users the ability to remove locks set on branches by other users",
+    "answers": [
+      "1. \n\n Branch policies",
+      "2. \n\n Branch permissions",
+      "3. \n\n Branch tags",
+      "4. \n\n Branch folders"
+    ],
+    "rationale": "Correct \nAnswer  B\nYou can use Branch permissions for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Azure repos branch permissions, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/branch-permissions?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is setting up a DevOps environment using Azure DevOps. They will be using Git for source code versioning in Azure Repos. They want to setup the right policies and permissions in Azure Repos. Below are the key requirements\n– Provide a set of users the ability to remove locks set on branches by other users\n– Require a minimum number of reviewers before completing a pull request\n– Enforce a merge strategy for pull requests\nWhich of the following can be used to implement the requirement?\nRequire a minimum number of reviewers before completing a pull request",
+    "answers": [
+      "1. \n\n Branch policies",
+      "2. \n\n Branch permissions",
+      "3. \n\n Branch tags",
+      "4. \n\n Branch folders"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can use Branch policies for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Azure repos branch permissions, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/branch-permissions?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is setting up a DevOps environment using Azure DevOps. They will be using Git for source code versioning in Azure Repos. They want to setup the right policies and permissions in Azure Repos. Below are the key requirements\n– Provide a set of users the ability to remove locks set on branches by other users\n– Require a minimum number of reviewers before completing a pull request\n– Enforce a merge strategy for pull requests\nWhich of the following can be used to implement the requirement?\nEnforce a merge strategy for pull requests",
+    "answers": [
+      "1. \n\n Branch policies",
+      "2. \n\n Branch permissions",
+      "3. \n\n Branch tags",
+      "4. \n\n Branch folders"
+    ],
+    "rationale": "Correct \nAnswer  A\nYou can use Branch policies for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Azure repos branch permissions, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/branch-permissions?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have an Azure DevOps organization named Contoso.\nYou need to recommend an authentication mechanism that meets the following requirements:\n– Supports authentication from Git\n– Minimizes the need to provide credentials during authentication\nWhat should you recommend?",
+    "answers": [
+      "1. \n\n Alternate credentials in Azure DevOps",
+      "2. \n\n Managed identities in Azure Active Directory (Azure AD)",
+      "3. \n\n Personal access tokens (PATs) in Azure DevOps",
+      "4. \n\n User accounts in Azure Active Directory (Azure AD)"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Personal access tokens (PATs) in Azure DevOps\nThe CORRECT answer is to use personal access tokens (PATs) in Azure DevOps. We have two purposes to fulfill:\nThe first is to ensure that the authentication happens from Git which rules out the use of Azure Active Directory based authentication.\nThe second is to minimize the need to provide credentials during an authentication request, for which PAT authentication gives you access without using a username and password directly. There is also an option to use the Git credential Manager tool which needs MS account or Azure AD credentials for the first time when you connect to a Git repo from the Git client. Once authentication is done, the manager will create and cache PAT for future connections until the token expires.\nhttps://docs.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/authentication-guidance?view=azure-devops\nhttps://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers\nUsing Personal Access token in Azure DevOps:\n\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers\nhttps://docs.microsoft.com/en-us/azure/devops/repos/git/auth-overview\n\nAlternate credentials in Azure DevOps is the INCORRECT option because even if the authentication will work from Git, it wont satisfy the requirement to minimize the need to provide credentials for authentication. Moreover, using alternate credentials is not a secure method, and therefore, it will be deprecated soon in the future.\nhttps://devblogs.microsoft.com/devops/azure-devops-will-no-longer-support-alternate-credentials-authentication/\nManaged identities in Azure Active Directory (Azure AD) is the INCORRECT option because the authentication method is using Azure Active Directory and not from Git.\nhttps://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview\nUser accounts in Azure Active Directory (Azure AD)  are also INCORRECT because it is based on Azure AD authentication and not Git. Also, using this method wont satisfy the requirement to minimize the need to provide credentials – It will ask for credentials every time someone logs in.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have a build pipeline in Azure Pipelines.\nYou create a Slack App Integration.\nYou need to send build notifications to a Slack channel name #Development.\nWhat should you do first?",
+    "answers": [
+      "1. \n\n Create a project-level notification.",
+      "2. \n\n Create a service hook subscription.",
+      "3. \n\n Create a global notification.",
+      "4. \n\n Configure a service connection."
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Create a service hook subscription\nCreate a service hook subscription is the CORRECT answer. Service hooks allow tasks to be run on other services when events take place in the Azure DevOps projects for which the service hooks are configured. In our case, we will integrate Slack with Azure DevOps projects using a service hook subscription.\nhttps://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-slack\nhttps://docs.microsoft.com/en-us/azure/devops/service-hooks/overview\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/integrations/slack?view=azure-devops\nhttps://docs.microsoft.com/en-us/azure/devops/service-hooks/services/slack?view=azure-devops\nConfigure a Service Connection is INCORRECT because service connections are helpful in connecting Microsoft or external/remote services to execute tasks in a pipeline Agents Job. They will not be helpful in integrating with slack for channel level notifications of a build.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints\n\nA variety of service connections available in Azure DevOps are:\n– Azure Classic\n– Azure Resource Manager\n– Azure Service Bus\n– Bitbucket Cloud\n– Chef\n– Docker Host\n– Docker Registry\n– External Git\n– Generic\n– GitHub\n– GitHub Enterprise Server\n– Jenkins\n– Kubernetes\n– Maven\n– npm\n– NuGet\n– Python package download\n– Python package upload\n– Service Fabric\n– SSH\n– Subversion\n– Team Foundation Server/Azure Pipelines\n– Visual Studio App Center\nCreate a global notification is an INCORRECT option because Global notifications in Azure DevOps manage notifications for all projects defined for an Azure DevOps organization or collections. Global notifications wont manage notifications to a particular slack channel instead would be helpful for notifying Azure native groups, teams, or individuals.\nhttps://docs.microsoft.com/en-us/azure/devops/notifications/manage-organization-notifications\nCreate a project-level notification is INCORRECT because the working of project-level notification is similar to the Global notifications, the only difference is that it is used for managing project level notifications as compared to all projects in an organization in the Global level notifications.\nhttps://docs.microsoft.com/en-us/azure/devops/notifications/manage-team-group-notifications",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have a private GitHub repository.\nYou need to display the commit status of the repository on Azure Boards.\nWhat should you do first?",
+    "answers": [
+      "1. \n\n Create a GitHub action in GitHub.",
+      "2. \n\n Add the Azure Boards app to the repository.",
+      "3. \n\n Add the Azure Pipelines app to the GitHub repository.",
+      "4. \n\n Configure multi-factor authentication (MFA) for your GitHub account."
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Add the Azure Boards app to the repository\nAdd the Azure Boards App to the repository is the CORRECT answer because doing this will link GitHub commits and pull requests to the work items in Azure Boards. This process will enhance the efficiency to track and plan the work. Azure Boards app is available to download in the GitHub marketplace.\n\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/connect-to-github\nhttps://azure.microsoft.com/en-in/blog/linking-your-github-commits-with-azure-boards/\nhttps://docs.microsoft.com/en-us/azure/devops/boards/github/install-github-app?view=azure-devops\nAdd the Azure Pipelines app to the GitHub repository is the INCORRECT answer because this will integrate GitHub repositories with the Azure pipelines to achieve an end to end tracking and traceability for a code change, commit, build and release. This feature will help to automate CI/CD processes for the code in the repository using Azure Pipelines. However, it wont help in the integration of repository and Azure Boards.\n\nhttps://www.azuredevopslabs.com/labs/azuredevops/github-integration/\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github\nhttps://github.com/microsoft/azure-pipelines-tasks\nConfigure multi-factor authentication (MFA) for your GitHub account is the INCORRECT answer because this feature will enhance the login process for your GitHub account by introducing another layer of authentication(if it is YOU whos logging in) but not help in integrating Azure Boards and Github private repository. An example of MFA is introducing the concept of verification code which will be sent to your personal mobile number before you can log in to Github even after entering your password.\nhttps://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa\n\nCreate a Github action in Github is INCORRECT because the GitHub Actions help in automating the software workflows by letting us enable CI/CD for the code. Using workflows/templates within Github Actions one can build, test, and deploy more efficiently. It won’t solve the problem of displaying the commit status of the repository on Azure Boards.\nhttps://github.com/features/actions",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You are integrating Azure Pipelines and Microsoft Teams.\nYou install the Azure pipelines app in Microsoft Teams.\nYou have an Azure DevOps organization named Contoso that contains a project named Project1.\nYou subscribe to Project1 in Microsoft Teams.\nYou need to ensure that you only receive events about failed builds in Microsoft Teams.\nWhat should you do first?",
+    "answers": [
+      "1. \n\n From Microsoft Teams, Run @azure pipelines subscriptions.",
+      "2. \n\n From Azure Pipelines, add a Publish Build Artifacts task to Project1.",
+      "3. \n\n From Microsoft Teams, run @azure pipelines subscribe  https://dev.azure.com/Contoso/Project1.",
+      "4. \n\n From Azure Pipelines, enable continuous integration for Project1."
+    ],
+    "rationale": "Correct \nCorrect Answer(s): From Microsoft Teams, Run @azure pipelines subscriptions\nFrom Microsoft Teams, Run @azure pipelines subscriptions is the CORRECT answer here because as an initial step(first step) you will list all the subscriptions and pipelines to manage any existing subscription. Once the subscriptions are listed, select the appropriate subscription and configure it using dropdown menus to receive event notifications for failed builds only.\n\nA step by step to integrate and manage MS teams with Azure DevOps Services :\nhttps://azuredevopslabs.com/labs/vstsextend/teams/#subscribe-for-the-pipelines-notifications\nFrom Microsoft Teams, run @azure pipelines subscribe  https://dev.azure.com/Contoso/Project1 is the INCORRECT answer because this command will be used to subscribe to Project1 as a whole and not specific failed build tasks. This command will subscribe to all the pipelines of Project1 including both build and release. Moreover, we previously did subscribe to Project1 in MS teams, so we do not need this command to run first.\n\nFor example, to subscribe for Build pipelines enter\n@azure pipelines subscribe https://dev.azure.com/test/abcaders/_build?definitionId=2\nFrom Azure Pipelines, enable continuous integration for Project1 is the INCORRECT choice because enabling continuous integration for a project will add triggers for the Build pipeline to run and nothing related to the notifications in teams for failed builds.\nhttps://azuredevopslabs.com/labs/azuredevops/continuousintegration/\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops&tabs=yaml#ci-triggers\nFrom Azure Pipelines, add a Publish Build Artifacts task to Project1 is also the INCORRECT choice because the Publish Build Artifact task will pick up all the final artifacts from the source build pipeline and publish it as Artifacts, which then will be available for any other pipeline to be pick up as a source (usually the source for Release pipelines).\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-build-artifacts",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You are planning projects for three customers. Each customers preferred process for work items is shown in the following table.\n\nThe customers all plan to use Azure DevOps for work item management.\nWhich work item process should you use for the customer Litware, Inc.?",
+    "answers": [
+      "1. \n\n Agile",
+      "2. \n\n CMMI",
+      "3. \n\n Scrum",
+      "4. \n\n XP"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Scrum\nScrum is the CORRECT answer because the scrum process in Azure DevOps works great when you want to track product backlog items (PBIs) and bugs on the Kanban board or break PBIs and bugs down into tasks on the taskboard. This process supports the original Scrum methodology.\n\nSCRUM methodology:\nhttps://www.scrum.org/resources/what-is-scrum\nhttps://www.scrum.org/\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/scrum-process?view=azure-devops\n\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/scrum-process-workflow?view=azure-devops\nXP is an INCORRECT answer because XP or extreme programming is a different software development methodology focussed on moving fast using concepts of CI and CD and test focussed development. It fundamentally consisted of 12 core principles. XP in the case of the Litware client, wont fulfill the requirement of tracking user stories and maintaining the PBIs on either of the Kanban or task boards.\nInformation in detail about the Extreme Programming practice and principles:\nhttps://www.geeksforgeeks.org/software-engineering-extreme-programming-xp/\nhttps://www.agilealliance.org/glossary/xp/\nCMMI is INCORRECT because CMMI is used when tracking for change requests is needed to create an auditable process. It wont support tracking PBIs/bugs broken into tasks as required by Litware Inc.\nAgile is the INCORRECT choice because there is no requirement for the User stories to be tracked and just Scrum can fulfill the requirement.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You are planning projects for three customers. Each customers preferred process for work items is shown in the following table.\n\nThe customers all plan to use Azure DevOps for work item management.\nWhich work item process should you use for the customer Contoso, Ltd.?",
+    "answers": [
+      "1. \n\n Agile",
+      "2. \n\n CMMI",
+      "3. \n\n Scrum",
+      "4. \n\n XP"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Agile\nThe CORRECT answer will be Agile because the company wants to track user stories and/or bugs on the Kanban board. Moreover, there is also a requirement to track bugs and tasks on the Taskboard. Agile process is chosen in Azure DevOps when the team uses Agile planning methods and tracks development and test activities separately.\nThe link to a detailed Microsoft document on how to choose a process in Azure DevOps:\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process\nAgile Process WorkFlow:\n\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/agile-process?view=azure-devops\nhttps://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/agile-process-workflow?view=azure-devops\nXP is an INCORRECT answer because XP or extreme programming is a different software development methodology focussed on moving fast using concepts of CI and CD and test focussed development. XP in the case of the Contoso client, wont fulfill the requirement of tracking user stories and tasks on either of the Kanban or task boards.\nInformation in detail about the Extreme Programming practice and principles:\nhttps://www.geeksforgeeks.org/software-engineering-extreme-programming-xp/\nhttps://www.agilealliance.org/glossary/xp/\nhttps://en.wikipedia.org/wiki/Extreme_programming\nhttps://en.wikipedia.org/wiki/Extreme_programming_practices\nCMMI is the INCORRECT answer here because the CMMI process is when a framework for Process improvement is required to support Estimates, work status, etc. This process won’t suffice Contosos requirements.\nScrum is the INCORRECT answer because the scrum process is Azure DevOps wont fulfill the requirement to track user stories and bugs on the kanban board.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have a project in Azure DevOps. You have an Azure Resource Group deployment project in Microsoft Visual Studio that is checked into the Azure DevOps project.\nYou need to create a release pipeline that will deploy resources by using Azure Resource Manager templates. The solution must minimize administrative effort.\nWhich task type should you include in the solution?",
+    "answers": [
+      "1. \n\n Azure Cloud Service Deployment",
+      "2. \n\n Azure RM Web App Deployment",
+      "3. \n\n Azure PowerShell",
+      "4. \n\n Azure App Service Manage"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Azure PowerShell\nAzure PowerShell is the CORRECT choice because azure powershell commands can be used to deploy azure resources in a resource group using ARM templates(Azure resource manager templates). Moreover, we need to minimize administrative effort, so we deploy the code using powershell and arm templates, or using infrastructure as code.\nAzure Powershell – an extension of normal windows PowerShell to support azure resources, provides flexibility in terms of scoped deployments. Different Azure PowerShell commands can be used for different deployments.\nPlease refer the commands below:\nFor Resource Group scope deployment\nhttps://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment?view=azps-4.8.0\nNew-AzResourceGroupDeployment -ResourceGroupName  -TemplateFile \nFor Subscription deployments\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-subscription\nNew-AzSubscriptionDeployment -Location  -TemplateFile \nFor Management Group level deployment\nhttps://docs.microsoft.com/en-us/powershell/module/az.resources/New-AzManagementGroupDeployment?view=azps-4.8.0\nNew-AzManagementGroupDeployment -Location  -TemplateFile \nFor Tenant level deployments\nhttps://docs.microsoft.com/en-us/powershell/module/az.resources/new-aztenantdeployment?view=azps-4.8.0\nNew-AzTenantDeployment -Location  -TemplateFile \nAzure Cloud Service Deployment is an INCORRECT choice because an Azure cloud service is a PAAS service and it does not suffice our requirement of deploying azure resources using azure resource manager (ARM) templates. Azure cloud service deployment task in the pipeline will not provide us the ability to utilize ARM templates to deploy different kinds of azure resources.\nhttps://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-choose-me\nAzure RM Web App Deployment is INCORRECT because azure web app is also a PAAS service which is used to host websites on the Azure managed platform. It wont give us the ability to deploy other Azure resources using the ARM templates. Infact, ARM templates can be used to create a web app deployment in Azure.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=classic\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/azure/deploy-arm-template?view=azure-devops\nAzure App Service Manage is INCORRECT because this task is used to control or manage the App service already deployed on Azure. This task is used to start, stop, restart, slot swap, Swap with Preview, install site extensions, or enable continuous monitoring for an Azure App Service. Moreover, Azure App Service Manage task has nothing to do with the deployments using the ARM templates and that is why we rule this option out.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-app-service-manage?view=azure-devops",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have an Azure DevOps organization named Contoso and an Azure DevOps project named Project1.\nYou plan to use Microsoft-hosted agents to build container images that will host full Microsoft .NET Framework apps in a YAML pipeline in Project1.\nWhat are two possible virtual machine images that you can use for the Microsoft-hosted agent pool?",
+    "answers": [
+      "1. \n\n vs2017-win2016",
+      "2. \n\n ubuntu-16.04",
+      "3. \n\n Win1803",
+      "4. \n\n macOS-10.13",
+      "5. \n\n vs.2015-win2012r2"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Vs2017-win2016 and Ubuntu-16.04\nVs2017-win2016 and ubuntu-16.04 are the CORRECT answers because these virtual machine images are supported with Microsoft-hosted agents, out of all the mentioned images in the question.\n\nPlease refer to the documentation below:\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software\nWin1803 is an INCORRECT choice because Microsoft has removed the Windows Server Core 1803 from the hosted images gallery, and no more support is available for it. If still needed, one can create a self hosted agent to run their applications on Windows Server Core 1803.\nhttps://github.com/Microsoft/azure-pipelines-image-generation/blob/master/images/win/WindowsContainer1803-Readme.md\nmacOS-10.13 is also an INCORRECT choice because Microsoft has removed macOS X High Sierra 10.13 from the hosted images list since March,2020.\nhttps://github.com/microsoft/azure-pipelines-image-generation/blob/master/images/macos/macos-10.13-Readme.md",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company is building a new solution in Java.\nThe company currently uses a SonarQube server to analyze the code of .NET solutions.\nYou need to analyze and monitor the code quality of the Java solution.\nWhich task types should you add to the build pipeline?",
+    "answers": [
+      "1. \n\n Grunt",
+      "2. \n\n Chef",
+      "3. \n\n Maven",
+      "4. \n\n Gulp"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Maven\nMaven is the CORRECT answer because only maven out of all options maven will be helpful when analyzing and monitoring Java code quality and security, when integrated through SonarQube extension for Azure pipelines.\nhttps://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube\nhttps://www.azuredevopslabs.com/labs/vstsextend/sonarqube/\n\nMaven is a build automation tool used mainly for java projects from apache, which helps in making the build process easy and uniform while encouraging the use of development best practices.\nhttp://maven.apache.org/what-is-maven.html\nChef is an INCORRECT answer because Chef is a Configuration Management and infrastructure automation tool which will not be helpful when analyzing the code quality for the Java based solutions.\nhttps://www.chef.io/\nGrunt is an INCORRECT answer because Grunt is a JS task runner used for automation of frequent tasks like unit-testing, compilation, etc. Grunt wont be useful when improving code quality for Java code.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/grunt\nhttps://gruntjs.com/getting-started\nGulp is INCORRECT because gulp is a community developed plugin based JavaScript toolkit used as a streaming build system in front-end web development. Gulp will not be helpful in analyzing and monitoring code quality for our Java based solution.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/javascript?view=azure-devops&tabs=code#gulp",
+    "quizNumber": "3"
+  },
+  {
+    "question": "You have 50 Node.js-based projects that you scan by using WhiteSource. Each project includes Package.json, Package-lock.json, and Npm-shrinkwrap.json files.\nYou need to minimize the number of libraries reports by WhiteSource to only the libraries that you explicitly reference.\nWhat should you do?",
+    "answers": [
+      "1. \n\n Configure the File System Agent plug-in.",
+      "2. \n\n Add a devDependencies section to Package-lock.json.",
+      "3. \n\n Configure the Artifactory plug-in.",
+      "4. \n\n Delete Package-lock.json."
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Add a devDependencies section to Package-lock.json\nAdd a devDependencies section to Package-lock.json is the CORRECT answer because we need to reduce the number of libraries to the bare minimum that needs to be reviewed.\nTo achieve that, within the package.json file we need to split out the NPM dependencies between devDependencies and (production) dependencies. After which we can use a production flag to exclude most of the unnecessary packages.\nhttps://docs.microsoft.com/en-us/archive/blogs/visualstudioalmrangers/manage-your-open-source-usage-and-security-as-reported-by-your-cicd-pipeline\n\nConfigure the Artifactory plug-in is an INCORRECT answer because this plugin integrates Artifactory Artifacts with WhiteSource. The Artifactory plugin adds additional information to the Artifactory artifacts and updates WhiteSource.\nOnce invoked, all the artifacts’ metadata on your Artifactory will be uploaded to your WhiteSource inventory. However, this wont solve our purpose of minimizing the number of library reports.\nhttps://whitesource.atlassian.net/wiki/spaces/WD/pages/34046111/Artifactory+Plugin\nConfigure the File System Agent plug-in is an INCORRECT choice because the file system agent or Unified system agent is a command line based tool which extracts descriptive information from the open source libraries into WhiteSource, so that they can viewed under a specific WhiteSource account through their Web Application.\nhttps://whitesource.atlassian.net/wiki/spaces/WD/pages/804814917/Unified+Agent+Configuration+File+and+Parameters\nDelete Package-lock.json is an INCORRECT because package-lock.json is a very important file which is created for locking the dependency with the installed version. This file is automatically generated for any operations where npm modifies either the node_modules tree, or package.json.\nPackage-lock.json being an extremely important file, it is highly recommended to not delete this file even when you want to resolve conflicts.\nhttps://docs.npmjs.com/configuring-npm/package-lock-json.html",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company deploys applications in Docker containers.\nYou want to detect known exploits in the Docker images used to provision the Docker containers.\nYou need to integrate image scanning into the application lifecycle. The solution must expose the exploits as early as possible during the application lifecycle.\nWhat should you configure?",
+    "answers": [
+      "1. \n\n a task executed in the continuous integration pipeline and a scheduled task that analyzes the image registry",
+      "2. \n\n manual tasks performed during the planning phase and the deployment phase",
+      "3. \n\n a task executed in the continuous deployment pipeline and a scheduled task against a running production container",
+      "4. \n\n a task executed in the continuous integration pipeline and a scheduled task that analyzes the production container"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): a task executed in the continuous integration pipeline and a scheduled task that analyzes the image registry\na task executed in the continuous integration pipeline and a scheduled task that analyzes the image registry is CORRECT because our requirement is to expose the exploits as early as possible. We can use the Docker task in a build or release pipeline and sign into ACR. Then, Using a script to pull an image and scan the container image for vulnerabilities.\nNew vulnerabilities are discovered all the time, so scanning for and identifying vulnerabilities is a continuous process. Incorporate vulnerability scanning throughout the container lifecycle by performing a vulnerability scan on containers before pushing the images to a public or private registry, and continue to scan container images in the registry both to identify any flaws that were somehow missed during development and to address any newly discovered vulnerabilities that might exist in the code used in the container images. Another feature for security of containers is provided by integrating Azure security center with Azure container instances to scan image vulnerabilities.\nhttps://docs.microsoft.com/en-us/azure/container-instances/container-instances-image-security\n\nhttps://samcogan.com/scanning-containers-during-builds-with-azure-security-centre/\nhttps://docs.microsoft.com/en-us/azure/devops/migrate/security-validation-cicd-pipeline?view=azure-devops&viewFallbackFrom=vsts\nmanual tasks performed during the planning phase and the deployment phase is an INCORRECT answer because this solution does not meet the requirement of scanning for vulnerabilities as early as possible. Moreover, it is depending on the manual tasks in the planning phase. This is not a best practice as performing manual tasks initially can slow down the application delivery time for the end customer, in return losing to deliver continuous value for the product for the Development team.\na task executed in the continuous deployment pipeline and a scheduled task against a running production container is an INCORRECT choice because we dont need to wait until the container is in production. We want to monitor and identify vulnerabilities as early as possible. Therefore, we rule this option out.\na task executed in the continuous integration pipeline and a scheduled task that analyzes the production container is an INCORRECT choice because the requirement is to detect the potential threats as early as possible. However, in this case we are waiting to schedule a task that analyzes the production container.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals.\nYou plan to create a release pipeline that will deploy Azure resources by using Azure Resource Manager templates. The release pipeline will create the following resources:\n– Two resource groups\n– Four Azure virtual machines in one resource group\n– Two Azure SQL databases in other resource group\nYou need to recommend a solution to deploy the resources.\nSolution: Create a main template that will deploy the resources in one resource group and a nested template that will deploy the resources in the other resource group.\nDoes this meet the goal?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nYes, this solution meets the goal.\nHere’s a breakdown of why:\n\nMain Template: This template can be used to deploy the two resource groups and the four virtual machines in one of them.\nNested Template: The nested template can be used to deploy the two Azure SQL databases in the second resource group.\nFlexibility: This approach provides flexibility as you can modify the nested template without affecting the main template, and vice versa.\nModularity: The use of nested templates promotes modularity and reusability of the deployment logic.\n\nTherefore, using a main template and a nested template is an effective way to deploy the specified Azure resources.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals.\nYou plan to create a release pipeline that will deploy Azure resources by using Azure Resource Manager templates. The release pipeline will create the following resources:\n– Two resource groups\n– Four Azure virtual machines in one resource group\n– Two Azure SQL databases in other resource group\nYou need to recommend a solution to deploy the resources.\nSolution: Create a main template that has two linked templates, each of which will deploy the resources in its respective group.\nDoes this meet the goal?",
+    "answers": [
+      "1. \n\n Yes",
+      "2. \n\n No"
+    ],
+    "rationale": "Correct \nCorrect Answer(s): Yes\nYes is the CORRECT answer here because we need to deploy resources to multiple resource group scopes. Multiple linked templates using one main/global template, work in the best possible way to manage the deployments at different scopes and makes the whole Infrastructure as code process easy to manage and scale.\nTo link a template, add a deployments resource to the main template. In the templateLink property, specify the URI of the template to include.\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/linked-templates#linked-template\nPlease refer to the template below to get an idea on linked template in a main/global template:",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company has a project in Azure DevOps for a new web application.\nThe company uses ServiceNow for change management.\nYou need to ensure that a change request is processed before any components can be deployed to the production environment.\nWhat are two ways to integrate ServiceNow into the Azure DevOps release pipeline?",
+    "answers": [
+      "1. \n\n Define a deployment control that invokes the ServiceNow REST API.",
+      "2. \n\n Define a pre-deployment gate before the deployment to the Prod stage.",
+      "3. \n\n Define a deployment control that invokes the ServiceNow SOAP API.",
+      "4. \n\n Define a post-deployment gate after the deployment to the QA stage."
+    ],
+    "rationale": "Correct \nCorrect Answer(s):\nDefine a pre-deployment gate before the deployment to the Prod stage.\nDefine a post-deployment gate after the deployment to the QA stage.\nDefine a pre-deployment gate before the deployment to the Prod stage and\nDefine a post-deployment gate after the deployment to the QA stage are the TWO CORRECT answers because our requirement is to integrate ServiceNow in the release pipeline of Azure DevOps with a motive of processing any change request that comes through ServiceNow, before any components can be deployed to the production environment.\nTutorial on how to Integrate Azure DevOps with ServiceNow change management using Azure Deployment Gates:\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/servicenow?view=azure-devops\nGates allow automatic collection of health signals from external services(ServiceNow in this case), and then promote the release when all the signals are successful (required status for work items, incidents, and issues in this case) at the same time or stop the deployment on timeout.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/?view=azure-devops\nGates in Pre-deployment Conditions:\n\nPre-deployment gate before Production stage and the post-deployment gate after QA stage will make sure that all the signals in the gate coming through ServiceNow are successful. Only after that it will proceed to complete deployment for the Production environment.\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=classic\nGates in Post-Deployment Conditions :\n\nhttps://www.azuredevopslabs.com/labs/vstsextend/releasegates/\nDefine a deployment control that invokes the ServiceNow REST API is an INCORRECT choice because this option possesses only a part of the solution and not the complete solution. There needs to be a deployment control that will invoke ServiceNow API but where and how it will be set to ensure change management happens before deployment to production stage, is not specified as part of the answer statement.\nDefine a deployment control that invokes the ServiceNow SOAP API is the INCORRECT answer because the answer statement is giving only half the solution as right.\nAs stated above, deployment control must be set that will invoke calls to the ServiceNow APIs but, when and as part of which stage are not specified. Since the requirement is to allow deployments to the production only if certain criteria is met, we rule this option out.",
+    "quizNumber": "3"
+  },
+  {
+    "question": "Your company uses Azure DevOps.\nOnly users who have accounts in Azure Active Directory can access the Azure DevOps environment.\nYou need to ensure that only devices that are connected to the on-premises network can access the Azure DevOps environment.\nWhat should you do?",
+    "answers": [
+      "1. \n\n Assign the Stakeholder access level to all users.",
+      "2. \n\n In Azure DevOps, configure Security in Project Settings.",
+      "3. \n\n In Azure Active Directory, configure conditional access.",
+      "4. \n\n In Azure Active Directory, configure risky sign-ins."
+    ],
+    "rationale": "Correct \nCorrect Answer(s): In Azure Active Directory, configure conditional access\nIn Azure Active Directory, configure conditional access is the CORRECT answer because a conditional access policy allows us to control specific access using a condition criteria. We can use a conditional access policy to control access for users to any cloud based/on premises(linked with azure) services with a logic(condition).\nIn our case, we will enable access for devices (on-premises IP range/network) by allowing only trusted networks to connect with the cloud-based Azure devops organization. Setting this will ensure that access to our DevOps is restricted from outside the organization network.\n\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview\nDocumentation on how to configure and design a conditional access policy in azure Active directory:\nhttps://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-policies\nIn Azure Active Directory, configure risky sign-ins is an INCORRECT answer because when we configure a sign-in risk policy which is a part Azure AD Identity protection, we set the policy to check if the sign-in is a risky one by setting certain conditions. However, we can not manage access to cloud based resources using the risky sign-ins.\nhttps://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies\nIn Azure DevOps, configure Security in Project Settings is an INCORRECT answer because we have a requirement to allow access from only on-premises network of the organization and we do not have an option to do that in Project settings of an Azure DevOps project.\nAssign the Stakeholder access level to all users is an INCORRECT answer because Stakeholder access is for accessing the Azure DevOps service like Azure repos, pipelines, Azure boards, etc. However, it can not configure network based access to the azure devops environment.",
+    "quizNumber": "3"
+  }
+]

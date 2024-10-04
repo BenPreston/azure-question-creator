@@ -1,0 +1,777 @@
+[
+  {
+    "question": "A company is currently planning on developing a project using the Agile project approach. The company wants to have a communication system in place for the various project teams. Below are the key requirements for the communication system\n– Provide the ability to have different communication channels for isolating members of different project teams\n– The chat history for the various channels should be maintained\n– It should be able to integrate into Azure Devops\n– It should provide the ability to add external contracts to the projects\nWhich of the following could you choose for this requirement?",
+    "answers": [
+      "Microsoft Flow",
+      "Microsoft teams",
+      "Microsoft Lync",
+      "Microsoft Project"
+    ],
+    "rationale": "The best software to use for these requirements is Microsoft Teams. The Microsoft documentation mentions the following when it comes to the features provided by Microsoft teams\n\nOption A is incorrect since this is more for creating workflows\nOption C is incorrect since now Lync has been replaced with Microsoft teams\nOption D is incorrect since this is a project management software\nFor more information on Microsoft Teams, please visit the below URL\nhttps://products.office.com/en-us/microsoft-teams/group-chat-software",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Create and document APIs",
+    "correctAnswer": "Microsoft teams"
+  },
+  {
+    "question": "A team currently has an application deployment lifecycle defined in Azure Pipelines. It is a Java based application. They also have configured a SonarQube server for measuring code quality. They want to integrate SonarQube in the release pipeline. Which of the following task types could be used for this purpose? Choose 2 answers from the options given below",
+    "answers": [
+      "1. \n\n Chef",
+      "2. \n\n Puppet",
+      "3. \n\n Maven",
+      "4. \n\n Gradle"
+    ],
+    "rationale": "This is clearly given in the Microsoft documentation\n\nSince this is clearly given, all other options are incorrect.\nAnt, Maven, Gradle, Jenkins for Java\nGulp, Grunt, npm etc. for the JavaScript project build\nFor more information on using SonarQube as part of Azure Devops, please visit the below URLhttps://docs.microsoft.com/en-us/azure/devops/java/sonarqube?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["3. \n\n Maven", "4. \n\n Gradle"]
+  },
+  {
+    "question": "A company has a project defined in Azure Devops for a new application. The application needs to be deployed onto various Windows Server 2016 virtual machines. A deployment strategy is in place which has the following requirements\n– The virtual machines must always maintain a consistent configuration\n– The administrative effort to deploy the virtual machines must be minimized\nWhich of the following solution would you use to deploy the virtual machine?",
+    "answers": [
+      "1. \n\n Azure Pipelines",
+      "2. \n\n Azure Logic Apps",
+      "3. \n\n Azure Functions",
+      "4. \n\n Azure Resource Manager templates"
+    ],
+    "rationale": "If you need to minimize the effort to deploy similar types of virtual machines, then the best way is to use Resource Manager templates.\nThe Microsoft documentation mentions the following\n\nOption A is incorrect since this is used to automate builds and deployments\nOption B is incorrect since this is used to develop workflows\nOption C is incorrect since this is a serverless compute service\nFor more information on Azure Resource Manager templates, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#template-deployment",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create and manage container images for solutions",
+    "correctAnswer": ["4. \n\n Azure Resource Manager templates"]
+  },
+  {
+    "question": "Case Study:\n\nCurrently there is an issue with the Automation Service. The configuration is not consistent over time and fails to correct the configuration. Which of the following must be done to correct the issue?",
+    "answers": [
+      "1. \n\n Replace the Register-AzureRmAutomationDscNode command with the Add-AzureRmAutomationDscNode",
+      "2. \n\n Change the value of the parameter \"ConfigurationMode\" to 'ApplyAndAutoCorrect'.",
+      "3. \n\n Add the AllowModuleOverwrite parameter to the Register-AzureRmAutomationDscNode command",
+      "4. \n\n Add the DefaultProfile parameter to the Register-AzureRmAutomationDscNode command"
+    ],
+    "rationale": "Here the main issue is that the ConfigurationMode parameter has been set to ApplyOnly which means it will only apply the configuration once. Change the “ConfigurationMode” value to “ApplyAndAutoCorrect”\n\nSince the issue is clear from the command, all other options are incorrect\nFor more information on Azure Automation, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/automation/tutorial-configure-servers-desired-state",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": [
+      "2. \n\n Change the value of the parameter \"ConfigurationMode\" to 'ApplyAndAutoCorrect'."
+    ]
+  },
+  {
+    "question": "Case Study:\n\nWhich of the following can be applied to ensure that the application does not get promoted to the next stage in the pipeline if it has active bugs assigned to it?",
+    "answers": [
+      "1. \n\n Creating a trigger",
+      "2. \n\n Creating a deployment gate",
+      "3. \n\n Creating a pre-deployment approval",
+      "4. \n\n Creating a post-deployment approval"
+    ],
+    "rationale": "Gates allow automatic collection of health signals from external services, and then promote the release when all the signals are successful at the same time or stop the deployment on timeout. Typically, gates are used in connection with incident management, problem management, change management, monitoring, and external approval systems.\nHence this is correct answer. we can stop the promotion to next stage in the pipeline with any active bug\n\nOptions A, C and D are incorrect since here we need to have an approval process in place\nFor more information on approvals in Azure Pipelines, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["2. \n\n Creating a deployment gate"]
+  },
+  {
+    "question": "You need to ensure the right code is present in the mobile component to initialize App Center.\nMSAppCenter.start(“{Your App Secret}”, withServices: [SLOT_1, SLOT_2])\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n MSAnalytics.self",
+      "2. \n\n MSDistribute.self",
+      "3. \n\n MSCrashes.self",
+      "4. \n\n MSPush.self"
+    ],
+    "rationale": "An example of this is given in the Microsoft documentation\n\nSince this is clearly given in the documentation, all other options are incorrect\nFor more information on using App Center with iOS apps, please visit the below URL\nhttps://docs.microsoft.com/en-us/appcenter/sdk/getting-started/ios",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Create an Azure API Management instance",
+    "correctAnswer": ["1. \n\n MSAnalytics.self"]
+  },
+  {
+    "question": "You need to ensure the right code is present in the mobile component to initialize App Center.\nMSAppCenter.start(“{Your App Secret}”, withServices: [SLOT_1, SLOT_2])\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n MSAnalytics.self",
+      "2. \n\n MSDistribute.self",
+      "3. \n\n MSCrashes.self",
+      "4. \n\n MSPush.self"
+    ],
+    "rationale": "An example of this is given in the Microsoft documentation\n\nSince this is clearly given in the documentation, all other options are incorrect\nFor more information on using App Center with iOS apps, please visit the below URL\nhttps://docs.microsoft.com/en-us/appcenter/sdk/getting-started/ios",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Create and document APIs",
+    "correctAnswer": ["3. \n\n MSCrashes.self"]
+  },
+  {
+    "question": "Case Study:\n\nWhich of the following access level would you provide for the photonapp-developers group?",
+    "answers": [
+      "1. \n\n Reader",
+      "2. \n\n Collaborator",
+      "3. \n\n Contributor",
+      "4. \n\n Owner"
+    ],
+    "rationale": "Since the development team only need the permission to install packages, the Reader access level should be sufficient enough. Below are the access levels given in the Microsoft documentation\n\nSince this is the right access level, all other options are incorrect\nFor more information on sharing and securing packages, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["1. \n\n Reader"]
+  },
+  {
+    "question": "Case Study:\n\nWhich of the following access level would you provide for the photonapp-admin group?",
+    "answers": [
+      "1. \n\n Reader",
+      "2. \n\n Collaborator",
+      "3. \n\n Contributor",
+      "4. \n\n Owner"
+    ],
+    "rationale": "Since this group also needs permissions to edit package feeds, we need to assign the owner role\nBelow are the access levels given in the Microsoft documentation\n\nSince this is the right access level, all other options are incorrect\nFor more information on sharing and securing packages, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["4. \n\n Owner"]
+  },
+  {
+    "question": "A team is currently using Azure Pipelines for their build and release process. They have the following requirements when it comes to the release artifacts\n– It needs to be ensured that for the Development stage, the release is retained for 10 days\n– The last 2 releases should be maintained\nWhich of the following would you set for the below requirement?\nIt needs to be ensured that for the Development stage, the release is retained for 10 days",
+    "answers": [
+      "1. \n\n Set a retention variable for the development stage",
+      "2. \n\n Set the retention policy for the development stage",
+      "3. \n\n Set a trigger for the development stage",
+      "4. \n\n Define the run numbers for the development stage"
+    ],
+    "rationale": "This can be done via the retention policy. The Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on retention policies, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/policies/retention?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": [
+      "2. \n\n Set the retention policy for the development stage"
+    ]
+  },
+  {
+    "question": "A team is currently using Azure Pipelines for their build and release process. They have the following requirements when it comes to the release artifacts\n– It needs to be ensured that for the Development stage, the release is retained for 10 days\n– The last 2 releases should be maintained\nWhich of the following would you set for the below requirement?\nThe last 2 releases should be maintained",
+    "answers": [
+      "1. \n\n Set a retention variable for the development stage",
+      "2. \n\n Set the retention policy for the development stage",
+      "3. \n\n Set a trigger for the development stage",
+      "4. \n\n Define the run numbers for the development stage"
+    ],
+    "rationale": "This can be done via the retention policy. The Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on retention policies, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/policies/retention?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": [
+      "2. \n\n Set the retention policy for the development stage"
+    ]
+  },
+  {
+    "question": "A company is currently using Azure Pipelines for implementing CI/CD for various applications. They have the following requirements when it comes to implementing Azure Pipelines\n– For the QA stage, the application needs to be deployed to a new Windows Virtual Machine in Azure.\n– The virtual machine should only be of a particular SKU size\nWhich of the following would you consider implementing in Azure to comply with the requirement?",
+    "answers": [
+      "1. \n\n Role Based Access",
+      "2. \n\n Azure Advisor",
+      "3. \n\n Azure Policies",
+      "4. \n\n Azure AD"
+    ],
+    "rationale": "You can define a policy for controlling the governance of deployment of virtual machines\nThe Microsoft documentation mentions the following\n\nOption A is incorrect since this is used to control access\nOption B is incorrect since this is a recommendations engine in Azure\nOption D is incorrect since this is an identity management solution\nFor more information on Azure policies, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/governance/policy/overview",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create and configure an Azure Functions app",
+    "correctAnswer": ["3. \n\n Azure Policies"]
+  },
+  {
+    "question": "A company is currently using Azure Devops services for developing different applications. They want to use the inbuilt Analytics service to measure different project metrics. The team lead wants to have a chart that represents the trend of remaining work items across multiple teams and multiple sprints.\nThe team lead decides to use the Cumulative Flow Diagram\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "This chart is used to show the count of work items (over time) for each column of a Kanban board.\nFor more information on the various widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A company is currently using Azure Devops services for developing different applications. They want to use the inbuilt Analytics service to measure different project metrics. The team lead wants to have a chart that represents the trend of remaining work items across multiple teams and multiple sprints.\nThe team lead decides to use the Cycle Lead time chart.\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "This chart is used to analyze the time it takes for your team to complete work items once they begin actively working on them\nFor more information on the various widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A company is currently using Azure Devops services for developing different applications. They want to use the inbuilt Analytics service to measure different project metrics. The team lead wants to have a chart that represents the trend of remaining work items across multiple teams and multiple sprints.\nThe team lead decides to use the Burndown chart\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "Answer  A\nYes, this is the ideal chart to use for this requirement. The Microsoft documentation mentions the following\n\nFor more information on the various widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["1. \n\n Yes"]
+  },
+  {
+    "question": "Your team is planning on deploying an application to an Azure Kubernetes cluster. There is a requirement to ensure the cluster can interact with other Azure resources. Which of the following would you create for this purpose?",
+    "answers": [
+      "1. \n\n SSH keys",
+      "2. \n\n A Service principal",
+      "3. \n\n An Azure policy",
+      "4. \n\n A secret"
+    ],
+    "rationale": "This can be done with the help of a service principal. The Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on creating a Kubernetes cluster, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-rm-template",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Create an Azure API Management instance",
+    "correctAnswer": ["2. \n\n A Service principal"]
+  },
+  {
+    "question": "A team is developing an application that would be deployed using ARM templates. The templates would also be used to create virtual machines. You need to store a secret for the virtual machine in an Azure Key vault.\nYou need to complete the following script for this purpose.\naz SLOT_1 create –name “Contoso-Vault2” –resource-group “ContosoResourceGroup” –location eastus\naz SLOT_2 SLOT_3 set –vault-name “Contoso-Vault2” –name “ExamplePassword” –value “hVFkk965BuUv”\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n keyvault",
+      "2. \n\n vault",
+      "3. \n\n secret",
+      "4. \n\n set"
+    ],
+    "rationale": "An example of this is given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on creating a key vault via the CLI, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create an Azure App Service Web App",
+    "correctAnswer": ["1. \n\n keyvault"]
+  },
+  {
+    "question": "A team is developing an application that would be deployed using ARM templates. The templates would also be used to create virtual machines. You need to store a secret for the virtual machine in an Azure Key vault.\nYou need to complete the following script for this purpose.\naz SLOT_1 create –name “Contoso-Vault2” –resource-group “ContosoResourceGroup” –location eastus\naz SLOT_2 SLOT_3 set –vault-name “Contoso-Vault2” –name “ExamplePassword” –value “hVFkk965BuUv”\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n keyvault",
+      "2. \n\n vault",
+      "3. \n\n secret",
+      "4. \n\n set"
+    ],
+    "rationale": "An example of this is given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on creating a key vault via the CLI, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Create and implement shared access signatures",
+    "correctAnswer": ["1. \n\n keyvault"]
+  },
+  {
+    "question": "A team is developing an application that would be deployed using ARM templates. The templates would also be used to create virtual machines. You need to store a secret for the virtual machine in an Azure Key vault.\nYou need to complete the following script for this purpose.\naz SLOT_1 create –name “Contoso-Vault2” –resource-group “ContosoResourceGroup” –location eastus\naz SLOT_2 SLOT_3 set –vault-name “Contoso-Vault2” –name “ExamplePassword” –value “hVFkk965BuUv”\nWhich of the following would go into SLOT_3?",
+    "answers": [
+      "1. \n\n keyvault",
+      "2. \n\n vault",
+      "3. \n\n secret",
+      "4. \n\n set"
+    ],
+    "rationale": "An example of this is given in the Microsoft documentation\n\nSince this is clearly mentioned in the Microsoft documentation, all other options are incorrect\nFor more information on creating a key vault via the CLI, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Develop code that uses keys, secrets, and certificates stored in Azure Key Vault",
+    "correctAnswer": ["3. \n\n secret"]
+  },
+  {
+    "question": "A DevOps team is planning on deploying a web application onto an Azure Web App service. In order to cater to testing of new release , they decide to make use of deployments slots in the Azure Web App service. They have an App service plan in place that is based on the Standard tier.\nThey have to create a script to perform the following steps\n1. Create a web app and attach it to the App service plan\n2. Create a deployment slot\n3. Initiate a swap of the deployment slots\nYou have to complete the below script for this requirement\nSLOT_1 -ResourceGroupName [resource group name] -Name [app name] -Location [location] -AppServicePlan [app service plan name]\nSLOT_2 -ResourceGroupName [resource group name] -Name [app name] -Slot [deployment slot name] -AppServicePlan [app service plan name]\n$ParametersObject = @{targetSlot = “[slot name  e.g. “production”]”}\nSLOT_3 -ResourceGroupName [resource group name] -ResourceType Microsoft.Web/sites/slots -ResourceName [app name]/[slot name] -Action applySlotConfig -Parameters $ParametersObject -ApiVersion 2015-07-01\nWhich of the following would go into SLOT_1?",
+    "answers": [
+      "1. \n\n New-AzWebAppSlot",
+      "2. \n\n New-AzResourceGroup",
+      "3. \n\n New-AzWebApp",
+      "4. \n\n Invoke-AzResourceAction"
+    ],
+    "rationale": "Here we need to create a new Azure Web App\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on working with deployment slots, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create an Azure App Service Web App",
+    "correctAnswer": ["3. \n\n New-AzWebApp"]
+  },
+  {
+    "question": "A DevOps team is planning on deploying a web application onto an Azure Web App service. In order to cater to testing of new release , they decide to make use of deployments slots in the Azure Web App service. They have an App service plan in place that is based on the Standard tier.\nThey have to create a script to perform the following steps\n1. Create a web app and attach it to the App service plan\n2. Create a deployment slot\n3. Initiate a swap of the deployment slots\nYou have to complete the below script for this requirement\nSLOT_1 -ResourceGroupName [resource group name] -Name [app name] -Location [location] -AppServicePlan [app service plan name]\nSLOT_2 -ResourceGroupName [resource group name] -Name [app name] -Slot [deployment slot name] -AppServicePlan [app service plan name]\n$ParametersObject = @{targetSlot = “[slot name  e.g. “production”]”}\nSLOT_3 -ResourceGroupName [resource group name] -ResourceType Microsoft.Web/sites/slots -ResourceName [app name]/[slot name] -Action applySlotConfig -Parameters $ParametersObject -ApiVersion 2015-07-01\nWhich of the following would go into SLOT_2?",
+    "answers": [
+      "1. \n\n New-AzWebAppSlot",
+      "2. \n\n New-AzResourceGroup",
+      "3. \n\n New-AzWebApp",
+      "4. \n\n Invoke-AzResourceAction"
+    ],
+    "rationale": "Here we need to create a new Azure Web App deployment slot\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on working with deployment slots, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create and configure an Azure Functions app",
+    "correctAnswer": ["1. \n\n New-AzWebAppSlot"]
+  },
+  {
+    "question": "A DevOps team is planning on deploying a web application onto an Azure Web App service. In order to cater to testing of new release , they decide to make use of deployments slots in the Azure Web App service. They have an App service plan in place that is based on the Standard tier.\nThey have to create a script to perform the following steps\n1. Create a web app and attach it to the App service plan\n2. Create a deployment slot\n3. Initiate a swap of the deployment slots\nYou have to complete the below script for this requirement\nSLOT_1 -ResourceGroupName [resource group name] -Name [app name] -Location [location] -AppServicePlan [app service plan name]\nSLOT_2 -ResourceGroupName [resource group name] -Name [app name] -Slot [deployment slot name] -AppServicePlan [app service plan name]\n$ParametersObject = @{targetSlot = “[slot name  e.g. “production”]”}\nSLOT_3 -ResourceGroupName [resource group name] -ResourceType Microsoft.Web/sites/slots -ResourceName [app name]/[slot name] -Action applySlotConfig -Parameters $ParametersObject -ApiVersion 2015-07-01\nWhich of the following would go into SLOT_3?",
+    "answers": [
+      "1. \n\n New-AzWebAppSlot",
+      "2. \n\n New-AzResourceGroup",
+      "3. \n\n New-AzWebApp",
+      "4. \n\n Invoke-AzResourceAction"
+    ],
+    "rationale": "Here we need to use the Invoke-AzResourceAction cmdlet to perform the swap process.\nAn example of this is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on working with deployment slots, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Configure deployment slots",
+    "correctAnswer": ["4. \n\n Invoke-AzResourceAction"]
+  },
+  {
+    "question": "A team needs to manage a project in Azure DevOps. They have to prevent the configuration of the project from changing over time.\nThey decide to add a code coverage step to the build pipelines.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "For this we have to implement continuous assurance for the project\nFor more information on the secure DevOps kit for Azure, please visit the following URL\nhttps://www.microsoft.com/en-us/itshowcase/building-cloud-apps-using-the-secure-devops-kit-for-azure",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A team needs to manage a project in Azure DevOps. They have to prevent the configuration of the project from changing over time.\nThey decide to implement Continuous Integration for the project.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "For this we have to implement continuous assurance for the project\nFor more information on the secure DevOps kit for Azure, please visit the following URL\nhttps://www.microsoft.com/en-us/itshowcase/building-cloud-apps-using-the-secure-devops-kit-for-azure",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A team needs to manage a project in Azure DevOps. They have to prevent the configuration of the project from changing over time.\nThey decide to implement Continuous Assurance for the project.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "Yes, this is the right approach. One can use the secure DevOps kit for Azure\nThis can be used to maintain consistency in your environments.\nThe Microsoft documentation mentions the following\n\nFor more information on the secure DevOps kit for Azure, please visit the following URL\nhttps://www.microsoft.com/en-us/itshowcase/building-cloud-apps-using-the-secure-devops-kit-for-azure",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["1. \n\n Yes"]
+  },
+  {
+    "question": "Your company has an application that runs on Azure. They currently use ServiceNow for Incident Management. They want to ensure that a ticket is generated in ServiceNow whenever a user fails to authenticate onto the application. Which of the following could they use in Azure Log Analytics?",
+    "answers": [
+      "1. \n\n Application Insights Connector",
+      "2. \n\n Automation and control",
+      "3. \n\n IT Service Management Connector",
+      "4. \n\n Insight and Analytics"
+    ],
+    "rationale": "One can use the IT Service Management Connector in Azure Log Analytics to connect to the ServiceNow system.\nThe Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on the ITSM connector, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["3. \n\n IT Service Management Connector"]
+  },
+  {
+    "question": "Your team currently has an Azure DevOps project and an Azure subscription. The subscription contains an Azure SLQ database named photonappdb. They want to create a release pipeline that would use the Azure SQL Database deployment task to update the database. Which of the following should they use an artifact in the update process?",
+    "answers": [
+      "1. \n\n A BACPAC file",
+      "2. \n\n A DACPAC file",
+      "3. \n\n An LDF file",
+      "4. \n\n An MDF file"
+    ],
+    "rationale": "You can use a DACPAC file for schema related changes\nThe Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure SQL database deployment, please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-sqldb?view=azure-devops&tabs=yaml",
+    "quizNumber": "2",
+    "category": "Develop for Azure Storage",
+    "subcategory": "Perform operations on data by using the appropriate SDK",
+    "correctAnswer": ["2. \n\n A DACPAC file"]
+  },
+  {
+    "question": "You have to implement an Azure DevOps strategy for usage of mobile devices with App Center.\nYou have to use distribution groups to control the relevant access to releases.\nBelow are the key requirements for the various groups\n\nWhich of the following type of group would you use for photonappgrpA?",
+    "answers": [
+      "1. \n\n Private",
+      "2. \n\n Primary",
+      "3. \n\n Public",
+      "4. \n\n Shared"
+    ],
+    "rationale": "Here you would use Private Distribution groups\nThe Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on App Center distribution groups, please visit the following URL\nhttps://docs.microsoft.com/en-us/appcenter/distribution/groups",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["1. \n\n Private"]
+  },
+  {
+    "question": "You have to implement an Azure DevOps strategy for usage of mobile devices with App Center.\nYou have to use distribution groups to control the relevant access to releases.\nBelow are the key requirements for the various groups\n\nWhich of the following type of group would you use for photonappgrpB?",
+    "answers": [
+      "1. \n\n Private",
+      "2. \n\n Primary",
+      "3. \n\n Public",
+      "4. \n\n Shared"
+    ],
+    "rationale": "Here you would use Public Distribution groups\nThe Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on App Center distribution groups, please visit the following URL\nhttps://docs.microsoft.com/en-us/appcenter/distribution/groups",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["3. \n\n Public"]
+  },
+  {
+    "question": "You have to implement an Azure DevOps strategy for usage of mobile devices with App Center.\nYou have to use distribution groups to control the relevant access to releases.\nBelow are the key requirements for the various groups\n\nWhich of the following type of group would you use for photonappgrpC?",
+    "answers": [
+      "1. \n\n Private",
+      "2. \n\n Primary",
+      "3. \n\n Public",
+      "4. \n\n Shared"
+    ],
+    "rationale": "Here you would use Shared Distribution groups\nThe Microsoft documentation mentions the following\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on App Center distribution groups, please visit the following URL\nhttps://docs.microsoft.com/en-us/appcenter/distribution/groups",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["4. \n\n Shared"]
+  },
+  {
+    "question": "Your team has an Azure DevOps project that consists of a build pipeline. Currently the applications that are part of the build pipeline use around 50 open source libraries. You have to ensure the applications are scanned for any known security vulnerabilities in the open source libraries.\nWhich of the following is an object you would you create the pipeline to facilitate this requirement?",
+    "answers": [
+      "1. \n\n A build task",
+      "2. \n\n A release task",
+      "3. \n\n A deployment task",
+      "4. \n\n An artifacts repository"
+    ],
+    "rationale": "You need to have tools in place in the build task to scan the applications that are part of the pipeline\nSince this is the clear option from the implementation, all other options are incorrect\nFor more information on including a security tool in the build pipeline , please visit the following URL\nhttps://azuredevopslabs.com/labs/vstsextend/whitesource/",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["1. \n\n A build task"]
+  },
+  {
+    "question": "Your team has an Azure DevOps project that consists of a build pipeline. Currently the applications that are part of the build pipeline use around 50 open source libraries. You have to ensure the applications are scanned for any known security vulnerabilities in the open source libraries.\nWhich of the following is a service you would use for this requirement?",
+    "answers": [
+      "1. \n\n WhiteSource Bolt",
+      "2. \n\n Bamboo",
+      "3. \n\n Chef",
+      "4. \n\n Puppet"
+    ],
+    "rationale": "You can use WhiteSource Bolt as a service for looking at vulnerabilities in your open source libraries\nAn example of this also given the Azure DevOps labs space.\n\nSince this is the clear option from the implementation, all other options are incorrect\nFor more information on including a security tool in the build pipeline , please visit the following URL\nhttps://azuredevopslabs.com/labs/vstsextend/whitesource/",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Implement solutions that interact with Microsoft Graph",
+    "correctAnswer": ["1. \n\n WhiteSource Bolt"]
+  },
+  {
+    "question": "Your company currently hosts a web application in Azure. The company currently makes use of Azure pipelines for managing the build and release processes for the application. You have to configure the use of alerts in Azure Monitor for the release pipeline. You have to ensure that new releases are only deployed to production if the staging environment release meets the defined performance baseline criteria.\nWhich of the following would you make use in the implementation?",
+    "answers": [
+      "1. \n\n An Azure Logic App",
+      "2. \n\n A trigger",
+      "3. \n\n A gate",
+      "4. \n\n An Azure Function"
+    ],
+    "rationale": "You would use a gate for this requirement\nThe Microsoft documentation mentions the following\n\nSince this is a clear option from the documentation given, all other options are incorrect\nFor more information on gates in Azure DevOps , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Implement Application Insights web tests and alerts",
+    "correctAnswer": ["3. \n\n A gate"]
+  },
+  {
+    "question": "Your team has an Azure DevOps project. They have to implement a build process that would create several artifacts. The build process itself would create several artifacts. You have to deploy the artifacts on to on-premises data center servers.\nYou decide to deploy a Kubernetes cluster on-premises and then deploy a Helm agent to the cluster. You then decide to add a download build artifacts task for the deployment pipeline.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "If you need to deploy to your on-premises environment, you have to use a self-hosted agent.\nFor more information on DevOps pipeline agents , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "Your team has an Azure DevOps project. They have to implement a build process that would create several artifacts. The build process itself would create several artifacts. You have to deploy the artifacts on to on-premises data center servers.\nYou decide to deploy a Docker build to the on-premises server. You then decide to add a download build artifacts task for the deployment pipeline.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "If you need to deploy to your on-premises environment, you have to use a self-hosted agent.\nFor more information on DevOps pipeline agents , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Create and document APIs",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "Your team has an Azure DevOps project. They have to implement a build process that would create several artifacts. The build process itself would create several artifacts. You have to deploy the artifacts on to on-premises data center servers.\nYou decide to deploy a self-hosted agent to the on-premises server. You then decide to add a Copy and Publish Build Artifacts task to the deployment pipeline.\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "Yes, you can use a self-hosted agent for this requirement.\nThe Microsoft documentation mentions the following\n\nFor more information on DevOps pipeline agents , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["1. \n\n Yes"]
+  },
+  {
+    "question": "Your team needs to deploy several Azure Resource Manager templates. These templates will reference secrets stored in the Azure Key vault service. You have to recommend the right solution for accessing the secrets in the key vault during the deployment of the Azure Resource Manager templates. You have to ensure the solution uses the principle of least privilege.\nWhich of the following would you use to restrict access to delete the key vault?",
+    "answers": [
+      "1. \n\n Azure Key value access policy",
+      "2. \n\n A Personal Access Token",
+      "3. \n\n OAuth 2.0",
+      "4. \n\n RBAC"
+    ],
+    "rationale": "For control plane access to the key vault, you can use Role based access control\nThe Microsoft documentation mentions the following\n\nSince this is a clear option from the documentation given, all other options are incorrect\nFor more information on securing the Key vault , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/secure-your-key-vault",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Implement Managed Identities for Azure resources",
+    "correctAnswer": ["4. \n\n RBAC"]
+  },
+  {
+    "question": "Your team needs to deploy several Azure Resource Manager templates. These templates will reference secrets stored in the Azure Key vault service. You have to recommend the right solution for accessing the secrets in the key vault during the deployment of the Azure Resource Manager templates. You have to ensure the solution uses the principle of least privilege.\nWhich of the following would you use to restrict access to the secrets stored in the key vault?",
+    "answers": [
+      "1. \n\n Azure Key value access policy",
+      "2. \n\n A Personal Access Token",
+      "3. \n\n OAuth 2.0",
+      "4. \n\n RBAC"
+    ],
+    "rationale": "For data plane access to the key vault, you can use Key vault access policies\nThe Microsoft documentation mentions the following\n\nSince this is a clear option from the documentation given, all other options are incorrect\nFor more information on securing the Key vault , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/key-vault/general/secure-your-key-vault",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Implement Managed Identities for Azure resources",
+    "correctAnswer": ["1. \n\n Azure Key value access policy"]
+  },
+  {
+    "question": "A company is planning on deploying a web application onto the Azure Web App service. You want to make use of Application Insights to provide more information onto how the application is being accessed by users. They have the following key requirements\n– See places in the web applications where users churn the most from the site\n– See if users are completing an entire process in the application\nWhich of the following Application Insights feature can be used for this requirement?\nSee places in the web applications where users churn the most from the site",
+    "answers": [
+      "1. \n\n Funnels",
+      "2. \n\n User Flows",
+      "3. \n\n Impact",
+      "4. \n\n Retention"
+    ],
+    "rationale": "You can get this from the User Flows feature\nThe Microsoft documentation mentions the following\n\nSince this is a clear option from the documentation given, all other options are incorrect\nFor more information on the User Flows feature , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-flows",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Implement Application Insights web tests and alerts",
+    "correctAnswer": ["2. \n\n User Flows"]
+  },
+  {
+    "question": "A company is planning on deploying a web application onto the Azure Web App service. You want to make use of Application Insights to provide more information onto how the application is being accessed by users. They have the following key requirements\n– See places in the web applications where users churn the most from the site\n– See if users are completing an entire process in the application\nWhich of the following Application Insights feature can be used for this requirement?\nSee if users are completing an entire process in the application",
+    "answers": [
+      "1. \n\n Funnels",
+      "2. \n\n User Flows",
+      "3. \n\n Impact",
+      "4. \n\n Retention"
+    ],
+    "rationale": "You can get this from the Funnels feature\nThe Microsoft documentation mentions the following\n\nSince this is a clear option from the documentation given, all other options are incorrect\nFor more information on the Funnels feature , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-funnels",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Implement Application Insights web tests and alerts",
+    "correctAnswer": ["1. \n\n Funnels"]
+  },
+  {
+    "question": "Your team need make use of NuGet packages in a project in Azure DevOps. The required NuGet packages are in a feed that required authentication. You have to ensure that the project can restore the NuGet package automatically.\nWhich of the following can be used for this requirement?",
+    "answers": [
+      "1. \n\n An Azure Automation account",
+      "2. \n\n A service principal defined in Azure AD",
+      "3. \n\n An application object defined in Azure AD",
+      "4. \n\n An Azure Artifacts Credential Provider"
+    ],
+    "rationale": "You can use Azure Artifacts Credential Provider to restore NuGet packages in your development workflow\nThis also present as a GitHub article\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on Azure Artifacts Credentials Provider, please visit the following URL\nhttps://github.com/microsoft/artifacts-credprovider",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["4. \n\n An Azure Artifacts Credential Provider"]
+  },
+  {
+    "question": "Your team is creating an ASP.Net Core application. They have to use the Azure Key vault service for storing secrets that will be used by the application. You have to assign the right permissions for the application as part of the Key Vault Access policy. Which of the following is the right permission to assign?",
+    "answers": [
+      "1. \n\n List only",
+      "2. \n\n Get only",
+      "3. \n\n Get and List",
+      "4. \n\n Set only"
+    ],
+    "rationale": "This operation only requires the Get permission.\nThis is also given in the documentation for the REST API\n\nSince this is clearly mentioned, all other options are incorrect\nFor more information on the API for getting a secret from the Key Vault, please visit the following URL\nhttps://docs.microsoft.com/en-us/rest/api/keyvault/getsecret",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Develop code that uses keys, secrets, and certificates stored in Azure Key Vault",
+    "correctAnswer": ["2. \n\n Get only"]
+  },
+  {
+    "question": "Your team is currently using Azure DevOps for applications being developed in the company. You want to use a metric that would assess the amount of time being lost as a result of the technical debt in the application code. Which of the following could be used for this purpose?",
+    "answers": [
+      "1. \n\n The number of code modules in the application",
+      "2. \n\n The number of unit test failures",
+      "3. \n\n The percentage of unit test failures",
+      "4. \n\n The percentage of overall time spent on rework"
+    ],
+    "rationale": "If the application code has technical debt, this means that the team is spending time on existing issues. The technical debt would make it difficult to deliver changes faster and efficiently.\nThe other options are incorrect because none of the would provide the option of providing a metric showcasing the of time being lost as a result of the technical debt.\nFor more information on an example on working with technical debt, please visit the following URL\nhttps://www.azuredevopslabs.com/labs/azuredevops/sonarcloud/",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["4. \n\n The percentage of overall time spent on rework"]
+  },
+  {
+    "question": "A company wants to implement a web-based solution on Azure. The development and deployment process would use services based on Azure. The company wants to implement the following as part of the solution\n– Host the web application using the Azure Web App service\n– Have an active-passive setup for the web application\n– Route traffic to the active setup for all users.\n– If the primary endpoint fails, then ensure users are directed to a secondary endpoint\nWhich of the following service could be used for routing user traffic based on these requirements?",
+    "answers": [
+      "1. \n\n Azure Standard Load Balancer",
+      "2. \n\n Azure DevOps",
+      "3. \n\n Azure Traffic Manager",
+      "4. \n\n Azure Functions"
+    ],
+    "rationale": "The Azure Traffic Manager has different routing methods which can be used for routing traffic.\nThe Microsoft documentation mentions the following\n\nThe other options are incorrect as they dont provide any routing options.\nFor more information on Azure Traffic Manager , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create and configure an Azure Functions app",
+    "correctAnswer": ["3. \n\n Azure Traffic Manager"]
+  },
+  {
+    "question": "A company wants to implement a web-based solution on Azure. The development and deployment process would use services based on Azure. The company wants to implement the following as part of the solution\n– Host the web application using the Azure Web App service\n– Have an active-passive setup for the web application\n– Route traffic to the active setup for all users.\nIf the primary endpoint fails, then ensure users are directed to a secondary endpoint\nWhich of the following is a routing method which could be used in the chosen routing service?",
+    "answers": [
+      "1. \n\n Priority",
+      "2. \n\n Weighted",
+      "3. \n\n Performance",
+      "4. \n\n MultiValue"
+    ],
+    "rationale": "For this requirement, you have to use the Priority routing method.\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on Azure Traffic Manager monitoring , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-monitoring",
+    "quizNumber": "2",
+    "category": "Develop Azure Compute Solutions",
+    "subcategory": "Create an Azure App Service Web App",
+    "correctAnswer": ["1. \n\n Priority"]
+  },
+  {
+    "question": "A team is planning on using Azure DevOps for managing the build and release pipelines for their applications. The key requirements for change requests and approvals in the build process is given below\n– There is a set of users that must manually validate a change request and approve the deployment onto a stage\n– It needs to be ensured that no active issues are present in a work item before deployment of a build onto a stage\n– It needs to be ensured that no active incidents are present for the system after it has been deployed and before promoting the release\n– During the deployment pipeline , you have to prompt the user to enter the value for a parameter that will be used on certain deployment tasks\nWhich of the following is the feature to use for the requirement?\nThere is a set of users that must manually validate a change request and approve the deployment onto a stage",
+    "answers": [
+      "1. \n\n Pre-deployment approvals",
+      "2. \n\n Post-deployment approvals",
+      "3. \n\n Pre-deployment gates",
+      "4. \n\n Post-deployment gates",
+      "5. \n\n Manual Intervention"
+    ],
+    "rationale": "Here we have to use Pre-deployment approvals\nThis is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Pipelines release gates and approvals , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["1. \n\n Pre-deployment approvals"]
+  },
+  {
+    "question": "A team is planning on using Azure DevOps for managing the build and release pipelines for their applications. The key requirements for change requests and approvals in the build process is given below\n– There is a set of users that must manually validate a change request and approve the deployment onto a stage\n– It needs to be ensured that no active issues are present in a work item before deployment of a build onto a stage\n– It needs to be ensured that no active incidents are present for the system after it has been deployed and before promoting the release\nDuring the deployment pipeline , you have to prompt the user to enter the value for a parameter that will be used on certain deployment tasks\nWhich of the following is the feature to use for the requirement?\nIt needs to be ensured that no active issues are present in a work item before deployment of a build onto a stage",
+    "answers": [
+      "1. \n\n Pre-deployment approvals",
+      "2. \n\n Post-deployment approvals",
+      "3. \n\n Pre-deployment gates",
+      "4. \n\n Post-deployment gates",
+      "5. \n\n Manual Intervention"
+    ],
+    "rationale": "Here we have to use Pre-deployment gates\nThis is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Pipelines release gates and approvals , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["3. \n\n Pre-deployment gates"]
+  },
+  {
+    "question": "A team is planning on using Azure DevOps for managing the build and release pipelines for their applications. The key requirements for change requests and approvals in the build process is given below\n– There is a set of users that must manually validate a change request and approve the deployment onto a stage\n– It needs to be ensured that no active issues are present in a work item before deployment of a build onto a stage\n– It needs to be ensured that no active incidents are present for the system after it has been deployed and before promoting the release\nDuring the deployment pipeline , you have to prompt the user to enter the value for a parameter that will be used on certain deployment tasks\nWhich of the following is the feature to use for the requirement?\nIt needs to be ensured that no active incidents are present for the system after it has been deployed and before promoting the release",
+    "answers": [
+      "1. \n\n Pre-deployment approvals",
+      "2. \n\n Post-deployment approvals",
+      "3. \n\n Pre-deployment gates",
+      "4. \n\n Post-deployment gates",
+      "5. \n\n Manual Intervention"
+    ],
+    "rationale": "Here we have to use Post-deployment gates\nThis is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Pipelines release gates and approvals , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Implement Azure Security",
+    "subcategory": "Authenticate and authorise users and apps by using Microsoft Entra ID",
+    "correctAnswer": ["4. \n\n Post-deployment gates"]
+  },
+  {
+    "question": "A team is planning on using Azure DevOps for managing the build and release pipelines for their applications. The key requirements for change requests and approvals in the build process is given below\n– There is a set of users that must manually validate a change request and approve the deployment onto a stage\n– It needs to be ensured that no active issues are present in a work item before deployment of a build onto a stage\n– It needs to be ensured that no active incidents are present for the system after it has been deployed and before promoting the release\nDuring the deployment pipeline , you have to prompt the user to enter the value for a parameter that will be used on certain deployment tasks\nWhich of the following is the feature to use for the requirement?\nDuring the deployment pipeline , you have to prompt the user to enter the value for a parameter that will be used on certain deployment tasks",
+    "answers": [
+      "1. \n\n Pre-deployment approvals",
+      "2. \n\n Post-deployment approvals",
+      "3. \n\n Pre-deployment gates",
+      "4. \n\n Post-deployment gates",
+      "5. \n\n Manual Intervention"
+    ],
+    "rationale": "Here we have to use Manual Intervention\nThis is also given in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Pipelines release gates and approvals , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["5. \n\n Manual Intervention"]
+  },
+  {
+    "question": "Your team currently has a Git repository hosted in Azure Repos. The repository contains an application that is hosted as a Docker image in Azure Container registry. You have to create an Azure container registry task that would update the repository whenever there is a change to the git repository. Which of the following would you require to ensure the webhook could be setup accordingly?",
+    "answers": [
+      "1. \n\n Access keys",
+      "2. \n\n Personal Access token",
+      "3. \n\n OAuth 2.0 tokens",
+      "4. \n\n ID tokens"
+    ],
+    "rationale": "We have to use Personal Access tokens for this requirement.\nThis is also mentioned in the Microsoft documentation\n\nSince this is clearly given in the Microsoft documentation, all other options are incorrect\nFor more information on Azure Container registry tasks , please visit the following URL\nhttps://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-overview",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["2. \n\n Personal Access token"]
+  },
+  {
+    "question": "Your team has defined a new project in Azure Devops. This is for a web application. You need to ensure that whenever code is checked in, a build is run automatically\nYou decide to Enable continuous integration from the Triggers tab of the build pipeline\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "In the Designer, you can go to the Continuous Integration section and ensure that triggers are enabled. This is also given in the Microsoft documentation\n\nFor more information on using triggers in the build pipeline, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=classic",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["1. \n\n Yes"]
+  },
+  {
+    "question": "Your team has defined a new project in Azure Devops. This is for a web application. You need to ensure that whenever code is checked in, a build is run automatically\nYou decide to select Batch changes while a build is in progress from the Triggers tab of the build pipeline\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "This is used when a batch of changes need to be built. The Microsoft documentation mentions the following on this setting\n\nFor more information on using triggers in the build pipeline, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=classic",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "Your team has defined a new project in Azure Devops. This is for a web application. You need to ensure that whenever code is checked in, a build is run automatically\nYou decide to enable the Pull request trigger setting from the Triggers tab of the build pipeline\nWould this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "This is more pertinent to a pull request. The Microsoft documentation mentions the following on this setting\n\nFor more information on using triggers in the build pipeline, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=classic",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A company wants to store NuGet packages which are created by the internal development team. These packages need to be streamed to different departments. Each department must have its own container for consuming the NuGet packages.\nWhich of the following would you use for storing the NuGet packages?",
+    "answers": [
+      "1. \n\n Azure Repository",
+      "2. \n\n Azure Artifacts",
+      "3. \n\n Azure Logic Apps",
+      "4. \n\n Azure Functions"
+    ],
+    "rationale": "You need to use Azure Artifacts for storing the NuGet packages. The Microsoft documentation mentions the following\n\nOption A is incorrect since this is used to manage your source code repositories\nOption C is incorrect since this is a workflow-based service\nOption D is incorrect since this is a serverless compute service\nFor more information on Azure Artifacts, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/get-started/?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Develop for Azure Storage",
+    "subcategory": "Perform operations on containers and items by using the SDK",
+    "correctAnswer": ["2. \n\n Azure Artifacts"]
+  },
+  {
+    "question": "A company wants to store NuGet packages which are created by the internal development team. These packages need to be streamed to different departments. Each department must have its own container for consuming the NuGet packages.\nWhich of the following would you create for each department?",
+    "answers": [
+      "1. \n\n A pipeline",
+      "2. \n\n A feed",
+      "3. \n\n A repository",
+      "4. \n\n A binary"
+    ],
+    "rationale": "Feeds are used as a container for packages. The Microsoft documentation mentions the following\n\nSince this is clearly mentioned in the documentation, all other options are incorrect\nFor more information on feeds, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Develop for Azure Storage",
+    "subcategory": "Perform operations on containers and items by using the SDK",
+    "correctAnswer": ["2. \n\n A feed"]
+  },
+  {
+    "question": "A team has currently setup a Devops project. The lead wants to make use of the Analytics service to see the count of work items over time for each column of a Kanban board. Which of the following widget would service this purpose?",
+    "answers": [
+      "1. \n\n Burnup",
+      "2. \n\n Cycle Time",
+      "3. \n\n Lead Time",
+      "4. \n\n Cumulative Flow Diagram"
+    ],
+    "rationale": "You can use the Cumulative Flow Diagram for this purpose. The Microsoft documentation mentions the following\n\nOption A is incorrect since this is normally used to display a trend of completed work across multiple teams and multiple sprints\nOption B is incorrect since this is used to analyze the time it takes for your team to complete work items once they begin actively working on them.\nOption C is incorrect since this is used to analyze the time it takes to deliver work from your backlog\nFor more information on analytic widgets, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/devops/report/dashboards/analytics-widgets?view=azure-devops",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["4. \n\n Cumulative Flow Diagram"]
+  },
+  {
+    "question": "A company has deployed solutions using the Azure Kubernetes service. They have solutions deployed to clusters running both Linux and Windows Server 2019. They want to be able to get the following metrics for the clusters\n– Able to view the health of the clusters\n– Able to view the health of the underlying VMs\nWhich of the following could be used for this purpose?",
+    "answers": [
+      "1. \n\n Azure Advisor",
+      "2. \n\n Azure Monitor",
+      "3. \n\n Azure Artifacts",
+      "4. \n\n Azure Devops"
+    ],
+    "rationale": "You can see all the metrics for the underlying resources for your cluster using the Azure Monitor service. The Microsoft documentation mentions the following\n\nNone of the other options have the ability monitor AKS clusters\nFor more information on monitoring AKS clusters, please visit the below URL\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-analyze",
+    "quizNumber": "2",
+    "category": "Monitor, Troubleshoot, and Optimise Azure Solutions",
+    "subcategory": "Monitor and analyze metrics, logs, and traces",
+    "correctAnswer": ["2. \n\n Azure Monitor"]
+  },
+  {
+    "question": "A company is currently planning on using the Azure Devops service for managing the CI/CD pipeline for various applications. The team wants to have an effective communication tool that can be used across the project. The tool should integrate with Azure Devops and also have a separation of channels for each team.\nYou decide to implement Slack?\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "Slack is the perfect communication tool for this requirement. The following is provided on the tool in the Azure marketplace\n\nFor more information on the tool, please visit the below URL\nhttps://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-slack",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["1. \n\n Yes"]
+  },
+  {
+    "question": "A company is currently planning on using the Azure Devops service for managing the CI/CD pipeline for various applications. The team wants to have an effective communication tool that can be used across the project. The tool should integrate with Azure Devops and also have a separation of channels for each team.\nYou decide to implement Bamboo?\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "This is a CI/CD tool from a company called Atlassian.\nFor more information on the Bamboo tool, please visit the below URL\nhttps://www.atlassian.com/software/bamboo",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "No Subcategory Found",
+    "correctAnswer": ["2. \n\n No"]
+  },
+  {
+    "question": "A company is currently planning on using the Azure Devops service for managing the CI/CD pipeline for various applications. The team wants to have an effective communication tool that can be used across the project. The tool should integrate with Azure Devops and also have a separation of channels for each team.\nYou decide to implement Microsoft teams?\nDoes this fulfil the requirement?",
+    "answers": ["1. \n\n Yes", "2. \n\n No"],
+    "rationale": "Answer  A\nYes, you can also use Microsoft teams for this requirement\nThe Azure Devops Lab has a complete tutorial on using Microsoft teams along with Azure Devops\n\nFor more information on the article, please visit the below URL\nhttps://www.azuredevopslabs.com/labs/vstsextend/teams/",
+    "quizNumber": "2",
+    "category": "Connect to and consume Azure services and third-party services",
+    "subcategory": "Configure access to APIs",
+    "correctAnswer": ["1. \n\n Yes"]
+  }
+]
